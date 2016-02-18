@@ -1,18 +1,16 @@
 Rails.application.routes.draw do
 
+
+  resources :vendors do
+    collection { post :import }
+  end
+
   devise_for :users
  
   root 'page#home'
 
-  get 'page/vendors'
+  resources :page
 
-  get 'page/about'
-
-  get 'page/faqs'
-
-  get 'page/contact'
-
-  get 'page/checklist'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
