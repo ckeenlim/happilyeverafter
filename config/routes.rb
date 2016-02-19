@@ -9,7 +9,12 @@ Rails.application.routes.draw do
  
   root 'page#home'
 
-  resources :page
+  get 'page/about'
+  get 'page/checklist'
+  get 'page/contact'
+  get 'page/faqs'
+  get 'page/vendors'
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

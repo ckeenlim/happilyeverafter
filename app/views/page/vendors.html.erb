@@ -1,2 +1,35 @@
-<h1>Page#vendors</h1>
-<p>Find me in app/views/page/vendors.html.erb</p>
+
+<h4>
+<%= link_to "Back to home page", root_path %> 
+
+</h4>
+
+<h1> Vendors </h1>
+
+<div class="container">
+	<table class = "table table-striped">
+	  <thead>
+	    <tr>
+	    	<th>Category </th>
+	      <th>Id</th>
+	      <th>Name</th>
+	      <th>Address</th>
+
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% if @vendors.nil? %>
+	  		<h1> no vendors yet </h1>
+	  	<% else %>
+		    <% @vendors.each do |vendor| %>
+		      <tr>
+		      	<td><%= vendor.categoryId %></td>
+		        <td><%= vendor.id %></td>
+		        <td><%= vendor.name %></td>
+		        <td><%= vendor.address %></td>
+		      </tr>
+		    <% end %>
+		  <% end %>
+	  </tbody>
+	</table>
+<div>

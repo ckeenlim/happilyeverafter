@@ -3,6 +3,7 @@ class PageController < ApplicationController
   end
 
   def vendors
+    @vendors = Vendor.all
   end
 
   def about
