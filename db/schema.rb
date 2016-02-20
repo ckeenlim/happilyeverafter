@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218031803) do
+ActiveRecord::Schema.define(version: 20160220170353) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "checklists", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "sortOrder"
+    t.integer  "supplierCategory"
+    t.integer  "importance"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "user_checklists", force: :cascade do |t|
+    t.integer  "userId"
+    t.integer  "checklistId"
+    t.string   "statusCd"
+    t.string   "supplierId"
+    t.decimal  "totalCostAmt"
+    t.decimal  "paidAmt"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

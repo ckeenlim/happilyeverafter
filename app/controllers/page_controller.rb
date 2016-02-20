@@ -16,5 +16,6 @@ class PageController < ApplicationController
   end
 
   def checklist
+    @checklists = Checklist.all
   end
 end

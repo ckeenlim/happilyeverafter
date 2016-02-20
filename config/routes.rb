@@ -11,10 +11,13 @@ Rails.application.routes.draw do
 
   get 'page/about'
   get 'page/checklist'
+  
+
   get 'page/contact'
   get 'page/faqs'
   get 'page/vendors'
   
+  post 'page/checklist' => 'checklist#import', :as => :import_checklist
 
 
   # The priority is based upon order of creation: first created -> highest priority.
