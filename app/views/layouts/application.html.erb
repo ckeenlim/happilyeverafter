@@ -23,14 +23,17 @@
  
 
 </head>
-
 <%= render partial: "shared/flash_messages", flash: flash %> 
+<body data-spy="scroll" data-target="#my-navbar">
+<%= render partial: "shared/top_nav" %>
+
+
   
 
   
   
   <%= yield %>
 
-
+</body> 
 
 </html>

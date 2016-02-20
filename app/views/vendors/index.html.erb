@@ -1,22 +1,21 @@
 
-<h4>
-<%= link_to "Back to home page", root_path %> 
-
-</h4>
-
-<h1> Vendors </h1>
-
-<div>
-	<%= form_tag import_vendors_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Import CSV" %>
-
-  <% end %>
- 
-	
-</div>
-
 <div class="container">
+	<h4> <%= link_to "Back to home page", root_path %> 
+	</h4>
+
+	<h1> Vendors </h1>
+
+	<div>
+		<%= form_tag import_vendors_path, multipart: true do %>
+	    <%= file_field_tag :file %>
+	    <%= submit_tag "Import CSV" %>
+
+	  <% end %>
+	 
+		
+	</div>
+
+
 	<table class = "table table-striped">
 	  <thead>
 	    <tr>
@@ -42,6 +41,7 @@
 		  <% end %>
 	  </tbody>
 	</table>
+	
 <div>
 
 

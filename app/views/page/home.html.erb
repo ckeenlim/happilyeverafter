@@ -2,102 +2,7 @@
 <!--html lang="en"-->
 
 
-<body data-spy="scroll" data-target="#my-navbar">
 
-    <!-- Navbar -->
-  	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
-  		<div class="container">
-  			<div class="navbar-header">
-  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  				</button>
-
-  				<%= link_to "HEAP", root_path , { :class=>"navbar-brand" } %>
-  				<!--a href="" class="navbar-brand">HEAP</a-->
-  			</div><!-- Navbar Header-->
-  			<div class="collapse navbar-collapse" id="navbar-collapse">
-  				
-  			<a href="" class="btn btn-warning navbar-btn navbar-right">Join Now</a>
-  				<ul class="nav navbar-nav">
-  					<li><a href="#searchContainer">Search</a> 
-  					<li><a href="#gallery">Gallery</a> 
-  					<li><a href="#features">Features</a> 
-  					<li><a href="#faq">Faq</a> 
-  					<li><a href="#contact">Contact Us</a> 
-  				</ul>
-  			</div>
-  		</div><!-- End Container-->
-  	</nav><!-- End navbar -->
-
-  	<!-- jumbotron-->
-
-  	<div class="jumbotron">
-      <div class="container text-center">
-        <h2 style="font: ">Happily Ever After Ph</h2>
-      </div><!-- End container -->
-    </div><!-- End jumbotron-->
-
-    <!-- Menu -->
-    <nav class="navbar navbar-inverse" id="myNavMenu">
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav" id="myUlMenu">
-          <li class="dropdown">
-            <a href="#">Home</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Vendors<b class="caret"></b></a>
-            <ul class="dropdown-menu" id="menu1">
-            <li>
-              <a href="#">Churches <i class="icon-arrow-right"></i></a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="nav-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-	            <li><a href="#">Venues</a></li>
-	            <li><a href="#">Photography</a></li>
-	            <li><a href="#">Videography</a></li>
-	            <li><a href="#">Catering</a></li>
-	            <li class="divider"></li>
-	            <li>
-	            	<%= link_to "See all categories", page_vendors_path %>
-	            	<!--a href="#">See all categories</a-->
-	            </li>
-
-            </ul>
-          </li>
-          <li class="dropdown">
-          	<%= link_to "About", page_about_path %>
-            <!--a href="#">About</a-->
-          </li>
-          <li class="dropdown">
-            <a href="#">Gallery</a>
-          </li>
-          <li class="dropdown">
-            <a href="#">Events</a>
-          </li>
-          <li class="dropdown">
-            <a href="#">Promos</a>
-          </li>
-          <li class="dropdown">
-          	<%= link_to "FAQs", page_faqs_path %>
-            <!--a href="#">FAQs</a-->
-          </li>
-          <li class="dropdown">
-          	<%= link_to "Contact Us", page_contact_path %>
-            <!--a href="#">Contact Us</a-->
-          </li>
-        </ul>
-      </div>
-    </nav><!-- End of Menu -->
 
   	<!-- Search-->
   	<div class="container" id="searchContainer">
@@ -163,5 +68,5 @@
 		<%= link_to "Import data", vendors_path %> 
 
 		</h4>
-</body>	
+
 <!--/html-->
