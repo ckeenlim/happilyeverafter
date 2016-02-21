@@ -3,7 +3,7 @@ class PageController < ApplicationController
   end
 
   def vendors
-    @vendors = Vendor.all
+    @vendors = Vendor.all.paginate(:page => params[:page])
   end
 
   def about

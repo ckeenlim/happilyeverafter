@@ -1,7 +1,5 @@
 
 <div class="container">
-	<h4> <%= link_to "Back to home page", root_path %> 
-	</h4>
 
 	<h1> Vendors </h1>
 
@@ -33,3 +31,5 @@
 	</table>
 	
 <div>
+
+<%= will_paginate @vendors, renderer:BootstrapPagination::Rails, previous_label:"<<", next_label:">>", inner_window:1, outer_window:0%>

@@ -1,47 +1,47 @@
 
     <!-- Navbar -->
-  	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
-  		<div class="container">
-  			<div class="navbar-header">
-  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  				</button>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-  				<%= link_to "HEAP", root_path , { :class=>"navbar-brand" } %>
-  				<!--a href="" class="navbar-brand">HEAP</a-->
-  			</div><!-- Navbar Header-->
+          <%= link_to "HEAP", root_path , { :class=>"navbar-brand" } %>
+          <!--a href="" class="navbar-brand">HEAP</a-->
+        </div><!-- Navbar Header-->
 
-  			<div class="collapse navbar-collapse" id="navbar-collapse">
-  			
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+        
         <% if user_signed_in? %>
           <%= link_to "Log Out", destroy_user_session_path , :method => :delete, :class=> "btn btn-primary btn-sm navbar-btn navbar-right"%>
         <% else %>
-          <%= link_to "Log in", new_user_session_path, {:class => "btn btn-primary btn-sm navbar-btn navbar-right"} %>
+          <%= link_to "Log in", new_user_session_path, {:class => "btn btn-primary btn-sm navbar-btn navbar-right sessionBtn"} %>
           <!--a href="" class="btn btn-primary navbar-btn navbar-right">Log in</a-->
           <span> :: </span>s
-          <%= link_to "Join Now", new_user_registration_path, {:class => "btn btn-warning navbar-btn navbar-right"} %>
+          <%= link_to "Join Now", new_user_registration_path, {:class => "btn btn-warning btn-sm navbar-btn navbar-right sessionBtn"} %>
           <!--a href="" class="btn btn-warning navbar-btn navbar-right">Join Now</a-->
         <% end %>
 
 
-  			
-  				<ul class="nav navbar-nav">
-  					<li><a href="#searchContainer">Search</a> 
-  					<li><a href="#gallery">Gallery</a> 
-  					<li><a href="#features">Features</a> 
-  					<li><a href="#faq">Faq</a> 
-  					<li><a href="#contact">Contact Us</a> 
-  				</ul>
-  			</div>
-  		</div><!-- End Container-->
-  	</nav><!-- End navbar -->
+        
+          <ul class="nav navbar-nav">
+            <li><a href="#searchContainer">Search</a> 
+            <li><a href="#gallery">Gallery</a> 
+            <li><a href="#features">Features</a> 
+            <li><a href="#faq">Faq</a> 
+            <li><a href="#contact">Contact Us</a> 
+          </ul>
+        </div>
+      </div><!-- End Container-->
+    </nav><!-- End navbar -->
 
-  	<!-- jumbotron-->
+    <!-- jumbotron-->
 
-  	<div class="jumbotron">
+    <div class="jumbotron">
       <div class="container text-center">
         <h2 style="font: ">Happily Ever After Ph</h2>
       </div><!-- End container -->
@@ -52,7 +52,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav" id="myUlMenu">
           <li class="dropdown">
-          	<%= link_to "Home", root_path %>
+            <%= link_to "Home", root_path %>
             <!--a href="#">Home</a-->
           </li>
           <li class="dropdown">
@@ -70,20 +70,20 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
-	            <li><a href="#">Venues</a></li>
-	            <li><a href="#">Photography</a></li>
-	            <li><a href="#">Videography</a></li>
-	            <li><a href="#">Catering</a></li>
-	            <li class="divider"></li>
-	            <li>
-	            	<%= link_to "See all categories", page_vendors_path %>
-	            	<!--a href="#">See all categories</a-->
-	            </li>
+              <li><a href="#">Venues</a></li>
+              <li><a href="#">Photography</a></li>
+              <li><a href="#">Videography</a></li>
+              <li><a href="#">Catering</a></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "See all categories", page_vendors_path %>
+                <!--a href="#">See all categories</a-->
+              </li>
 
             </ul>
           </li>
           <li class="dropdown">
-          	<%= link_to "About", page_about_path %>
+            <%= link_to "About", page_about_path %>
             <!--a href="#">About</a-->
           </li>
           <li class="dropdown">
@@ -96,11 +96,11 @@
             <a href="#">Promos</a>
           </li>
           <li class="dropdown">
-          	<%= link_to "FAQs", page_faqs_path %>
+            <%= link_to "FAQs", page_faqs_path %>
             <!--a href="#">FAQs</a-->
           </li>
           <li class="dropdown">
-          	<%= link_to "Contact Us", page_contact_path %>
+            <%= link_to "Contact Us", page_contact_path %>
             <!--a href="#">Contact Us</a-->
           </li>
 
