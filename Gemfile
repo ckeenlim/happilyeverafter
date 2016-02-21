@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # additional gems go here
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-gem 'google-webfonts-rails', '~> 0.0.4'
+gem 'webfontloader', '~> 1.6', '>= 1.6.21'
 ##########################
 
 # Use ActiveModel has_secure_password
