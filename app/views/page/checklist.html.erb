@@ -32,7 +32,7 @@
 
 		<div class="col-xs-12 col-lg-8">
 			
-			<table class = "table table-striped">
+			<table class = "table">
 			  <thead>
 			    <tr>
 			    	<th>Name </th>
@@ -45,7 +45,12 @@
 			  	<% else %>
 				    <% @checklists.each do |checklist| %>
 				      <tr>
-				      	<td> <h4><%= checklist.name %></h4></td>
+				      	<td class="col-xs-12 col-md-8"> 
+				      		<h4><%= checklist.name %></h4>
+				      	</td>
+				      	<td class="col-xs-6 col-md-4">
+				      		<button type="button" class="btn btn-primary">done</button>
+				      	</td>
 				      </tr>
 				    <% end %>
 				  <% end %>

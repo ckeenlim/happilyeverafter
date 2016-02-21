@@ -22783,3 +22783,1104 @@ Processing by PageController#vendors as HTML
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
   Rendered shared/_top_nav.html.erb (2.1ms)
 Completed 200 OK in 137ms (Views: 133.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/page/vendors" for ::1 at 2016-02-20 21:25:13 -0500
+Processing by PageController#vendors as HTML
+  [1m[36mVendor Load (2.3ms)[0m  [1mSELECT "vendors".* FROM "vendors"[0m
+  Rendered page/vendors.html.erb within layouts/application (15.1ms)
+  Rendered shared/_flash_messages.html.erb (0.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (7.6ms)
+Completed 200 OK in 858ms (Views: 846.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/application.self-a0544852897b4aca6161b0f7b9ae475602e4d6822cb0b0422ec5272286d0ceb3.css?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 21:25:14 -0500
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 21:25:17 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.9ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (7.4ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.4ms)
+Completed 200 OK in 161ms (Views: 159.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 21:25:32 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.7ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (6.0ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (3.6ms)
+Completed 200 OK in 182ms (Views: 180.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/application.self-a0544852897b4aca6161b0f7b9ae475602e4d6822cb0b0422ec5272286d0ceb3.css?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 21:25:33 -0500
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:00:30 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (64.5ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (109.5ms)
+  Rendered shared/_flash_messages.html.erb (0.4ms)
+  [1m[35mUser Load (11.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (27.3ms)
+Completed 200 OK in 1033ms (Views: 903.5ms | ActiveRecord: 76.0ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:00:32 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:00:32 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:00:32 -0500
+
+
+Started GET "/assets/application.self-a0544852897b4aca6161b0f7b9ae475602e4d6822cb0b0422ec5272286d0ceb3.css?body=1" for ::1 at 2016-02-20 22:00:32 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:00:33 -0500
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:01:17 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (1.4ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (6.9ms)
+  Rendered shared/_flash_messages.html.erb (0.2ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (4.4ms)
+Completed 200 OK in 736ms (Views: 732.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.self-a0544852897b4aca6161b0f7b9ae475602e4d6822cb0b0422ec5272286d0ceb3.css?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:01:18 -0500
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:19:54 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (64.5ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (91.1ms)
+  Rendered shared/_flash_messages.html.erb (0.2ms)
+  [1m[35mUser Load (41.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (59.1ms)
+Completed 200 OK in 6906ms (Views: 6700.8ms | ActiveRecord: 106.4ms)
+
+
+Started GET "/assets/application.self-de3420f78acf3bc8c4ebb5212c22de0f12a9560204847c2a1628abacf135bd65.css?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:20:02 -0500
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:27:32 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (1.2ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (18.2ms)
+  Rendered shared/_flash_messages.html.erb (0.4ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (13.0ms)
+Completed 200 OK in 735ms (Views: 725.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:27:33 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/application.self-de3420f78acf3bc8c4ebb5212c22de0f12a9560204847c2a1628abacf135bd65.css?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:27:34 -0500
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:43:33 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (1.3ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 965ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+     7:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     8:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     9:   <%= csrf_meta_tags %>
+    10:   <%=google_webfonts_init(config hash)%>
+    11: 
+    12:   <meta charset="utf-8">
+    13:   <title>Happily Ever After PH - Weddings, Wedding Planner, Ideas, Philippines</title>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___1810190389738408486_70196326186460'
+
+
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.0ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.9ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (42.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (157.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (102.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (275.7ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:46:28 -0500
+Processing by PageController#checklist as HTML
+  [1m[35mChecklist Load (1.1ms)[0m  SELECT "checklists".* FROM "checklists"
+  Rendered page/checklist.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 1077ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `google_webfonts_init' for #<#<Class:0x007fafb0813140>:0x007fafadf33338>):
+     7:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     8:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     9:   <%= csrf_meta_tags %>
+    10:   <%=google_webfonts_init({
+    11:     google: ['Oswald']
+    12:     })%>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___1810190389738408486_70196256936120'
+
+
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (146.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (114.6ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (273.8ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:48:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PageController#checklist as HTML
+  [1m[35mChecklist Load (1.4ms)[0m  SELECT "checklists".* FROM "checklists"
+  Rendered page/checklist.html.erb within layouts/application (58.9ms)
+  Rendered shared/_flash_messages.html.erb (1.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (191.7ms)
+Completed 200 OK in 2072ms (Views: 1868.1ms | ActiveRecord: 106.3ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/application.self-de3420f78acf3bc8c4ebb5212c22de0f12a9560204847c2a1628abacf135bd65.css?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:48:05 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:48:06 -0500
+
+
+Started GET "/page/about" for ::1 at 2016-02-20 22:48:11 -0500
+Processing by PageController#about as HTML
+  Rendered page/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flash_messages.html.erb (0.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (4.1ms)
+Completed 200 OK in 237ms (Views: 235.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:48:24 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.5ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (3.3ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.2ms)
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:48:44 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.4ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (2.8ms)
+  Rendered shared/_flash_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.1ms)
+Completed 200 OK in 88ms (Views: 87.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/application.self-de3420f78acf3bc8c4ebb5212c22de0f12a9560204847c2a1628abacf135bd65.css?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:48:44 -0500
+
+
+Started GET "/" for ::1 at 2016-02-20 22:48:53 -0500
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/weddinghome.jpg" for ::1 at 2016-02-20 22:48:53 -0500
+
+
+Started GET "/page/contact" for ::1 at 2016-02-20 22:50:27 -0500
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (3.8ms)
+Completed 200 OK in 690ms (Views: 688.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:50:30 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.6ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (6.5ms)
+  Rendered shared/_flash_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (3.4ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:53:27 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.9ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (13.5ms)
+  Rendered shared/_flash_messages.html.erb (0.2ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (5.0ms)
+Completed 200 OK in 3191ms (Views: 3182.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/application.self-4e765cd4c983a3386145f1403e52909461955f2103a310e0321de18b44bf726b.css?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:53:30 -0500
+
+
+Started GET "/page/contact" for ::1 at 2016-02-20 22:53:42 -0500
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 122ms (Views: 121.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:53:44 -0500
+Processing by PageController#checklist as HTML
+  [1m[35mChecklist Load (0.4ms)[0m  SELECT "checklists".* FROM "checklists"
+  Rendered page/checklist.html.erb within layouts/application (2.8ms)
+  Rendered shared/_flash_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/page/about" for ::1 at 2016-02-20 22:53:45 -0500
+Processing by PageController#about as HTML
+  Rendered page/about.html.erb within layouts/application (0.2ms)
+  Rendered shared/_flash_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 184ms (Views: 183.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/vendors" for ::1 at 2016-02-20 22:53:48 -0500
+Processing by PageController#vendors as HTML
+  [1m[36mVendor Load (1.2ms)[0m  [1mSELECT "vendors".* FROM "vendors"[0m
+  Rendered page/vendors.html.erb within layouts/application (4.8ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.5ms)
+Completed 200 OK in 757ms (Views: 696.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:53:56 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.4ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (4.6ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 103ms (Views: 101.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:56:48 -0500
+Processing by PageController#checklist as HTML
+  [1m[36mChecklist Load (0.7ms)[0m  [1mSELECT "checklists".* FROM "checklists"[0m
+  Rendered page/checklist.html.erb within layouts/application (8.2ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (4.1ms)
+Completed 200 OK in 933ms (Views: 930.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:56:49 -0500
+
+
+Started GET "/assets/page.self-7c2df7aed476903beb5f467815525ac7514bf5a00ff9c4d18f9545d718742eb4.css?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/application.self-4e765cd4c983a3386145f1403e52909461955f2103a310e0321de18b44bf726b.css?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-20 22:56:50 -0500
+
+
+Started GET "/" for ::1 at 2016-02-20 22:57:16 -0500
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.2ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 117ms (Views: 116.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/weddinghome.jpg" for ::1 at 2016-02-20 22:57:16 -0500
+
+
+Started GET "/page/checklist" for ::1 at 2016-02-20 22:57:19 -0500
+Processing by PageController#checklist as HTML
+  [1m[35mChecklist Load (0.4ms)[0m  SELECT "checklists".* FROM "checklists"
+  Rendered page/checklist.html.erb within layouts/application (3.7ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.2ms)
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/page/contact" for ::1 at 2016-02-20 22:57:20 -0500
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flash_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 111ms (Views: 110.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/faqs" for ::1 at 2016-02-20 22:57:21 -0500
+Processing by PageController#faqs as HTML
+  Rendered page/faqs.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flash_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/vendors" for ::1 at 2016-02-20 22:57:25 -0500
+Processing by PageController#vendors as HTML
+  [1m[35mVendor Load (0.6ms)[0m  SELECT "vendors".* FROM "vendors"
+  Rendered page/vendors.html.erb within layouts/application (1.6ms)
+  Rendered shared/_flash_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 93ms (Views: 91.2ms | ActiveRecord: 0.9ms)
