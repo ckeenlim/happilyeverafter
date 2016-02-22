@@ -1,5 +1,7 @@
 class PageController < ApplicationController
+  before_filter :set_search
   def home
+
   end
 
   def vendors
@@ -18,4 +20,6 @@ class PageController < ApplicationController
   def checklist
     @checklists = Checklist.all
   end
+
+
 end

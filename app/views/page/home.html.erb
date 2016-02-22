@@ -12,12 +12,28 @@
   			</div>
 
   			<div class="row" style="text-align: center;">
-  				<form action="" class="form-inline" style="border-bottom: none;">
-            <div class="form-group ">
-              <input type="text" class="form-control" id="searchText" placeholder="Reception, Photographers, etc.">
-            </div>
-            <button type="submit" class="btn btn-default">Find</button>
-          </form>
+
+
+
+  				<!--form action="" class="form-inline" style="border-bottom: none;"-->
+
+          <%= search_form_for @q, :html => {:class => "form-search",style:"border: none"}, url: search_vendors_path, method: :post do |f| %>
+            
+            <%= f.search_field :name_cont, :html => {:class => "form-control", :id => "searchText"} %>
+            <%= f.submit "Find", :html => {:class =>"btn btn-default"} %>
+          <% end %>
+
+          <!--/form-->
+
+
+
+            <!--div class="form-group ">
+              
+              <!--input type="text" class="form-control" id="searchText" placeholder="Reception, Photographers, etc."-->
+            <!--/div>
+            
+            <!--button type="submit" class="btn btn-default">Find</button-->
+          <!--/form-->
   			</div><!-- End row -->
   		</section>
   	</div><!--End Container-->

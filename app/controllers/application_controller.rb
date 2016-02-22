@@ -7,8 +7,9 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
- 
-
+def set_search
+@q=Vendor.search(params[:q])
+end
 
 
 

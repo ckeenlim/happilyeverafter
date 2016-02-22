@@ -1,0 +1,33 @@
+<div class="container">
+
+	<h1> Search Results </h1>
+
+	<table class = "table table-striped">
+	  <thead>
+	    <tr>
+	    	<th>Category </th>
+	      <th>Id</th>
+	      <th>Name</th>
+	      <th>Address</th>
+
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% if @vendors.nil? %>
+	  		<h1> no vendors yet </h1>
+	  	<% else %>
+		    <% @vendors.each do |vendor| %>
+		      <tr>
+		      	<td><%= vendor.categoryId %></td>
+		        <td><%= vendor.id %></td>
+		        <td><%= vendor.name %></td>
+		        <td><%= vendor.address %></td>
+		      </tr>
+		    <% end %>
+		  <% end %>
+	  </tbody>
+	</table>
+
+
+	
+<div>

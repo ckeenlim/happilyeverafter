@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
 
   resources :vendors do
-    collection { post :import }
+    collection { post :import}
+    collection { post :search, to:'vendors#search' }
   end
 
   devise_for :users
