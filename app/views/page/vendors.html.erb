@@ -25,7 +25,7 @@
 		      <tr>
 		      	<td><%= vendor.categoryId %></td>
 		        <td><%= vendor.id %></td>
-		        <td><%= vendor.name %></td>
+		        <td><%= link_to vendor.name, vendor_path(:id => vendor.id) %></td>
 		        <td><%= vendor.address %></td>
 		      </tr>
 		    <% end %>
