@@ -2,11 +2,14 @@
 
 	<h1> Search Results </h1>
 
+
+  <%= render partial: "shared/search_form" %> 
+
+
 	<table class = "table table-striped">
 	  <thead>
 	    <tr>
 	    	<th>Category </th>
-	      <th>Id</th>
 	      <th>Name</th>
 	      <th>Address</th>
 
@@ -19,8 +22,8 @@
 		    <% @vendors.each do |vendor| %>
 		      <tr>
 		      	<td><%= vendor.categoryId %></td>
-		        <td><%= vendor.id %></td>
-		        <td><%= vendor.name %></td>
+		       
+		        <td><%= link_to(vendor.name, vendor) %></td>
 		        <td><%= vendor.address %></td>
 		      </tr>
 		    <% end %>

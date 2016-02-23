@@ -1,2 +1,19 @@
-<h1>Vendors#show</h1>
-<p>Find me in app/views/vendors/show.html.erb</p>
+<div class="container">
+
+	<br>
+	<%= render partial: "shared/search_form" %>  
+	
+	<h1> Vendor </h1>
+
+	<div style="border-style: solid; border-width: 1px; margin: 5px 5px 5px 5px; padding: 5px 5px 5px 5px;">
+	<table id="VendorPage">
+
+			<% for attribute in @vendor.attributes.keys %>
+  			<p><%= attribute.humanize %> <%= @vendor.attributes[attribute].to_s %></p>
+			<% end %>
+
+	</table>
+
+	</div>
+
+</div>

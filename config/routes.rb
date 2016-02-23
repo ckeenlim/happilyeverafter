@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-
+  get '/vendors/search', to: 'page#vendors'
+  
   resources :vendors do
     collection { post :import}
     collection { post :search, to:'vendors#search' }
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   get 'page/faqs'
   get 'page/vendors'
   
-  post 'page/checklist' => 'checklist#import', :as => :import_checklist
+  match "vendor/search" => "vendors#index", via: [:get]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
