@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'page/faqs'
   get 'page/vendors'
   
+  post 'page/checklist' => 'checklist#import', :as => :import_checklist
   match "vendor/search" => "vendors#index", via: [:get]
 
 
