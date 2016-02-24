@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Vendors#edit</h1>
+<p>Find me in app/views/vendors/edit.html.erb</p>
+
+
+<%= simple_form_for @vendor do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :officeNo %>
+  <%= f.file_field :avatars, multiple: true %>
+  <%= f.button :submit %>
+<% end %>
+
+</div>

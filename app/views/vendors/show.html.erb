@@ -11,6 +11,25 @@
 			<% for attribute in @vendor.attributes.keys %>
   			<p><%= attribute.humanize %> <%= @vendor.attributes[attribute].to_s %></p>
 			<% end %>
+			<p>
+			babababab
+			</p>
+			<%= @vendor.avatars.to_json.html_safe %>
+
+			<p>
+			tatatata
+			</p>
+			<!--%= image_tag @vendor.avatars.to_s if @vendor.avatars.present? %-->
+			<%=  @vendor.avatars[0] %>
+			<br>
+			<%=  @vendor.avatars[0].current_path if @vendor.avatars.present? %>
+			<br>
+			<%= image_tag @vendor.avatars[0].url if @vendor.avatars.present?  %>
+
+
+
+			<%= link_to "EDIT",  edit_vendor_path(@vendor) %>
+
 
 	</table>
 

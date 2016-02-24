@@ -1,0 +1,11 @@
+<div class="container">
+
+<%= simple_form_for Vendor.new do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :officeNo %>
+  <%= f.file_field :avatars, multiple: true %>
+  <%= f.button :submit %>
+<% end %>
+
+</div>

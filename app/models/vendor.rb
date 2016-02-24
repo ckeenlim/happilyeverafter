@@ -1,6 +1,7 @@
 class Vendor < ActiveRecord::Base
+	mount_uploaders :avatars, AvatarUploader
+	
 	require 'csv'
-
 
 	def self.import(file)
 		CSV.foreach(file.path, headers: true) do |row|
