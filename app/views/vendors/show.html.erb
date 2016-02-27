@@ -1,12 +1,96 @@
+
 <div class="container">
 
 	<br>
 	<%= render partial: "shared/search_form" %>  
 	
-	<h1> Vendor </h1>
+	<h1> Vendor: <%= @vendor.name %> </h1>
+
+
+	<div class="container">
+		<div class="container-fluid">
+			<div class="panel col-xs-4 col-md-3">
+				<ul>
+					<li>
+						<div>
+						<%= image_tag @vendor.avatars[0].url , :class => "avatarClass" if @vendor.avatars.present?  %>
+						</div>
+					</li>
+
+					<li>
+						<div class= "panel panel-default">
+							<div class="panel-heading">
+								<strong> Rating: </strong> 
+								<span class="average-review-rating" data-score=<%= @average_review %>
+								>
+								</span>
+
+								<strong> Reviews: <span> <%= @vendor.reviews.count %></span></strong>
+								
+
+							</div>
+
+							<div class="panel-body">
+								Wordclass Photographer. Very Affordable. Always available.
+							</div>
+						</div>
+
+					</li>
+
+				</ul>
+			</div>
+
+		
+
+			
+			<div class="col-xs-6 col-md-8">
+			 <div class="wrapper">
+            <h1>Gallery</h1>
+
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li> <%= image_tag @vendor.avatars[0].url  if @vendor.avatars.present? %> </li>
+                        <li> <%= image_tag @vendor.avatars[1].url  if @vendor.avatars[1].present? %> </li>
+                        <li><%= image_tag @vendor.avatars[2].url  if @vendor.avatars[2].present? %> </li>
+                        <li><%= image_tag @vendor.avatars[3].url  if @vendor.avatars[3].present? %> </li>
+                        <li><img src="../_shared/img/img5.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="../_shared/img/img6.jpg" width="600" height="400" alt=""></li>
+                    </ul>
+                </div>
+
+                <p class="photo-credits">
+                    Photos by <a href="http://www.mw-fotografie.de">Marc Wiegelmann</a>
+                </p>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                
+                <p class="jcarousel-pagination">
+                    
+                </p>
+            </div>
+        </div>
+        </div>
+
+
+		</div>
+	</div>
+
+	<div>
+	<%= link_to "Add Review", new_vendor_review_path(@vendor) %>
+	</div>
+
+	<div>
+		<%= render @vendor.reviews %>
+	</div>
+
 
 	<div style="border-style: solid; border-width: 1px; margin: 5px 5px 5px 5px; padding: 5px 5px 5px 5px;">
+
 	<table id="VendorPage">
+
+
 
 			<% for attribute in @vendor.attributes.keys %>
   			<p><%= attribute.humanize %> <%= @vendor.attributes[attribute].to_s %></p>
@@ -36,3 +120,34 @@
 	</div>
 
 </div>
+
+<script>
+	$('.review-rating').raty({
+		readOnly: true,
+		score: function() {
+			return $(this).attr('data-score');
+		},
+		path: '/assets/'
+
+
+
+	}
+
+
+		);
+
+</script>
+
+
+<script>
+	$('.average-review-rating').raty({
+		readOnly: true,
+		path: '/assets/',
+		score: function() {
+			return $(this).attr('data-score')
+		}
+
+
+
+	});
+</script>

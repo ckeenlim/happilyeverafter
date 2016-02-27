@@ -33,6 +33,8 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'ransack', '~> 1.7'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem "mini_magick"
+
 ##########################
 
 # Use ActiveModel has_secure_password

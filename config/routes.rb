@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :vendors do
     collection { post :import}
     collection { post :search, to:'vendors#search' }
+    resources :reviews
   end
 
   devise_for :users
