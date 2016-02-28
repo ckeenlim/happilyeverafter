@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
 
   get 'vendors/search' => 'page#vendors'
+
   
   resources :vendors do
     collection { post :import}
     collection { post :search, to:'vendors#search' }
     resources :reviews
+
+    member do
+      post 'sendEmail'
+    end
+  
+    
+    
   end
 
   devise_for :users

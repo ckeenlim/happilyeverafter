@@ -22,4 +22,9 @@ class PageController < ApplicationController
   end
 
 
+  def contact_vendor
+
+  end
+
+
 end

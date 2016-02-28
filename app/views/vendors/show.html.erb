@@ -1,19 +1,18 @@
-
 <div class="container">
 
-	<br>
-	<%= render partial: "shared/search_form" %>  
-	
-	<h1> Vendor: <%= @vendor.name %> </h1>
-
-
 	<div class="container">
-		<div class="container-fluid">
+		
 			<div class="panel col-xs-4 col-md-3">
 				<ul>
 					<li>
 						<div>
 						<%= image_tag @vendor.avatars[0].url , :class => "avatarClass" if @vendor.avatars.present?  %>
+						
+						<!--% if @vendor.avatars.nil? %-->
+						<%= image_tag "happilyeverafterlogo2.png", :class => "avatarClass" %>
+
+
+						<!--% end%-->
 						</div>
 					</li>
 
@@ -24,15 +23,13 @@
 								<span class="average-review-rating" data-score=<%= @average_review %>
 								>
 								</span>
-
-								<strong> Reviews: <span> <%= @vendor.reviews.count %></span></strong>
+								<br>
+								<%= @vendor.reviews.count %></span><strong> Reviews <span> </strong>
 								
 
 							</div>
 
-							<div class="panel-body">
-								Wordclass Photographer. Very Affordable. Always available.
-							</div>
+							
 						</div>
 
 					</li>
@@ -40,10 +37,60 @@
 				</ul>
 			</div>
 
-		
-
-			
+			<!-- Information goes here -->
 			<div class="col-xs-6 col-md-8">
+				<h1> <%= @vendor.name %> </h1>
+
+				<ul>
+					<li>
+						<div class="panel-body">
+								Wordclass Photographer. Very Affordable. Always available.
+								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
+								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
+								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
+								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
+								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
+								g
+							</div>
+					</li>
+					<li>
+						Websites: <%= link_to "website", "http://#{@vendor.websiteUrl}", :target => "_blank" %>
+
+					</li>
+					<li>
+						Address: <%= @vendor.address %>
+
+					</li>
+
+					<li>
+						Contact Information: <%= @vendor.officeNo %>
+						
+						<%= @vendor.homeNo.nil? ? "" : @vendor.homeNo.to_s %>
+						<%= @vendor.cellNo.nil? ? "" : @vendor.cellNo.to_s %>
+						<%= @vendor.cellNoAlt1.nil? ? "" : @vendor.cellNoAlt1.to_s %>
+						<%= @vendor.cellNoAlt2.nil? ? "" : @vendor.cellNoAlt2.to_s %>
+						<%= @vendor.cellNoAlt3.nil? ? "" : @vendor.cellNoAlt3.to_s %>
+
+
+					</li>
+
+					<li>
+						email: <%= @vendor.emailAddress %>
+					</li>
+
+
+				</ul>
+
+		
+		</div>
+
+		</div>
+
+		
+		<div class="container">
+			<!-- Gallery Photos are here -->
+			
+			<div class="col-xs-12 col-md-8">
 			 <div class="wrapper">
             <h1>Gallery</h1>
 
@@ -72,17 +119,55 @@
             </div>
         </div>
         </div>
+    
+        <div class="col-xs-6 col-md-4">
+        	<h1> Contact Form </h1>
+
+        	<%= simple_form_for sendEmail_vendor_path do |f| %>
+
+        	<%= f.input "Email" %>
+        	<%= f.input "Message" %>
+        	<%= f.submit %>
+        	<% end %>
+
+        </div>
+    </div>
+		
+	
 
 
-		</div>
+	<div style="margin-bottom: 5px;">
+	<h1> Reviews </h1>
+	<br>
+	<%= link_to "Write a Review", new_vendor_review_path(@vendor), class: "btn btn-small btn-warning" %>
+
+
 	</div>
 
-	<div>
-	<%= link_to "Add Review", new_vendor_review_path(@vendor) %>
-	</div>
+	<div class="container">
+		<table class="table">
+		<tbody>
+		<% @reviews.each do |review |%>
+			<tr>
+				
+				
+				<td >
+					<div class="clearfix review-rating" data-score= <%= review.rating %>> 
+							<%= "#{review.user.email}" %>
+					</div>
+					<div>
+					<%= review.comment %> 
+					<%= link_to "Edit", edit_vendor_review_path(review.vendor, review) %>
+					<%= link_to "Delete", vendor_review_path(review.vendor, review), method: :delete, data: {confirm: "Are you sure?"} %>
+					</div>
+				</td>
 
-	<div>
-		<%= render @vendor.reviews %>
+			</tr>
+
+		<% end %>
+		</tbody>
+		</table>
+		<!--%= render @vendor.reviews %-->
 	</div>
 
 
@@ -112,6 +197,7 @@
 
 
 
+				
 			<%= link_to "EDIT",  edit_vendor_path(@vendor) %>
 
 

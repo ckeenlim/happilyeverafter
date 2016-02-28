@@ -8,6 +8,7 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id]) 
+    @reviews = Review.where(vendor_id: @vendor)
     if @vendor.reviews.blank?
       @average_review = 0
     else
@@ -54,6 +55,11 @@ class VendorsController < ApplicationController
 
   	redirect_to vendors_path,  notice: "Data imported. HEAP!"
 
+  end
+
+
+  def sendEmail
+    redirect_to @vendor, notice: "Email sent"
   end
 
   private

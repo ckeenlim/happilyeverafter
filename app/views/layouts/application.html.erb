@@ -31,7 +31,7 @@
  
 
 </head>
-<%= render partial: "shared/flash_messages", flash: flash %> 
+
 <body data-spy="scroll" data-target="#my-navbar">
 <%= render partial: "shared/top_nav" %>
 
@@ -45,3 +45,7 @@
 </body> 
 
 </html>
+
+<script>
+    $('.error_msgs').fadeOut(1800)
+  </script>
