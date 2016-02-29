@@ -3,13 +3,6 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
           <%= link_to "HEAP", root_path , { :class=>"navbar-brand" } %>
           <!--a href="" class="navbar-brand">HEAP</a-->
         </div><!-- Navbar Header-->
@@ -25,16 +18,6 @@
           <%= link_to "Join Now", new_user_registration_path, {:class => "btn btn-warning btn-sm navbar-btn navbar-right sessionBtn"} %>
           <!--a href="" class="btn btn-warning navbar-btn navbar-right">Join Now</a-->
         <% end %>
-
-
-        
-          <ul class="nav navbar-nav">
-            <li><a href="#searchContainer">Search</a> 
-            <li><a href="#gallery">Gallery</a> 
-            <li><a href="#features">Features</a> 
-            <li><a href="#faq">Faq</a> 
-            <li><a href="#contact">Contact Us</a> 
-          </ul>
         </div>
       </div><!-- End Container-->
     </nav><!-- End navbar -->
@@ -42,7 +25,8 @@
     <!-- jumbotron-->
 
     <div class="jumbotron">
-      <div class="container text-center">
+      <div class="container text-center" style="margin-top: none;">
+        <!--<%= image_tag("heap_logo.jpg", :alt => "Happily Ever After Ph") %>-->
         <h2 style="font: ">Happily Ever After Ph</h2>
       </div><!-- End container -->
     </div><!-- End jumbotron-->

@@ -18,10 +18,9 @@
   				<!--form action="" class="form-inline" style="border-bottom: none;"-->
           
           <%= search_form_for @q, :class => "form-inline", url: search_vendors_path, method: :post do |f| %>
-            
-            <%= f.text_field :name_cont, class: "form-control", placeholder: "Photographers, etc." %>
             <div class = "m-t-1">
-            <%= f.submit "Find", :class =>"btn btn-default" %>
+              <%= f.text_field :name_cont, class: "form-control", placeholder: "Photographers, etc." %>
+              <%= f.submit "Find", :class =>"btn btn-default" %>
             </div>
           <% end %>
 
