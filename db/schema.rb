@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227045648) do
+ActiveRecord::Schema.define(version: 20160303034624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "checklists", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "sortOrder"
-    t.integer  "supplierCategory"
-    t.integer  "importance"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "rating"
@@ -35,21 +25,25 @@ ActiveRecord::Schema.define(version: 20160227045648) do
     t.integer  "vendor_id"
   end
 
-  create_table "user_checklists", force: :cascade do |t|
-    t.integer  "userId"
-    t.integer  "checklistId"
-    t.string   "statusCd"
-    t.string   "supplierId"
-    t.decimal  "totalCostAmt"
-    t.decimal  "paidAmt"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "user_id"
-    t.integer  "checklist_id"
+  create_table "todo_items", force: :cascade do |t|
+    t.string   "item"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_index "user_checklists", ["checklist_id"], name: "index_user_checklists_on_checklist_id", using: :btree
-  add_index "user_checklists", ["user_id"], name: "index_user_checklists_on_user_id", using: :btree
+  create_table "user_todo_items", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "todo_item_id"
+    t.datetime "completed_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "item"
+    t.text     "description"
+  end
+
+  add_index "user_todo_items", ["todo_item_id"], name: "index_user_todo_items_on_todo_item_id", using: :btree
+  add_index "user_todo_items", ["user_id"], name: "index_user_todo_items_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -91,6 +85,6 @@ ActiveRecord::Schema.define(version: 20160227045648) do
     t.json     "avatars"
   end
 
-  add_foreign_key "user_checklists", "checklists"
-  add_foreign_key "user_checklists", "users"
+  add_foreign_key "user_todo_items", "todo_items"
+  add_foreign_key "user_todo_items", "users"
 end

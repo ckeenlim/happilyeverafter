@@ -1,18 +1,16 @@
-<div class="container">
+
 
 	<div class="container">
 		
 			<div class="panel col-xs-4 col-md-3">
 				<ul>
 					<li>
-						<div>
-						<%= image_tag @vendor.avatars[0].url , :class => "avatarClass" if @vendor.avatars.present?  %>
-						
-						<!--% if @vendor.avatars.nil? %-->
-						<%= image_tag "happilyeverafterlogo2.png", :class => "avatarClass" %>
-
-
-						<!--% end%-->
+						<div class="avatarDiv">
+							<% if @vendor.avatars.present? %>
+								<%= image_tag @vendor.avatars[0].url , :class => "avatarClass"   %>
+							<%else%>
+								<%= image_tag "happilyeverafterlogo2.png", :class => "avatarClass" %>
+							<% end%>
 						</div>
 					</li>
 
@@ -24,23 +22,16 @@
 								>
 								</span>
 								<br>
-								<%= @vendor.reviews.count %></span><strong> Reviews <span> </strong>
-								
-
+								<%= @vendor.reviews.count %></span><strong> Reviews </strong>
 							</div>
-
-							
 						</div>
-
 					</li>
-
 				</ul>
 			</div>
 
 			<!-- Information goes here -->
 			<div class="col-xs-6 col-md-8">
 				<h1> <%= @vendor.name %> </h1>
-
 				<ul>
 					<li>
 						<div class="panel-body">
@@ -51,7 +42,7 @@
 								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
 								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
 								g
-							</div>
+						</div>
 					</li>
 					<li>
 						Websites: <%= link_to "website", "http://#{@vendor.websiteUrl}", :target => "_blank" %>
@@ -64,76 +55,55 @@
 
 					<li>
 						Contact Information: <%= @vendor.officeNo %>
-						
 						<%= @vendor.homeNo.nil? ? "" : @vendor.homeNo.to_s %>
 						<%= @vendor.cellNo.nil? ? "" : @vendor.cellNo.to_s %>
 						<%= @vendor.cellNoAlt1.nil? ? "" : @vendor.cellNoAlt1.to_s %>
 						<%= @vendor.cellNoAlt2.nil? ? "" : @vendor.cellNoAlt2.to_s %>
 						<%= @vendor.cellNoAlt3.nil? ? "" : @vendor.cellNoAlt3.to_s %>
-
-
 					</li>
 
 					<li>
 						email: <%= @vendor.emailAddress %>
 					</li>
-
-
 				</ul>
+			</div>
+		</div>
 
 		
-		</div>
-
-		</div>
 
 		
 		<div class="container">
 			<!-- Gallery Photos are here -->
 			
 			<div class="col-xs-12 col-md-8">
-			 <div class="wrapper">
-            <h1>Gallery</h1>
+			 
+      </div>
 
-            <div class="jcarousel-wrapper">
-                <div class="jcarousel">
-                    <ul>
-                        <li> <%= image_tag @vendor.avatars[0].url  if @vendor.avatars.present? %> </li>
-                        <li> <%= image_tag @vendor.avatars[1].url  if @vendor.avatars[1].present? %> </li>
-                        <li><%= image_tag @vendor.avatars[2].url  if @vendor.avatars[2].present? %> </li>
-                        <li><%= image_tag @vendor.avatars[3].url  if @vendor.avatars[3].present? %> </li>
-                        <li><img src="../_shared/img/img5.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="../_shared/img/img6.jpg" width="600" height="400" alt=""></li>
-                    </ul>
-                </div>
-
-                <p class="photo-credits">
-                    Photos by <a href="http://www.mw-fotografie.de">Marc Wiegelmann</a>
-                </p>
-
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                
-                <p class="jcarousel-pagination">
-                    
-                </p>
-            </div>
-        </div>
-        </div>
     
         <div class="col-xs-6 col-md-4">
-        	<h1> Contact Form </h1>
+        	<h2> Contact This Vendor </h2>
 
-        	<%= simple_form_for sendEmail_vendor_path do |f| %>
+        	<%= simple_form_for Contact.new do |f| %>
+    			<%= f.input :name, :required => true %>
+    			<%= f.input :email, :required => true %>
+    			<%= f.input :message, :as => :text, :required => true %>
+    			<div class= "hidden">
+      			<%= f.input :nickname, :hint => 'Leave this field blank!' %>
+			    </div>
+			    <div>
+			      </br>
+			      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+			    </div>
+  				<% end %>
 
-        	<%= f.input "Email" %>
-        	<%= f.input "Message" %>
-        	<%= f.submit %>
-        	<% end %>
+
 
         </div>
-    </div>
+  </div>
+ 
 		
 	
+	<div class="container">
 
 
 	<div style="margin-bottom: 5px;">
@@ -144,7 +114,6 @@
 
 	</div>
 
-	<div class="container">
 		<table class="table">
 		<tbody>
 		<% @reviews.each do |review |%>
@@ -171,41 +140,15 @@
 	</div>
 
 
-	<div style="border-style: solid; border-width: 1px; margin: 5px 5px 5px 5px; padding: 5px 5px 5px 5px;">
-
-	<table id="VendorPage">
-
-
-
-			<% for attribute in @vendor.attributes.keys %>
-  			<p><%= attribute.humanize %> <%= @vendor.attributes[attribute].to_s %></p>
-			<% end %>
-			<p>
-			babababab
-			</p>
-			<%= @vendor.avatars.to_json.html_safe %>
-
-			<p>
-			tatatata
-			</p>
-			<!--%= image_tag @vendor.avatars.to_s if @vendor.avatars.present? %-->
-			<%=  @vendor.avatars[0] %>
-			<br>
-			<%=  @vendor.avatars[0].current_path if @vendor.avatars.present? %>
-			<br>
-			<%= image_tag @vendor.avatars[0].url if @vendor.avatars.present?  %>
-
 
 
 				
 			<%= link_to "EDIT",  edit_vendor_path(@vendor) %>
 
 
-	</table>
-
-	</div>
-
 </div>
+</div>
+
 
 <script>
 	$('.review-rating').raty({

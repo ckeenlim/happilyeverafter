@@ -1,0 +1,15 @@
+<div class="container">
+	
+
+	<%= form_tag generate_user_todo_items_path do %>
+	<%= submit_tag "Generate items" %>
+	<% end %>
+	<br>
+	<h2> Checklist </h2>
+	<% @user_todo_items.each do |t| %>
+		<%= t.item %>
+		<br>
+
+	<% end %>
+
+</div>

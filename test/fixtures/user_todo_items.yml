@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  todo_item_id: 
+  completed_at: 2016-03-02 19:42:06
+
+two:
+  user_id: 
+  todo_item_id: 
+  completed_at: 2016-03-02 19:42:06

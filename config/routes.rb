@@ -1,35 +1,43 @@
 Rails.application.routes.draw do
 
   get 'vendors/search' => 'page#vendors'
-
+  
   
   resources :vendors do
     collection { post :import}
     collection { post :search, to:'vendors#search' }
-    resources :reviews
 
-    member do
-      post 'sendEmail'
-    end
-  
     
-    
+    resources :reviews
   end
 
-  devise_for :users
+  devise_for :users 
+
  
   root 'page#home'
 
   get 'page/about'
   get 'page/checklist'
-  
+
+  #resources :user_checklists
+  #resources :checklists 
+   
+
+  resources :user_todo_items do
+    collection { post :generate, to:'user_todo_items#generate'}
+
+  end
 
   get 'page/contact'
   get 'page/faqs'
   get 'page/vendors'
   
-  post 'page/checklist' => 'checklist#import', :as => :import_checklist
+  #post 'page/checklist' => 'checklist#import', :as => :import_checklist
 
+ 
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
