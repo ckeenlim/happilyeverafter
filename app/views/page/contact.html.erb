@@ -1,19 +1,33 @@
 <div class="container"> 
-<div align="center">
-  <h3>Contact Us</h3>
+  <div class="wrapper-heading" align="center">
+    <br>
+    <div> <h4 style="margin-top:0; margin-bottom: 0; line-height: 1.1; font-family: roboto, sans-serif;">
+              GET IN TOUCH
+          </h4>
+    </div>
+    <div style="margin-top: 5px;"> <h2 style="margin-top: 10px;">SEND US A MESSAGE</h2> </div>
+  </div>
 
-  <%= simple_form_for @contact do |f| %>
-    <%= f.input :name, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :message, :as => :text, :required => true %>
-    <div class= "hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-    </div>
-    <div>
-      </br>
-      <%= f.button :submit, 'Send message', :class=> "btn btn-primary hidden" %>
-    </div>
-  <% end %>
-</div>
+  <div class="container">
+
+    <%= simple_form_for @contact do |f| %>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-1">
+          <%= f.input :name, :required => true %>
+          <%= f.input :email, :required => true %>
+          <%= f.input :subject, :required => true%>
+        </div>
+        <div class ="col-sm-6">
+          <%= f.input :message, :as => :text, :required => true, :input_html => {'rows' => 8 } %>
+        </div>
+      </div>
+
+      <div>
+        <br>
+        <%= f.button :submit, 'Send message', :class=> "btn btn-primary hidden" %>
+      </div>
+    <% end %>
+
+  </div>
 
 </div>

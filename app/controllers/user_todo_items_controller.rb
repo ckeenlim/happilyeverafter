@@ -3,6 +3,9 @@ class UserTodoItemsController < ApplicationController
 
 	def index
 		@user_todo_items = UserTodoItem.where('user_id' => current_user.id).order(:todo_item_id)
+		if !@user_todo_items.any?
+			generate
+		end
 		#user_todo_items = TodoItem.includes(:user_todo_items => :users).where('user_id' => current_user.id)
 	end
 
@@ -20,7 +23,7 @@ class UserTodoItemsController < ApplicationController
 			@User_Todo_Item.save!
 		end
 
-		redirect_to user_todo_items_path
+		#redirect_to user_todo_items_path
 	end
 
 	def complete

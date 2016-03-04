@@ -1,0 +1,12 @@
+<div class="container">
+
+POSTS/FORUMS
+
+
+<% @posts.each do |p| %>
+	<div class="table">
+		<tr> <%= link_to p.title, post_path(:id => p.id) %> </tr>
+	</div>
+<% end %>
+
+</div>
