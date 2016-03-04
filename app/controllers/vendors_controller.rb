@@ -1,6 +1,6 @@
 class VendorsController < ApplicationController
-  before_action :find_vendor
-  before_filter :set_search
+#  before_action :find_vendor
+#  before_filter :set_search
   
   def index
   	@vendors = Vendor.all.paginate(:page => params[:page])

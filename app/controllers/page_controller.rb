@@ -21,5 +21,10 @@ class PageController < ApplicationController
     @checklists = Checklist.all
   end
 
+  def listings
+    @categories = Category.all
+    @locations = Location.all
+    @vendors = Vendor.all.paginate(:page => params[:page])
+  end
 
 end

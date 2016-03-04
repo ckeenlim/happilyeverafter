@@ -1,0 +1,141 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <form>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-info">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#collapseCategory">
+                            <h4 class="panel-title accordion-toggle">Category</h4>
+                        </div>
+                        <div id="collapseCategory" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                            	
+								<div>
+									<input type="checkbox" id="allCategories">
+									<label for="allCategories">
+                                        All Categories
+                                    </label>
+								</div>	
+								
+								<% @categories.each do |category| %>
+								<div>
+									<input type="checkbox" id="<%= category.name %>">
+									<label for="<%= category.name %>">
+                                        <%= category.name %>
+                                    </label>
+								</div>	
+								<% end %>
+								
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#collapsePrice">
+                            <h4 class="panel-title accordion-toggle">Price</h4>
+                        </div>
+                        <div id="collapsePrice" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <input type="text" name="price" data-provide="slider" data-slider-min="1" data-slider-max="999999999" data-slider-step="1" data-slider-value="999999999" data-slider-tooltip="show">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#collapseLocation">
+                            <h4 class="panel-title accordion-toggle">Location</h4>
+                        </div>
+                        <div id="collapseLocation" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                            	
+								<div>
+									<input type="checkbox" id="allLocations">
+									<label for="allLocations">
+                                        All Locations
+                                    </label>
+								</div>
+								
+								<% @locations.each do |location| %>
+								<div>
+									<input type="checkbox" id="<%= location.name %>">
+									<label for="<%= location.name %>">
+                                        <%= location.name %>
+                                    </label>
+								</div>	
+								<% end %>
+								
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#collapseSearch">
+                            <h4 class="panel-title accordion-toggle">Search</h4>
+                        </div>
+                        <div id="collapseSearch" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <input type="search" placeholder="hanapin dito..."><input type="submit" class="btn btn-info" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-9">
+        	
+    			<div class="well well-sm">
+        			<strong>Category Title</strong>
+        			<div class="btn-group">
+            			<a href="#" id="list" class="btn btn-default btn-sm">
+            				<span class="glyphicon glyphicon-th-list"></span>
+								List
+						</a>
+						<a href="#" id="grid" class="btn btn-default btn-sm">
+							<span class="glyphicon glyphicon-th"></span>
+								Grid
+						</a>
+        			</div>
+    			</div>
+				
+    			<div id="vendors" class="row list-group">
+    				<% @vendors.each do |vendor| %>
+					<div class="item col-xs-4 col-lg-4">
+						<div class="thumbnail">
+			                <img class="group list-group-image" src="http://placehold.it/300x200/000/fff" alt="" />
+			                <div class="caption">
+			                    <h4 class="group inner list-group-item-heading textellipsis">
+			                        <%= link_to vendor.name, vendor_path(:id => vendor.id) %></h4>
+			                    <p class="group inner list-group-item-text textellipsis">
+			                        <%= vendor.address %>&nbsp;</p>
+								<div class="textellipsis"><%= vendor.emailAddress %>&nbsp;</div>
+								<div class="textellipsis"><%= vendor.websiteUrl %>&nbsp;</div>
+								<br>
+								<!--div>
+		                            <div class="ratings">
+				                        <p class="pull-right">3 reviews</p>
+				                        <p>
+				                            <span class="glyphicon glyphicon-star"></span>
+				                            <span class="glyphicon glyphicon-star"></span>
+				                            <span class="glyphicon glyphicon-star"></span>
+				                            <span class="glyphicon glyphicon-star"></span>
+				                            <span class="glyphicon glyphicon-star-empty"></span>
+				                            4.0 stars
+				                        </p>
+				                    </div>
+		                        </div-->
+								<br>
+			                    <div class="row">
+			                    	<div class="col-xs-12 col-md-4 col-lg-4">
+			                            &nbsp;
+			                        </div>
+			                    	<div class="col-xs-12 col-md-4 col-lg-4">
+			                            <a class="btn btn-success" href="#">Add to Checklist</a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+					</div>
+					<% end %>		
+				</div>
+			
+			<%= will_paginate @vendors, renderer:BootstrapPagination::Rails, previous_label:"<<", next_label:">>", inner_window:1, outer_window:0%>
+        </div>
+    </div>
+</div>
