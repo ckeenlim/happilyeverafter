@@ -12,24 +12,59 @@
         <% if user_signed_in? %>
           <%= link_to "Log Out", destroy_user_session_path , :method => :delete, :class=> "btn btn-primary btn-sm navbar-btn navbar-right"%>
         <% else %>
-          <%= link_to "Log in", new_user_session_path, {:class => "btn btn-primary btn-sm navbar-btn navbar-right sessionBtn"} %>
+          <%= link_to "Log in", new_user_session_path, {:class => "btn btn-primary btn-sm navbar-btn navbar-right sessionBtn", 'data-target' => "#login-modal", 'data-toggle' => "modal"} %>
           <!--a href="" class="btn btn-primary navbar-btn navbar-right">Log in</a-->
           <span> :: </span>s
-          <%= link_to "Join Now", new_user_registration_path, {:class => "btn btn-warning btn-sm navbar-btn navbar-right sessionBtn"} %>
+          <%= link_to "Join Now", new_user_registration_path, {:class => "btn btn-warning btn-sm navbar-btn navbar-right sessionBtn", 'data-target' => "#join-modal", 'data-toggle' => "modal"} %>
           <!--a href="" class="btn btn-warning navbar-btn navbar-right">Join Now</a-->
         <% end %>
         </div>
       </div><!-- End Container-->
     </nav><!-- End navbar -->
+    
+    <!-- Login Modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h1>Login to Your Account</h1><br>
+          <form>
+            <input type="text" name="user" placeholder="Username">
+            <input type="password" name="pass" placeholder="Password">
+            <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          </form>
+          <div class="login-help">
+            <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="join-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="joinmodal-container">
+          <h1>Sign up Now!</h1><br>
+          <form>
+            <input type="text" name="user" placeholder="Email">
+            <input type="text" name="pass" placeholder="Password">
+            <input type="text" name="passconf" placeholder="Re-type your password">
+            <input type="submit" name="join" class="join joinmodal-submit" value="Sign Up">
+          </form>
+          <div class="join-help">
+            <a href="#">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- jumbotron-->
 
-    <div class="jumbotron">
-      <div class="container text-center" style="margin-top: none;">
-        <!--<%= image_tag("heap_logo.jpg", :alt => "Happily Ever After Ph") %>-->
-        <h2 style="font: ">Happily Ever After Ph</h2>
+    <!--<div class="jumbotron">-->
+      <div class="container text-center" style="margin-top: 20px;">
+        <%= image_tag("heap_logo2.jpg", :alt => "Happily Ever After Ph") %>
+        <!--<h2 style="font: ">Happily Ever After Ph</h2>-->
       </div><!-- End container -->
-    </div><!-- End jumbotron-->
+    <!--</div>--><!-- End jumbotron-->
 
     <!-- Menu -->
     <nav class="navbar navbar-inverse" id="myNavMenu">
@@ -41,7 +76,7 @@
           </li>
           <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Vendors<b class="caret"></b></a>
-            <ul class="dropdown-menu" id="menu1">
+            <ul class="dropdown-menu">
             <li>
               <a href="#">Churches <i class="icon-arrow-right"></i></a>
               <ul class="dropdown-menu sub-menu">
