@@ -12,6 +12,4 @@ def set_search
 end
 
 
-
-
 end

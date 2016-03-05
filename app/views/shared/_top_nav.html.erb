@@ -12,7 +12,7 @@
         <% if user_signed_in? %>
           <%= link_to "Log Out", destroy_user_session_path , :method => :delete, :class=> "btn btn-primary btn-sm navbar-btn navbar-right"%>
         <% else %>
-          <%= link_to "Log in", new_user_session_path, {:class => "btn btn-primary btn-sm navbar-btn navbar-right sessionBtn", 'data-target' => "#login-modal", 'data-toggle' => "modal"} %>
+          <%= link_to "Log in", "#login-modal" , {:class => "btn btn-primary btn-sm navbar-btn navbar-right sessionBtn", 'data-toggle' => "modal"} %>
           <!--a href="" class="btn btn-primary navbar-btn navbar-right">Log in</a-->
           <span> :: </span>s
           <%= link_to "Join Now", new_user_registration_path, {:class => "btn btn-warning btn-sm navbar-btn navbar-right sessionBtn", 'data-target' => "#join-modal", 'data-toggle' => "modal"} %>
@@ -27,14 +27,12 @@
       <div class="modal-dialog">
         <div class="loginmodal-container">
           <h1>Login to Your Account</h1><br>
-          <form>
-            <input type="text" name="user" placeholder="Username">
-            <input type="password" name="pass" placeholder="Password">
-            <input type="submit" name="login" class="login loginmodal-submit" value="Login">
-          </form>
-          <div class="login-help">
-            <a href="#">Register</a> - <a href="#">Forgot Password</a>
-          </div>
+          <%= simple_form_for(:user, :url => session_path(:user)) do |f| %>
+            <%= f.input :email %>
+            <%= f.input :password %>            
+            <%= f.submit "Login", :class => "login loginmodal-submit"  %>
+            <%= link_to "Forgot your password?", new_password_path(:user) %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -44,15 +42,12 @@
       <div class="modal-dialog">
         <div class="joinmodal-container">
           <h1>Sign up Now!</h1><br>
-          <form>
-            <input type="text" name="user" placeholder="Email">
-            <input type="text" name="pass" placeholder="Password">
-            <input type="text" name="passconf" placeholder="Re-type your password">
-            <input type="submit" name="join" class="join joinmodal-submit" value="Sign Up">
-          </form>
-          <div class="join-help">
-            <a href="#">Login</a>
-          </div>
+          <%= simple_form_for(:user, :url => registration_path(:user)) do |f| %>
+            <%= f.input :email , autofocus: true, class: "form-control", required: true %>
+            <%= f.input :password,class: "form-control",  required: true  %>            
+            <%= f.input :password_confirmation, class: "form-control", required: true %>
+            <%= f.submit "Sign Up", :class => "join joinmodal-submit"  %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -95,7 +90,7 @@
               <li><a href="#">Catering</a></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "See all categories", page_vendors_path %>
+                <%= link_to "See all categories", page_listings_path %>
                 <!--a href="#">See all categories</a-->
               </li>
 
