@@ -1,5 +1,6 @@
 class Vendor < ActiveRecord::Base
 	has_many :reviews
+	has_many :locations
 	mount_uploaders :avatars, AvatarUploader
 	
 	require 'csv'
