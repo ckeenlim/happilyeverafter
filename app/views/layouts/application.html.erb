@@ -6,6 +6,8 @@
   <title>Happilyeverafter - Weddings, Wedding Planner, Ideas, Philippines</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js' %>
+  
   <%= csrf_meta_tags %>
  
 
@@ -26,6 +28,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
@@ -44,3 +47,8 @@
 </body> 
 
 </html>
+
+
+<script>
+    $('.error_msgs').fadeOut(1800)
+  </script>

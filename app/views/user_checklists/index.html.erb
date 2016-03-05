@@ -1,0 +1,13 @@
+<div class="container">
+<% @checklists.each do |c| %>
+	<h4> <%= c.name %> </h4>
+	
+		<!--% c.user_checklists.select {|user_checklist| user_checklist.user_id == current_user.id}.each do |f| %-->
+		<% c.user_checklists.select {|user_checklist| user_checklist.user_id == current_user.id}.each do |f| %>
+		<p> <%= f.item %> </p>
+
+		<% end %>
+
+
+<% end %>
+</div>

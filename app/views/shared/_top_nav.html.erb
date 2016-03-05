@@ -103,11 +103,12 @@
             <%= link_to "Contact Us", page_contact_path %>
             <!--a href="#">Contact Us</a-->
           </li>
-
+          <% if user_signed_in? %>
           <li class="dropdown">
-            <%= link_to "My Checklist", page_checklist_path %>
+            <%= link_to "My Checklist", user_todo_items_path%>
             <!--a href="#">Contact Us</a-->
           </li>
+          <% end %>
         </ul>
       </div>
     </nav><!-- End of Menu -->

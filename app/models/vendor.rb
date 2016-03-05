@@ -1,7 +1,8 @@
 class Vendor < ActiveRecord::Base
-	mount_uploaders :avatars, AvatarUploader
+	has_many :reviews
 	has_many :locations
-  
+	mount_uploaders :avatars, AvatarUploader
+	
 	require 'csv'
 
 	def self.import(file)

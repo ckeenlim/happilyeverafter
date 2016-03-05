@@ -1,6 +1,33 @@
 <div class="container"> 
-<h1>Contact Us</h1>
-<p>Curabitur aliquet velit id nibh mollis fermentum. Nullam laoreet lorem a diam venenatis tristique. Maecenas tempor condimentum fermentum. Nullam bibendum quam id quam gravida, id consequat mi suscipit. In efficitur tortor ut purus tempor, placerat varius purus lacinia. Integer lobortis felis sit amet velit lobortis pulvinar. Etiam facilisis, quam ut blandit suscipit, nisi velit tristique nibh, cursus euismod arcu justo in ligula. Fusce semper ullamcorper consectetur. Suspendisse fringilla mauris erat, at ultricies odio consectetur sed. Nam ante turpis, euismod nec velit eget, aliquet sodales arcu. Mauris tristique euismod ante, ac sollicitudin est. Donec porttitor ex vel eros volutpat egestas. Donec non viverra lorem, vel semper sem.
-</p>
+  <div class="wrapper-heading" align="center">
+    <br>
+    <div> <h4 style="margin-top:0; margin-bottom: 0; line-height: 1.1; font-family: roboto, sans-serif;">
+              GET IN TOUCH
+          </h4>
+    </div>
+    <div style="margin-top: 5px;"> <h2 style="margin-top: 10px;">SEND US A MESSAGE</h2> </div>
+  </div>
+
+  <div class="container">
+
+    <%= simple_form_for @contact do |f| %>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-1">
+          <%= f.input :name, :required => true %>
+          <%= f.input :email, :required => true %>
+          <%= f.input :subject, :required => true%>
+        </div>
+        <div class ="col-sm-6">
+          <%= f.input :message, :as => :text, :required => true, :input_html => {'rows' => 8 } %>
+        </div>
+      </div>
+
+      <div>
+        <br>
+        <%= f.button :submit, 'Send message', :class=> "btn btn-primary hidden" %>
+      </div>
+    <% end %>
+
+  </div>
 
 </div>

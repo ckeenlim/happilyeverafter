@@ -27,4 +27,11 @@ class PageController < ApplicationController
     @vendors = Vendor.all.paginate(:page => params[:page])
   end
 
+
+  def contact_vendor
+
+  end
+
+
 end
+
