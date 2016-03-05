@@ -15,10 +15,16 @@ class PageController < ApplicationController
   end
 
   def contact
+    @contact = Contact.new
   end
 
   def checklist
     @checklists = Checklist.all
+  end
+
+
+  def contact_vendor
+
   end
 
 
