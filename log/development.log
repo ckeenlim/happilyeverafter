@@ -1,0 +1,396 @@
+
+
+Started GET "/page/listings" for ::1 at 2016-03-04 21:41:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PageController#listings as HTML
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35mVendor Load (1.0ms)[0m  SELECT  "vendors".* FROM "vendors" LIMIT 30 OFFSET 0
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  Rendered page/listings.html.erb within layouts/application (71.1ms)
+  Rendered shared/_flash_messages.html.erb (0.7ms)
+  Rendered shared/_top_nav.html.erb (8.5ms)
+Completed 200 OK in 3007ms (Views: 2838.1ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/application.self-58e68448637ad2242eb8043e799de8001d2513b0c7a36754c7b688d22b2f3c3a.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/bootstrap-slider.min.self-5e85c5e5df686eeccb76359b9067fc7afe08e363219828892d9fc6eab60ccc33.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/page.self-461284375ec29ed623ac3bc6713e6ea5d764aa1dbe83c4051c3fcd3a7cf85172.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/user_todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/vendors.self-a7d127e8e21d519708c194fa488e27bdaf6cf64169bbe845a0d65cab56a3eced.css?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-04 21:41:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap-slider.min.self-d09bf6267e3d184dcb62191a4e6f38c74ce681b3f9e3bbf8c96e02045e4f4723.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/listings.self-5ea1aea0520a7c7777851cde6e77a0934acf862a78da76a92184a5d7375b62c3.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/jquery.raty.self-eb7045c9858acfa4797981589f870a37b0dc801327e96148473cad672c94b9b8.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/user_todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/assets/heap_logo2-ab8a5274eaa4b90f3430d68f9ecc1c3a33d09ada7ae8b4395cbb19eb266724a6.jpg" for ::1 at 2016-03-04 21:41:46 -0500
+
+
+Started GET "/vendors/501" for ::1 at 2016-03-04 21:42:18 -0500
+Processing by VendorsController#show as HTML
+  Parameters: {"id"=>"501"}
+  [1m[35mVendor Load (0.7ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1  [["id", 501]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", "501"]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."vendor_id" = $1  [["vendor_id", 501]]
+  [1m[36m (37.2ms)[0m  [1mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."vendor_id" = $1[0m  [["vendor_id", 501]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."vendor_id" = $1  [["vendor_id", 501]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."vendor_id" = 501[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mVendor Load (0.4ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", 501]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", 501]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", 501]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", 501]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", 501]]
+  Rendered vendors/show.html.erb within layouts/application (487.3ms)
+  Rendered shared/_flash_messages.html.erb (0.6ms)
+  Rendered shared/_top_nav.html.erb (16.0ms)
+Completed 200 OK in 1068ms (Views: 883.8ms | ActiveRecord: 43.8ms)
+
+
+Started GET "/page/contact" for ::1 at 2016-03-04 21:42:32 -0500
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (23.4ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    10: 
+    11:   <div class="container">
+    12: 
+    13:     <%= simple_form_for @contact do |f| %>
+    14:       <div class="row">
+    15:         <div class="col-sm-4 col-sm-offset-1">
+    16:           <%= f.input :name, :required => true %>
+  app/views/page/contact.html.erb:13:in `_app_views_page_contact_html_erb___2500640083280132966_70112347013720'
+
+
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (101.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.8ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (216.5ms)
+
+
+Started GET "/page/contact" for ::1 at 2016-03-04 21:42:33 -0500
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    10: 
+    11:   <div class="container">
+    12: 
+    13:     <%= simple_form_for @contact do |f| %>
+    14:       <div class="row">
+    15:         <div class="col-sm-4 col-sm-offset-1">
+    16:           <%= f.input :name, :required => true %>
+  app/views/page/contact.html.erb:13:in `_app_views_page_contact_html_erb___2500640083280132966_70112351078540'
+
+
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.6ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.1ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (129.8ms)
+
+
+Started GET "/page/faqs" for ::1 at 2016-03-04 21:42:42 -0500
+Processing by PageController#faqs as HTML
+  Rendered page/faqs.html.erb within layouts/application (0.4ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  Rendered shared/_top_nav.html.erb (16.0ms)
+Completed 200 OK in 378ms (Views: 377.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/about" for ::1 at 2016-03-04 21:42:46 -0500
+Processing by PageController#about as HTML
+  Rendered page/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  Rendered shared/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 117ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-04 21:42:48 -0500
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (1.8ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  Rendered shared/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 121ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/weddinghome.jpg" for ::1 at 2016-03-04 21:42:48 -0500
+
+
+Started POST "/vendors/search" for ::1 at 2016-03-04 21:42:53 -0500
+Processing by VendorsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xbAyhh6gpVSW3O65FxVsArzY9nTX0VwYi5HrMZ/1CSWTHiAOBdqPcclzyL1JU+R/jJr8wOG9cUhNfVLinG4tSw==", "q"=>{"name_cont"=>"test"}, "commit"=>"Find"}
+  Rendered shared/_search_form.html.erb (7.4ms)
+  [1m[35mVendor Load (57.8ms)[0m  SELECT "vendors".* FROM "vendors" WHERE ("vendors"."name" ILIKE '%test%')
+  Rendered vendors/search.html.erb within layouts/application (95.2ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  Rendered shared/_top_nav.html.erb (2.2ms)
+Completed 200 OK in 236ms (Views: 167.9ms | ActiveRecord: 62.8ms)
+
+
+Started GET "/page/contact" for ::1 at 2016-03-04 21:43:07 -0500
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    10: 
+    11:   <div class="container">
+    12: 
+    13:     <%= simple_form_for @contact do |f| %>
+    14:       <div class="row">
+    15:         <div class="col-sm-4 col-sm-offset-1">
+    16:           <%= f.input :name, :required => true %>
+  app/views/page/contact.html.erb:13:in `_app_views_page_contact_html_erb___2500640083280132966_70112351078540'
+
+
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (161.7ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tan/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (214.5ms)
+
+
+Started GET "/page/contact" for ::1 at 2016-03-04 21:46:53 -0500
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (13.5ms)
+  Rendered shared/_flash_messages.html.erb (0.1ms)
+  Rendered shared/_top_nav.html.erb (39.1ms)
+Completed 200 OK in 876ms (Views: 859.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap-slider.min.self-5e85c5e5df686eeccb76359b9067fc7afe08e363219828892d9fc6eab60ccc33.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/page.self-461284375ec29ed623ac3bc6713e6ea5d764aa1dbe83c4051c3fcd3a7cf85172.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/user_checklist.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/user_todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/vendors.self-a7d127e8e21d519708c194fa488e27bdaf6cf64169bbe845a0d65cab56a3eced.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/application.self-58e68448637ad2242eb8043e799de8001d2513b0c7a36754c7b688d22b2f3c3a.css?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap-slider.min.self-d09bf6267e3d184dcb62191a4e6f38c74ce681b3f9e3bbf8c96e02045e4f4723.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/jquery.raty.self-eb7045c9858acfa4797981589f870a37b0dc801327e96148473cad672c94b9b8.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/listings.self-5ea1aea0520a7c7777851cde6e77a0934acf862a78da76a92184a5d7375b62c3.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/user_checklist.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/user_todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for ::1 at 2016-03-04 21:46:55 -0500
+
+
+Started GET "/assets/heap_logo2-ab8a5274eaa4b90f3430d68f9ecc1c3a33d09ada7ae8b4395cbb19eb266724a6.jpg" for ::1 at 2016-03-04 21:46:55 -0500
