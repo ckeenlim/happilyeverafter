@@ -5,7 +5,12 @@ POSTS/FORUMS
 
 <% @posts.each do |p| %>
 	<div class="table">
-		<tr> <%= link_to p.title, post_path(:id => p.id) %> </tr>
+		<tr> 
+			<%= link_to p.title, post_path(:id => p.id) %> 
+			<p> <%= time_ago_in_words(p.created_at) %> </p>
+			<p> by user: <%= p.user_id %>
+
+		</tr>
 	</div>
 <% end %>
 
