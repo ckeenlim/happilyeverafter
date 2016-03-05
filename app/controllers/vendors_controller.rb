@@ -8,6 +8,12 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id]) 
+    @reviews = Review.where(vendor_id: @vendor)
+    if @vendor.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @vendor.reviews.average(:rating).round(2)
+    end
   end
 
   def search
@@ -51,6 +57,11 @@ class VendorsController < ApplicationController
 
   end
 
+
+  def sendEmail
+    redirect_to @vendor, notice: "Email sent"
+  end
+
   private
   def vendor_params
     params.require(:vendor).permit!
@@ -58,9 +69,10 @@ class VendorsController < ApplicationController
 
   private 
   def find_vendor
-    @vendor = Vendor.find(params[:id]) 
+    @vendor = Vendor.find(params[:id]) if params[:id].present? 
     
   end
 
 
 end
+

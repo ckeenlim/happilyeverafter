@@ -31,7 +31,7 @@
 		</div>
 
 		<div class="col-xs-12 col-lg-8">
-			
+			<%= link_to "NEW ITEM", new_checklist_path %>
 			<table class = "table">
 			  <thead>
 			    <tr>
@@ -47,6 +47,9 @@
 				      <tr>
 				      	<td class="col-xs-12 col-md-8"> 
 				      		<h4><%= checklist.name %></h4>
+				      					<% checklist.user_checklists.each do |user_checklist| %> 
+				      						<p> <%= user_checklist.item %> </p>
+				      					<% end %>
 				      	</td>
 				      	<td class="col-xs-6 col-md-4">
 				      		<button type="button" class="btn btn-sm btn-primary statusBtn">done</button>

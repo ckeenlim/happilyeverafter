@@ -6,6 +6,8 @@
   <title>Happilyeverafter - Weddings, Wedding Planner, Ideas, Philippines</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js' %>
+  
   <%= csrf_meta_tags %>
  
 
@@ -17,7 +19,8 @@
    <!-- Latest compiled and minified CSS -->
   <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <!--link rel="stylesheet" type="text/css" href="css/custom.css"-->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale = 1.0" />
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -28,7 +31,7 @@
  
 
 </head>
-<%= render partial: "shared/flash_messages", flash: flash %> 
+
 <body data-spy="scroll" data-target="#my-navbar">
 <%= render partial: "shared/top_nav" %>
 
@@ -42,3 +45,7 @@
 </body> 
 
 </html>
+
+<script>
+    $('.error_msgs').fadeOut(1800)
+  </script>
