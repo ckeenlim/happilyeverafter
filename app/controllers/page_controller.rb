@@ -15,11 +15,16 @@ class PageController < ApplicationController
   end
 
   def contact
-    @contact = Contact.new
   end
 
   def checklist
     @checklists = Checklist.all
+  end
+
+  def listings
+    @categories = Category.all
+    @locations = Location.all
+    @vendors = Vendor.all.paginate(:page => params[:page])
   end
 
 
@@ -29,3 +34,4 @@ class PageController < ApplicationController
 
 
 end
+
