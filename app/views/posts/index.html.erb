@@ -1,21 +1,61 @@
 <div class="container">
 
-POSTS/FORUMS
+<h4> POSTS/FORUMS </h4>
 <div>
-<%= link_to "Start New Thread", new_post_path %>
+<%= link_to "Start a New Thread", new_post_path %>
 </div>
 
 <div class="container">
-	<% @posts.each do |p| %>
-		<div class="table">
-			<tr> 
-				<%= link_to p.title, post_path(:id => p.id) %> 
-				<p> <%= time_ago_in_words(p.created_at) %> </p>
-				<p> by user: <%= p.user_id %> </p>
+	<div class = "row">
+		<div class = "col-md-12">
+			<div class = "panel panel-default">
+				<div class= "panel-heading"> Test </div>
+				<table class = "table table-hover">
+					<thead> 
+						<tr>
+							<th class="hidden-xs topic-marker"> </th>
+							<th> Title </th>
+							<th class ="text-right"> Replies </th>
+							<th class ="hidden-xs"> Latest Post Info </th>
+						</tr>
 
-			</tr>
+					</thead>
+
+					<tbody>
+						<% @posts.each do |p| %>
+						<tr>
+							<td class="hidden-xs topic-marker" > 
+								<i class="fa fa-comments fa-lg">
+								</i>
+							</td>
+
+							<td class="col-md-6"> 
+								<div>
+									<%= link_to p.title, post_path(:id => p.id) %> 
+								</div>
+								<small class="text-muted"> Author: </small>
+							</td>
+
+							<td class="col-md-1 text-right"> <%= p.comments.count %> </td>
+							<td class="col-md-4 hidden-xs"> <%= time_ago_in_words(p.comments.last.created_at ) unless p.comments.empty? %></td>
+						</tr>
+						<% end %>
+
+					</tbody>
+
+
+				</table>
+
+
+
+
+				
+			</div>
 		</div>
-	<% end %>
+	</div>
+
+
+
 </div>
 
 </div>

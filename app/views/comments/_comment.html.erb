@@ -1,0 +1,44 @@
+
+	<div class="pull-right">
+		&nbsp;
+		&nbsp;
+	</div>
+	<div class="clearfix">
+		&nbsp;
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="panel-title"> <%= comment.user.email %>
+			</div>
+		</div>
+		<div class="panel-body thread-row">
+			<div class="row thread-row">
+				<div class="col-md-2 col-sm-3 hidden-xs text-center userblock">
+				<br>user photo block
+				<br>user photo block
+				<br>user photo block
+				<br>test
+				<br>join date
+				<br>wedding date
+				<br>test
+				</div>
+				<div class="col-md-5 col-sm-6 col-xs-8">
+					<div class="clearfix hidden-xs"> &nbsp; </div>
+					<div class="text-muted">
+						<small> 
+							<span class="hidden-sm hidden-xs"> Posted: </span>
+							<%= comment.created_at %>
+						</small>
+					</div>
+				</div>
+				<div class="col-md-10 col-sm-9 col-xs-12">
+					<div>
+						<div class="clearfix"> &nbsp; </div>
+						<p> <%= comment.comment %> </p>
+						<div class="clearfix"> &nbsp; </div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
