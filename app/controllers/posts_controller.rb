@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	before_filter :authenticate_user!, except: [:index]
+	
 	def index
 		@posts = Post.all
+
 	end
 
 	def show

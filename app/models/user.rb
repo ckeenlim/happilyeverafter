@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   
   has_many :reviews
   has_many :user_todo_items
+  has_many :posts
+  has_many :comments
 end
