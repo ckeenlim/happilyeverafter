@@ -9,7 +9,7 @@ class VendorsController < ApplicationController
   def show
     @vendor = Vendor.find(params[:id]) 
     @reviews = Review.where(vendor_id: @vendor)
-    if @vendor.reviews.blank?
+    if @vendor.reviews(:ratings).blank?
       @average_review = 0
     else
       @average_review = @vendor.reviews.average(:rating).round(2)
