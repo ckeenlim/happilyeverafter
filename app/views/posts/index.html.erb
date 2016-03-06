@@ -33,7 +33,7 @@
 								<div>
 									<%= link_to p.title, post_path(:id => p.id) %> 
 								</div>
-								<small class="text-muted"> Author: </small>
+								<small class="text-muted"> Author: <%= p.user.email %> </small>
 							</td>
 
 							<td class="col-md-1 text-right"> <%= p.comments.count %> </td>
