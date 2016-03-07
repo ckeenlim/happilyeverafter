@@ -28,7 +28,11 @@ class UserTodoItemsController < ApplicationController
 
 	def complete
 		@user_todo_item.update_attribute(:completed_at, Time.now)
-		redirect_to user_todo_items_path
+		respond_to do |format|
+			format.html {redirect_to user_todo_items_path }
+			format.js 
+		end
+		
 	end
 
 	def reset
