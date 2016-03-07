@@ -1,27 +1,29 @@
-<div class="container">
+<div class="container col-md-6 col-md-offset-3">
 	
-	<% if @user_todo_items.size == 0 %>
-		<%= form_tag generate_user_todo_items_path do %>
-		<%= submit_tag "Generate items" %>
-	<% end %>
-
-	<% end %>
 	
 	<br>
 	<h2> Checklist </h2>
+		
 		<% @user_todo_items.each do |t| %>
-
+			<div class="index_row">
 			<%if t.completed? %>
+				
+				<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
+				<strike> <%= t.item %> </strike>
 				<%= link_to "Reset", reset_user_todo_item_path(t.id), method: :patch %>
 				
-				<strike> <%= t.item %> </strike>
-				<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
-			<% else %>
-				<%= link_to "Mark as Complete", complete_user_todo_item_path(t.id), method: :patch %>
-				<%= t.item %>
-			<% end %>
-			<br>
 
+			<% else %>
+				<%= link_to complete_user_todo_item_path(t.id), method: :patch, remote: true do %>
+					<i class="fa fa-check"></i>
+				<% end %>
+
+				<div id=<%= dom_id(t) %>> <%= t.item %> </div>
+			<% end %>
+			</div>
+			<br>
 		<% end %>
+
+		
 
 </div>
