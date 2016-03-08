@@ -1,3 +1,3 @@
 <% if @user_todo_item.completed? %>
-	$("#<%= dom_id(@user_todo_item) %>").css("font-weight","bold");
+	$("#<%= dom_id(@user_todo_item) %>").slideUp("normal", function() { $(this).remove(); }  );
 <% end %>

@@ -3,7 +3,7 @@ class VendorsController < ApplicationController
   before_filter :set_search
   
   def index
-  	@vendors = Vendor.all.paginate(:page => params[:page])
+  	@vendors = Vendor.all.paginate(:page => params[:page], :per_page=> 12)
   end
 
   def show

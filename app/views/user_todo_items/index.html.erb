@@ -1,29 +1,83 @@
-<div class="container col-md-6 col-md-offset-3">
-	
-	
-	<br>
-	<h2> Checklist </h2>
-		
-		<% @user_todo_items.each do |t| %>
-			<div class="index_row">
-			<%if t.completed? %>
-				
-				<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
-				<strike> <%= t.item %> </strike>
-				<%= link_to "Reset", reset_user_todo_item_path(t.id), method: :patch %>
-				
+<div class="container">
 
-			<% else %>
-				<%= link_to complete_user_todo_item_path(t.id), method: :patch, remote: true do %>
-					<i class="fa fa-check"></i>
+
+<div class="checklist-container col-xs-12 col-lg-3", style="margin-right: 10px;">
+
+	
+
+	<div class="panel-group">
+		<div class="panel", style="text-align: center;">
+
+			<h4> <i class="fa fa-list-ul"></i> My Checklist </h4>
+			
+		</div>
+		<br>
+		<ul>
+			<li class="panel panel-heading">
+				To-Dos
+
+			</li>
+
+			<li class="panel panel-heading">
+				Completed
+
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+<div class=" checklist-container col-xs-12 col-lg-9">
+	
+	
+		<div class="panel-group">
+		
+			<ul>
+			<% @user_todo_items.each do |t| %>
+				<li class="panel panel-heading", id=<%= dom_id(t)%> >
+
+						<%= link_to complete_user_todo_item_path(t.id), method: :patch, remote: true do %>
+							<i class="fa fa-check"></i>
+						<% end %>
+
+						<%= t.item %> 
+
+
+				</li>
+				<!--
+				<%if t.completed? %>
+						<div class="completed row clearfix" , id=<%= dom_id(t)%> >
+						<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
+						<%= t.item %> 
+						
+						<%= link_to "Reset", reset_user_todo_item_path(t.id), method: :patch, remote: true %>
+						</div>
+						
+				<% else %>
+						<div class = "row clearfix", id=<%= dom_id(t)%>>
+						<%= link_to complete_user_todo_item_path(t.id), method: :patch, remote: true do %>
+							<i class="fa fa-check"></i>
+						<% end %>
+
+						<%= t.item %> 
+
+						</div>					
 				<% end %>
-
-				<div id=<%= dom_id(t) %>> <%= t.item %> </div>
+				-->
 			<% end %>
-			</div>
-			<br>
-		<% end %>
 
-		
+			</ul>
+		</div>
+</div>
+
+</div>
+
+<div class="container col-md-6 col-md-offset-3">
+
+		<br>
+		<br>
+
+		footer??
 
 </div>
