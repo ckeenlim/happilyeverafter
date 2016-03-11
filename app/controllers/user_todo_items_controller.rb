@@ -2,10 +2,11 @@ class UserTodoItemsController < ApplicationController
 	before_action :set_user_todo_item , except: [:index]
 
 	def index
-		@user_todo_items = UserTodoItem.where('user_id' => current_user.id).order(:todo_item_id)
+		@user_todo_items = UserTodoItem.where(:user_id => current_user.id, :completed_at => nil).order(:todo_item_id)
 		if !@user_todo_items.any?
 			generate
 		end
+		@completed_user_todo_items = UserTodoItem.where(:user_id => current_user.id).where().not(completed_at: nil).order(:todo_item_id)
 		#user_todo_items = TodoItem.includes(:user_todo_items => :users).where('user_id' => current_user.id)
 	end
 
