@@ -1,6 +1,6 @@
 <% if @user_todo_item.completed? %>
 	
-	var htmlToDo = "<div class='completed-todo-item' ><i class='fa fa-check'></i> <%= j @user_todo_item.item %> </div>";
+	var htmlToDo = "<div class='completed-todo-item' ><i style = 'opacity: 0.4;' class='fa fa-check'></i> <%= j @user_todo_item.item %> </div>";
 	var testvar = "<i class='fa fa-check'></i> ";
 	$("#<%= dom_id(@user_todo_item) %> .todoContent").replaceWith(htmlToDo);
 

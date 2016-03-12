@@ -74,13 +74,14 @@
 		</div>
 
 		
-
-		<div>
-			<h4> Reply to Thread </h4>
-			<div id="comment-form">
-				<%= render  'comments/form'%>
+		<% if @comments.total_pages == @comments.current_page %>
+			<div>
+				<h4> Reply to Thread </h4>
+				<div id="comment-form">
+					<%= render  'comments/form'%>
+				</div>
 			</div>
-		</div>
+		<% end %>
 	</div>	
 	
 </div>

@@ -30,13 +30,12 @@
 	
 		<div class="panel-group", id="all-items">
 			<h1> Remaining To-Dos </h1>
-			<ul>
+			<ul id="remaining-items-list">
 			<% @user_todo_items.each do |t| %>
 				<li class="panel panel-heading , remaining-todo-item", id=<%= dom_id(t)%> >
 					<div class="todoContent">
 						<%= link_to '<i class="fa fa-check"></i>'.html_safe, complete_user_todo_item_path(t.id), class: "check-but", method: :patch, remote: true  %>
-							<!--i class="fa fa-check"></i-->
-						
+							
 						<%= t.item %> 
 					</div>
 				</li>
@@ -63,21 +62,29 @@
 			<% end %>
 
 			</ul>
+
+			<%= render 'new' %>
 		</div>
 
 		
-		<!-- compeleted items -->
+		<!-- completed items -->
 		<div class="panel-group", id="completed-items-panel", style="display:none;">
 			<h1> Completed Items </h1>
 			<ul id="completed-items">
-			<% @completed_user_todo_items.each do |t| %>
+				<% @completed_user_todo_items.each do |t| %>
+					
+					<li class="panel panel-heading completed-todo-item", id=<%= dom_id(t)%> >
+						<div class="completedTodoContent">
+							<div class='completed-todo-item' >
+							<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
+							<%= t.item %> 
+							</div>
+						</div>
+					</li>
+					
+				<% end %>
+
 				
-				<li class="panel panel-heading, completed-todo-item", id=<%= dom_id(t)%> >
-						<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
-						<%= t.item %> 
-				</li>
-				
-			<% end %>
 
 			</ul>
 		</div>

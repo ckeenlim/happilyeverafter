@@ -1,0 +1,6 @@
+<li class="panel panel-heading , remaining-todo-item", id=<%= dom_id(user_todo_item)%> >
+		<div class="todoContent">
+				<%= link_to '<i class="fa fa-check"></i>'.html_safe, complete_user_todo_item_path(user_todo_item.id), class: "check-but", method: :patch, remote: true  %>						
+				<%= user_todo_item.item %> 
+		</div>
+</li>
