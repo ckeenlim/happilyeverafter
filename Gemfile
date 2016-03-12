@@ -35,6 +35,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem "mini_magick"
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'jquery-turbolinks'
 ##########################
 
 # Use ActiveModel has_secure_password

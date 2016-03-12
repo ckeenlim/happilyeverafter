@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post
+		@comments = @post.comments.paginate(page: params[:page], :per_page => 10)
 	end
 
 
