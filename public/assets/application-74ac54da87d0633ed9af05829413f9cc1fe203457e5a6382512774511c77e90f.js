@@ -14792,18 +14792,25 @@ $(document).ready(function() {
 
 }).call(this);
 $(function() {
-$("#todo-panel-option").click(function(){
-    $("#all-items").show();
-    $("#completed-items-panel").hide();
-});
+	$("#todo-panel-option").click(function(){
+	    $("#all-items").show();
+	    $("#completed-items-panel").hide();
+	});
 
-$("#completed-todo-panel-option").click(function(){
-    $("#all-items").hide();
-    $("#completed-items-panel").show();
-});
+	$("#completed-todo-panel-option").click(function(){
+	    $("#all-items").hide();
+	    $("#completed-items-panel").show();
+	});
 
-	$(".completed-todo-item").css("text-decoration", "line-through");
+	$(".checkIcon").click(function () {
+    $(this).parents('li').slideUp();
+	});
 
+	$(".resetIcon").click(function () {
+    $(this).parentsUntil('#completed-items').hide();
+	});
+
+	$('[data-toggle="tooltip"]').tooltip();   
 })
 ;
 (function() {
