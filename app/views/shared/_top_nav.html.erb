@@ -1,14 +1,7 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to "HEAP", root_path , { :class=>"navbar-brand" } %>
-          <!--a href="" class="navbar-brand">HEAP</a-->
-        </div><!-- Navbar Header-->
-
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-        
+      <div class="collapse navbar-collapse" id="navbar-collapse">
         <% if user_signed_in? %>
           <%= link_to "Log Out", destroy_user_session_path , :method => :delete, :class=> "btn btn-primary btn-sm navbar-btn navbar-right"%>
         <% else %>
@@ -18,8 +11,7 @@
           <%= link_to "Join Now", "#join-modal", {:class => "btn btn-warning btn-sm navbar-btn navbar-right sessionBtn", 'data-toggle' => "modal"} %>
           <!--a href="" class="btn btn-warning navbar-btn navbar-right">Join Now</a-->
         <% end %>
-        </div>
-      </div><!-- End Container-->
+      </div>
     </nav><!-- End navbar -->
     
     <!-- Login Modal -->

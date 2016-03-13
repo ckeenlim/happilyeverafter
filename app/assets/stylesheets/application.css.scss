@@ -138,44 +138,18 @@
     margin: 0 auto;
 }
 
-#searchContainer {
-    background-image: url('weddinghome.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: unset;
-    margin-right: unset;
-    width: auto;
-    height: 500px;
-}
-
-.img-responsive {
-    display: block;
-    margin: 0 auto;
-}
-
 #myNavbar ul {
     width: 100%;
     text-align: center;
 }
 
-#menu1 {
-    text-align: left;
+#myNavbar li {
+    display: inline-block;
+    float: none;
 }
 
 .navbar {
     margin-bottom: 0px;
-}
-
-#searchDiv {
-    text-align: center;
-}
-
-#searchText {
-    width: 300px;
-}
-
-.page-header {
-    border-bottom: none;
 }
 
 #myNavMenu {
@@ -394,3 +368,6 @@ body{
   font-size: 12px;
 }
 
+.page-header {
+    border-bottom: none;
+}
