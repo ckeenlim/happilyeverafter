@@ -1,6 +1,36 @@
-<li class="panel panel-heading , remaining-todo-item", id=<%= dom_id(user_todo_item)%> >
-		<div class="todoContent">
-				<%= link_to '<i class="fa fa-check"></i>'.html_safe, complete_user_todo_item_path(user_todo_item.id), class: "check-but", method: :patch, remote: true  %>						
-				<%= user_todo_item.item %> 
-		</div>
-</li>
+<% if user_todo_item.completed_at == nil %>
+	<li class="panel panel-heading , remaining-todo-item", id=<%= dom_id(user_todo_item)%> >
+					<div class="todoContent">
+						<%= link_to '<i class="fa fa-check-square-o checkIcon", style="margin-right:5px;", data-toggle="tooltip" title="Mark as Complete"> </i> '.html_safe, complete_user_todo_item_path(user_todo_item.id), class: "check-but", method: :patch, remote: true  %>
+							
+						<%= user_todo_item.item %> 
+
+						<ul class="list-inline panel-actions", style="text-align: right;margin-top: -25px;margin-bottom: 0;">
+							<li>
+								<i class="fa fa-trash", data-toggle="tooltip" title="Remove"> </i>
+							
+							</li>
+
+						</ul>
+					</div>
+				</li>	
+
+<% else %>
+	<li class="panel panel-heading completed-todo-item", id=<%= dom_id(user_todo_item)%> >
+						<div class="completedTodoContent">
+							<div class='completed-todo-item' >
+								<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
+								<%= user_todo_item.item %> 
+
+								<ul class="list-inline panel-actions", style="text-align: right;margin-top: -25px;margin-bottom: 0;">
+									<li>
+										<%= link_to '<i class="fa fa-undo resetIcon", style="margin-right:5px;", data-toggle="tooltip" title="Restore"> </i> '.html_safe, reset_user_todo_item_path(user_todo_item.id), method: :patch, remote: true  %>
+									</li>
+
+								</ul>
+
+							</div>
+						</div>
+					</li>
+
+<% end %>

@@ -2,6 +2,6 @@
 		:url => url_for(:action => 'create', :controller => 'user_todo_items'),
    	:method => 'post',
 		remote: true do |f| %>
-	<%= f.input :item, label: 'Your Own New Item', class: "new-item-input"  %>
+	<%= f.input :item, label: 'New To-Do', class: "new-item-input"  %>
 	<%= f.button :submit, 'Add' %>
 <% end %>

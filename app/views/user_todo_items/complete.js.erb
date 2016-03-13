@@ -1,10 +1,12 @@
 <% if @user_todo_item.completed? %>
 	
-	var htmlToDo = "<div class='completed-todo-item' ><i style = 'opacity: 0.4;' class='fa fa-check'></i> <%= j @user_todo_item.item %> </div>";
-	var testvar = "<i class='fa fa-check'></i> ";
-	$("#<%= dom_id(@user_todo_item) %> .todoContent").replaceWith(htmlToDo);
+	//var htmlToDo = "<div class='completed-todo-item' ><i style = 'opacity: 0.4;' class='fa fa-check'></i> <%= j @user_todo_item.item %> </div>";
+	
+	//$("#<%= dom_id(@user_todo_item) %> .todoContent").replaceWith(htmlToDo);
 
-	$("#<%= dom_id(@user_todo_item) %>").appendTo('#completed-items');
+	//$("#<%= dom_id(@user_todo_item) %>").appendTo('#completed-items');
+
+	$('#completed-items').append('<%= j render (@user_todo_item)%>');
 	
 	
 <% end %>

@@ -428,7 +428,7 @@ body {
 .checklist-container {
   width: 30%;
   max-width: 750px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(21, 155, 238, 0.4);
   margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.3);
@@ -437,20 +437,26 @@ body {
   font-size: 1.2em;
 }
 
-/* line 59, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/user_todo_items.scss */
+/* line 60, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/user_todo_items.scss */
 body {
   height: 100%;
-  background: -webkit-linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
-  background: -moz-linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
-  background: -ms-linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
-  background: -o-linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
-  background: linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
-  /*background: -webkit-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
-  background:    -moz-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
-  background:     -ms-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
-  background:      -o-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
-  background:         linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%); */
+  	/*
+  	background: -webkit-linear-gradient( 40deg, #f1f9fe 20%,  #fdfdf8 100%);
+  	background:    -moz-linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
+   background:     -ms-linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
+   background:      -o-linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
+   background:         linear-gradient(40deg, #f1f9fe 20%, #fdfdf8 100%);
+   background: -webkit-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
+   background:    -moz-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
+   background:     -ms-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
+   background:      -o-linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%);
+   background:         linear-gradient(40deg, #b5f1f8 10%, #fafbf2 100%); */
   font-family: 'Lato', sans-serif;
+}
+
+/* line 76, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/user_todo_items.scss */
+.completed-todo-item {
+  text-decoration: line-through;
 }
 /* line 8, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/vendors.scss */
 ul {
