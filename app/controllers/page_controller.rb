@@ -23,16 +23,22 @@ class PageController < ApplicationController
   end
 
   def listings
+    
     @categories = Category.all
     @locations = Location.all
-    @vendors = Vendor.all.paginate(:page => params[:page])
+    
+    if params[:price]
+      @search = Vendor.search(params[:details])
+      @vendors = @search.result
+    else
+      @vendors = Vendor.all.paginate(:page => params[:page])
+    end
   end
 
 
   def contact_vendor
 
   end
-
 
 end
 

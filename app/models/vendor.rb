@@ -16,4 +16,10 @@ class Vendor < ActiveRecord::Base
 			end
 		end
 	end
+	
+  def self.search(details)
+    # find(:all, :conditions => ['name LIKE ?', "%#{details}%"])
+    where("name LIKE ?", "%#{details}%")
+    # where(:categoryId => @categories)
+  end
 end

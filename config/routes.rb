@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get 'page/faqs'
   get 'page/vendors'
   get 'page/listings'
+  # get 'page/search' => 'page#listings'
   post 'page/checklist' => 'checklist#import', :as => :import_checklist
 
  
