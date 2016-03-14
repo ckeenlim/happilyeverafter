@@ -14807,7 +14807,7 @@ $(function() {
 	});
 
 	$(".resetIcon").click(function () {
-    $(this).parentsUntil('#completed-items').hide();
+    $(this).parentsUntil('#completed-items').remove();
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();   

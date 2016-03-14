@@ -7,6 +7,14 @@
 	//$("#<%= dom_id(@user_todo_item) %>").appendTo('#completed-items');
 
 	$('#completed-items').append('<%= j render (@user_todo_item)%>');
+	$('[data-toggle="tooltip"]').tooltip();   
 	
-	
+	$('#remaining-items-list #<%= dom_id(@user_todo_item) %>').remove();
+	$(".resetIcon").click(function () {
+    $(this).parentsUntil('#completed-items').remove();
+	});
+	var num1 = +$("#user-todo-count").text() - 1;
+	var num2 = +$("#user-todo-completed").text() + 1;
+	$("#user-todo-count").text(num1);
+	$("#user-todo-completed").text(num2);
 <% end %>
