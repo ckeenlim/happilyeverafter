@@ -73,8 +73,11 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.completed-todo-item {
-	text-decoration: line-through;
+.checklist-container  {
+	a {
+		text-decoration:none !important; 
+	}
 }
+
 
 

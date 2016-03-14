@@ -1,0 +1,10 @@
+	$('#remaining-items-list').append('<%= j render (@user_todo_item)%>');
+	$('[data-toggle="tooltip"]').tooltip();   
+	$('#completed-items #<%= dom_id(@user_todo_item) %>').remove();
+	$(".checkIcon").click(function () {
+    $(this).parents('li').slideUp();
+	});
+	var num1 = +$("#user-todo-count").text() + 1;
+	var num2 = +$("#user-todo-completed").text() - 1;
+	$("#user-todo-count").text(num1);
+	$("#user-todo-completed").text(num2);

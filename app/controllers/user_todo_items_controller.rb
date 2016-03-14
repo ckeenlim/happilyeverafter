@@ -70,6 +70,16 @@ class UserTodoItemsController < ApplicationController
 
 	end
 
+	def destroy
+		@user_todo_item.destroy
+
+		respond_to do |format|
+				format.html  {redirect_to user_todo_items_path}#{redirect_to post_path(@post) }
+				format.js 
+		end
+		
+	end
+
 	private
 
 	def set_user_todo_item

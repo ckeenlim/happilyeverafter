@@ -285,9 +285,9 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* line 76, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/user_todo_items.scss */
-.completed-todo-item {
-  text-decoration: line-through;
+/* line 77, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/user_todo_items.scss */
+.checklist-container a {
+  text-decoration: none !important;
 }
 /* line 8, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/vendors.scss */
 ul {
