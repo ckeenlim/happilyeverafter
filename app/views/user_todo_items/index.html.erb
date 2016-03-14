@@ -10,17 +10,32 @@
 			
 		</div>
 		<br>
-		<ul>
-			<li class="panel panel-heading", id="todo-panel-option">
-				To-Dos
 
-			</li>
+		<div class="panel panel-heading", id="todo-panel-option">
+			<div class="row">
+				<div class="col-xs-6">
+					To-Dos
+				</div>
+				<div class="col-xs-6">
+					<span id="user-todo-count"> <%= @user_todo_items.count %> </span>
+					/
+					<span id="user-todo-total"> <%= @user_todo_items.count + @completed_user_todo_items.count %> </span>
+				</div>
+			</div>
+		</div>
 
-			<li class="panel panel-heading", id="completed-todo-panel-option">
-				Completed
+		<div class="panel panel-heading", id="completed-todo-panel-option">
+			<div class="row">
+				<div class="col-xs-6">
+					Completed
+				</div>
+				<div class="col-xs-6">
+					<span id="user-todo-completed"> <%= @completed_user_todo_items.count %> </span>
+				</div>
+			</div>
+		</div>
 
-			</li>
-		</ul>
+
 	</div>
 </div>
 

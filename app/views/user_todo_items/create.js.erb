@@ -1,2 +1,6 @@
 $('#user_todo_item_item').val('');
 $('#remaining-items-list').append('<%= j render (@user_todo_item)%>');
+var num1 = +$("#user-todo-count").text() + 1;
+var num2 = +$("#user-todo-total").text() + 1;
+$("#user-todo-count").text(num1);
+$("#user-todo-total").text(num2);

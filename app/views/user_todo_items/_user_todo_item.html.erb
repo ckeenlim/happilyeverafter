@@ -7,8 +7,9 @@
 
 						<ul class="list-inline panel-actions", style="text-align: right;margin-top: -25px;margin-bottom: 0;">
 							<li>
-								<i class="fa fa-trash", data-toggle="tooltip" title="Remove"> </i>
-							
+								
+								<%= link_to '<i class="fa fa-trash", data-toggle="tooltip" title="Remove"> </i>'.html_safe, user_todo_item_path(user_todo_item.id), method: :delete, remote: true, 
+		data: {confirm: "Are you sure?"} %>
 							</li>
 
 						</ul>
