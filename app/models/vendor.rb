@@ -1,6 +1,7 @@
 class Vendor < ActiveRecord::Base
 	has_many :reviews
 	has_many :locations
+	has_one :category
 	mount_uploaders :avatars, AvatarUploader
 	
 	require 'csv'
@@ -17,9 +18,4 @@ class Vendor < ActiveRecord::Base
 		end
 	end
 	
-  def self.search(details)
-    # find(:all, :conditions => ['name LIKE ?', "%#{details}%"])
-    where("name LIKE ?", "%#{details}%")
-    # where(:categoryId => @categories)
-  end
 end

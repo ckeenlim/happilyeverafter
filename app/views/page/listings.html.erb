@@ -1,7 +1,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <form action="/page/listings" method="get">
+        	<%= form_tag("/page/search", method: "post") do %>
+            
                 <div class="panel-group" id="accordion">
                     <div class="panel panel-default">
                         <div class="panel-heading" data-toggle="collapse" data-target="#collapseCategory">
@@ -73,12 +74,13 @@
                         </div>
                         <div id="collapseSearch" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                <input type="search" id="details" name="details" placeholder="Enter details..."><input type="submit" class="btn btn-info" value="Submit">
+                                <%= search_field(:vendor, :details, placeholder:"Enter details...") %>
+                                <%= submit_tag "Filter", class: "btn btn-info" %>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
+            <% end %>
         </div>
         <div class="col-md-9">
         	
