@@ -19,5 +19,4 @@ class Vendor < ActiveRecord::Base
 	end
 
 	self.per_page = 12
-	
 end
