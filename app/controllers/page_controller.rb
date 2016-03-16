@@ -5,7 +5,7 @@ class PageController < ApplicationController
   end
 
   def vendors
-    @vendors = Vendor.all.paginate(:page => params[:page])
+    @vendors = search.paginate(:page => params[:page])
   end
 
   def about
@@ -23,16 +23,63 @@ class PageController < ApplicationController
   end
 
   def listings
+    
     @categories = Category.all
     @locations = Location.all
-    @vendors = Vendor.all.paginate(:page => params[:page])
+    @vendors = vendors
+    
   end
 
+  def search
+    if (params[:commit])
+      
+      @search = Vendor
+      # For Details Textfield #
+      detailsQuery = ""
+      if (params[:vendor][:details].present?)
+        detailsQuery = "name ilike '%" + params[:vendor][:details] + "%'"  
+      end
+      # End of Details Textfield
+       
+      # For Category CheckBoxes #
+      categoryQuery = ""
+      if (params.has_key?'categoryCheckbox')
+        categoryQuery = "";
+        params[:categoryCheckbox].each do |c|
+          
+          if (categoryQuery != "")
+            categoryQuery += "OR"
+          end
+          
+          categoryQuery += ' "categoryId" = ' + c + ' '
+        end  
+      end
+      # End of Category CheckBoxes
+      
+      # For Location CheckBoxes #
+      locationQuery = "";
+      if (params.has_key?'locationCheckbox')
+        locationQuery = "";
+        params[:locationCheckbox].each do |l|
+          
+          if (locationQuery != "")
+            locationQuery += "OR"
+          end
+          
+          locationQuery += " address ilike '%" + l + "%' "
+        end  
+      end
+      # End of Location CheckBoxes
+      
+      @search = Vendor.where(detailsQuery).where(categoryQuery).where(locationQuery)
+      
+    else
+      @search = Vendor.all
+    end
+  end
 
   def contact_vendor
 
   end
-
-
 end
 
