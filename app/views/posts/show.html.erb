@@ -22,45 +22,47 @@
 
 		</div>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="panel-title"> <%= @post.user.email %>
-				</div>
-			</div>
-			<div class="panel-body thread-row">
-				<div class="row thread-row">
-					<div class="col-md-2 col-sm-3 hidden-xs text-center userblock">
-					<br>user photo block
-					<br>user photo block
-					<br>user photo block
-					<br>test
-					<br>join date
-					<br>wedding date
-					<br>test
-
-					</div>
-
-					<div class="col-md-5 col-sm-6 col-xs-8">
-						<div class="clearfix hidden-xs"> &nbsp; </div>
-						<div class="text-muted">
-							<small> 
-								<span class="hidden-sm hidden-xs"> Posted: </span>
-								<%= @post.created_at %>
-							</small>
-
-						</div>
-					</div>
-
-					<div class="col-md-10 col-sm-9 col-xs-12">
-						<div>
-							<div class="clearfix"> &nbsp; </div>
-							<p> <%= @post.content %> </p>
-							<div class="clearfix"> &nbsp; </div>	
-						</div>
+		<% if @comments.current_page == 1 %>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="panel-title"> <%= @post.user.email %>
 					</div>
 				</div>
+				<div class="panel-body thread-row">
+					<div class="row thread-row">
+						<div class="col-md-2 col-sm-3 hidden-xs text-center userblock">
+						<br>user photo block
+						<br>user photo block
+						<br>user photo block
+						<br>test
+						<br>join date
+						<br>wedding date
+						<br>test
+
+						</div>
+
+						<div class="col-md-5 col-sm-6 col-xs-8">
+							<div class="clearfix hidden-xs"> &nbsp; </div>
+							<div class="text-muted">
+								<small> 
+									<span class="hidden-sm hidden-xs"> Posted: </span>
+									<%= @post.created_at %>
+								</small>
+
+							</div>
+						</div>
+
+						<div class="col-md-10 col-sm-9 col-xs-12">
+							<div>
+								<div class="clearfix"> &nbsp; </div>
+								<p> <%= @post.content %> </p>
+								<div class="clearfix"> &nbsp; </div>	
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+		<% end %>
 
 		<div >
 			<div id="comment-list">
@@ -69,7 +71,7 @@
 			<% end %>
 			</div>
 			<div>
-				<%= will_paginate @comments %>
+				<%= will_paginate @comments, renderer:BootstrapPagination::Rails, previous_label:"<<", next_label:">>", inner_window:1, outer_window:0%>
 			</div>
 		</div>
 
