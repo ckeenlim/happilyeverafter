@@ -105,8 +105,15 @@
             <a href="#">Promos</a>
           </li>
           <li class="dropdown">
-            <%= link_to "Forums", posts_path %>
-            <!--a href="#">FAQs</a-->
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Forums<b class="caret"></b></a>
+            <ul class="dropdown-menu", role="menu">
+              <% @forum_categories.each do |f| %>
+                <li style="display:list-item;"><a href="#"> <%= f.name %> </a></li>
+              <% end %>
+              <li style="display:list-item;">
+                <%= link_to "All", posts_path %>   
+              </li>
+            </ul>
           </li>
           <li class="dropdown">
             <%= link_to "Contact Us", page_contact_path %>
