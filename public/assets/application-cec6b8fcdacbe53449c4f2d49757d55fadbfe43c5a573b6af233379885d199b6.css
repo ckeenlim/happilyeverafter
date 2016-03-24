@@ -9134,7 +9134,7 @@ button.close {
   visibility: visible;
 }
 
-/* line 38, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 39, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .dropdown:hover .dropdown-menu {
   display: block;
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -9151,12 +9151,12 @@ button.close {
   border-right: 1px solid #9c9c9c;
 }
 
-/* line 54, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 56, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
   margin-top: 0;
 }
 
-/* line 58, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 60, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar .sub-menu:before {
   border-bottom: 7px solid transparent;
   border-left: none;
@@ -9166,7 +9166,7 @@ button.close {
   top: 10px;
 }
 
-/* line 66, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 68, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar .sub-menu:after {
   border-top: 6px solid transparent;
   border-left: none;
@@ -9177,28 +9177,29 @@ button.close {
   left: -6px;
 }
 
-/* line 76, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 78, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .nav .dropdown-toggle .caret {
   display: none;
 }
 
-/* line 80, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 82, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar-nav {
   text-align: left;
   display: inline-block;
 }
 
-/*
+/* line 88, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .nav navbar-nav li {
-	display: inline-block;
-}*/
-/* line 90, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+  display: inline-block;
+}
+
+/* line 92, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .jumbotron {
   background-color: #fff;
   height: 120px;
 }
 
-/* line 95, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 97, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar .navbar-inverse {
   background-color: #fff;
   border-color: #337ab7;
@@ -9208,40 +9209,40 @@ button.close {
   border-right: none;
 }
 
-/* line 104, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 106, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .dropdown {
   color: #000;
 }
 
-/* line 108, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 110, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar-inverse .navbar-nav > li > a:hover {
   color: #337ab7;
   background-color: transparent;
 }
 
-/* line 113, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 115, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar-inverse .navbar-nav > li > a:visited {
   color: #337ab7;
   background-color: transparent;
 }
 
-/* line 118, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 120, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar-inverse .navbar-nav > li > a {
   color: #525252;
 }
 
-/* line 122, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 124, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .panel panel-primary {
   border-color: #63A0B8;
 }
 
-/* line 126, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 128, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .panel-primary > .panel-heading {
   border-color: #63A0B8;
   background-color: #63A0B8;
 }
 
-/* line 131, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 133, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 #myNavbar {
   background-color: #fff;
   border-color: #337ab7;
@@ -9253,24 +9254,24 @@ button.close {
   margin: 0 auto;
 }
 
-/* line 142, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 144, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 #myNavbar ul {
   width: 100%;
   text-align: center;
 }
 
-/* line 147, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 149, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 #myNavbar li {
   display: inline-block;
   float: none;
 }
 
-/* line 152, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 154, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .navbar {
   margin-bottom: 0px;
 }
 
-/* line 156, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 158, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 #myNavMenu {
   background-color: #fff;
   border-top: 0.05px solid #e3e3e3;
@@ -9279,7 +9280,7 @@ button.close {
   border-right: none;
 }
 
-/* line 164, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 166, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .statusBtn {
   border-radius: 15%;
   width: 40px;
@@ -9287,19 +9288,19 @@ button.close {
   margin: 0 5px;
 }
 
-/* line 171, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 173, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .sessionBtn {
   margin: 0 5px;
 }
 
-/* line 175, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 177, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 body {
   padding-top: 40px;
   font-family: Lato, arial, sans-serif;
 }
 
 /****** LOGIN MODAL ******/
-/* line 183, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 185, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-container {
   padding: 30px;
   max-width: 350px;
@@ -9312,14 +9313,14 @@ body {
   font-family: roboto;
 }
 
-/* line 195, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 197, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-container h1 {
   text-align: center;
   font-size: 1.8em;
   font-family: roboto;
 }
 
-/* line 201, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 203, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-container input[type=submit] {
   width: 100%;
   display: block;
@@ -9327,7 +9328,7 @@ body {
   position: relative;
 }
 
-/* line 208, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 210, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-container input[type=text], input[type=password] {
   height: 44px;
   font-size: 16px;
@@ -9343,7 +9344,7 @@ body {
   -moz-box-sizing: border-box;
 }
 
-/* line 223, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 225, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-container input[type=text]:hover, input[type=password]:hover {
   border: 1px solid #b9b9b9;
   border-top: 1px solid #a0a0a0;
@@ -9352,7 +9353,7 @@ body {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 231, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 233, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal {
   text-align: center;
   font-size: 14px;
@@ -9365,7 +9366,7 @@ body {
     user-select: none; */
 }
 
-/* line 243, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 245, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-submit {
   /* border: 1px solid #3079ed; */
   border: 0px;
@@ -9378,7 +9379,7 @@ body {
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
-/* line 255, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 257, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-submit:hover {
   /* border: 1px solid #2f5bb7; */
   border: 0px;
@@ -9387,7 +9388,7 @@ body {
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
-/* line 263, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 265, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .loginmodal-container a {
   text-decoration: none;
   color: #666;
@@ -9398,13 +9399,13 @@ body {
   transition: opacity ease 0.5s;
 }
 
-/* line 273, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 275, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .login-help {
   font-size: 12px;
 }
 
 /****** JOIN MODAL ******/
-/* line 278, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 280, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-container {
   padding: 30px;
   max-width: 350px;
@@ -9417,14 +9418,14 @@ body {
   font-family: roboto;
 }
 
-/* line 290, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 292, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-container h1 {
   text-align: center;
   font-size: 1.8em;
   font-family: roboto;
 }
 
-/* line 296, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 298, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-container input[type=submit] {
   width: 100%;
   display: block;
@@ -9432,7 +9433,7 @@ body {
   position: relative;
 }
 
-/* line 303, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 305, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-container input[type=text], input[type=password] {
   height: 44px;
   font-size: 16px;
@@ -9448,7 +9449,7 @@ body {
   -moz-box-sizing: border-box;
 }
 
-/* line 318, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 320, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-container input[type=text]:hover, input[type=password]:hover {
   border: 1px solid #b9b9b9;
   border-top: 1px solid #a0a0a0;
@@ -9457,7 +9458,7 @@ body {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 326, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 328, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal {
   text-align: center;
   font-size: 14px;
@@ -9470,7 +9471,7 @@ body {
     user-select: none; */
 }
 
-/* line 338, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 340, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-submit {
   /* border: 1px solid #3079ed; */
   border: 0px;
@@ -9483,7 +9484,7 @@ body {
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
-/* line 350, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 352, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-submit:hover {
   /* border: 1px solid #2f5bb7; */
   border: 0px;
@@ -9492,7 +9493,7 @@ body {
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
-/* line 358, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 360, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .joinmodal-container a {
   text-decoration: none;
   color: #666;
@@ -9503,12 +9504,12 @@ body {
   transition: opacity ease 0.5s;
 }
 
-/* line 368, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 370, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .join-help {
   font-size: 12px;
 }
 
-/* line 372, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
+/* line 374, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/application.css.scss */
 .page-header {
   border-bottom: none;
 }

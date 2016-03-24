@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
+                    <!-- <div class="panel panel-default">
                         <div class="panel-heading" data-toggle="collapse" data-target="#collapsePrice">
                             <h4 class="panel-title accordion-toggle">Price</h4>
                         </div>
@@ -40,7 +40,7 @@
                                 <input type="text" name="price" data-provide="slider" data-slider-min="1" data-slider-max="999999999" data-slider-step="1" data-slider-value="999999999" data-slider-tooltip="show">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="panel panel-default">
                         <div class="panel-heading" data-toggle="collapse" data-target="#collapseLocation">
                             <h4 class="panel-title accordion-toggle">Location</h4>
@@ -116,7 +116,8 @@
 			                            &nbsp;
 			                        </div>
 			                    	<div class="col-xs-12 col-md-4 col-lg-4">
-			                            <a class="btn btn-success" href="#">Add to Checklist</a>
+			                            <!-- <a class="btn btn-success" href="#">Add to Checklist</a> -->
+			                            &nbsp;
 			                        </div>
 			                    </div>
 			                </div>
@@ -125,7 +126,8 @@
 					<% end %>		
 				</div>
 			
-			<%= will_paginate @vendors, renderer:BootstrapPagination::Rails, previous_label:"<<", next_label:">>", inner_window:1, outer_window:0%>
+		<div><%= will_paginate @vendors, renderer:BootstrapPagination::Rails, previous_label:"<<", next_label:">>", inner_window:3, outer_window:0%>
+			</div>
         </div>
     </div>
 </div>
