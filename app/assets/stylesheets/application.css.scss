@@ -12,11 +12,12 @@
  *
  *= require_tree .
  *= require_self
- *= require Raleway/bootstrap.min
- *= require Raleway/style
- *= require Raleway/font-awesome
- *= require Raleway/ionicons.min
- *= require Raleway/bootstrap-social
+ *** Raleway Assets
+ *= require bootstrap.min
+ *= require style
+ *= require font-awesome
+ *= require ionicons.min
+ *= require bootstrap-social
  */
 
 
