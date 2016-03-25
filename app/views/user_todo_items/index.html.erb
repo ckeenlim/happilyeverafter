@@ -41,15 +41,12 @@
 
 
 
-<div class=" checklist-container col-xs-12 col-lg-9">
+<div class=" checklist-container col-xs-12 col-lg-8">
 	
 		<div class="panel-group", id="all-items">
-			<h1 style="color: white;"> Remaining To-Dos </h1>
+			<h1> Remaining To-Dos </h1>
 			<ul id="remaining-items-list">
-			<%= render @user_todo_items %> 
-				
-			
-
+				<%= render @user_todo_items %> 
 			</ul>
 
 			<%= render 'new' %>
@@ -58,7 +55,7 @@
 		
 		<!-- completed items -->
 		<div class="panel-group", id="completed-items-panel", style="display:none;">
-			<h1 style="color: white;"> Completed Items </h1>
+			<h1> Completed Items </h1>
 			<ul id="completed-items">
 				<% @completed_user_todo_items.each do |t| %>
 					
