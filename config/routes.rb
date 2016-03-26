@@ -1,6 +1,3 @@
-match "*path" => redirect("https://happilyeverafter%{path}"), :constraints => { :protocol => "http://" }
-match "*path" => redirect("https://happilyeverafter%{path}"), :constraints => { :subdomain => "" }
-
 Rails.application.routes.draw do
 
   get 'vendors/search' => 'page#vendors'
