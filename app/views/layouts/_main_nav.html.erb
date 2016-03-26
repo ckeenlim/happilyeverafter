@@ -114,9 +114,7 @@
 												    		<li><a tabindex="-1" href="features-labels-badges.html">Labels &amp; Badges</a></li>
 												    		<li><a tabindex="-1" href="features-forms.html">Forms</a></li>
 												    		<li><a tabindex="-1" href="features-panels.html">Panels</a></li>
-												    		<% if user_signed_in? %>
-												    			<li><%= link_to "My Checklist", user_todo_items_path%></li>
-												    		<% end %>
+												    		
 												    	</ul>
 													</li>
 													<li><a href="features-typography.html">Typography</a></li>
@@ -246,6 +244,9 @@
 									            	<li><a href="blog-posts-fullwidth.html">Full Width</a></li>
 									            	<li><a href="blog-posts-grid.html">Grid</a></li>
 									            	<li><a href="blog-single-post.html">Single Post</a></li>
+									            	<% if user_signed_in? %>
+												    			<li><%= link_to "My Checklist", user_todo_items_path%></li>
+												    		<% end %>
 									            	<li><%= link_to "All", posts_path %> </li> 
 									        	</ul>
 									        </li>
