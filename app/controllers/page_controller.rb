@@ -1,5 +1,5 @@
 class PageController < ApplicationController
-  before_filter :set_search
+  
   def home
 
   end
