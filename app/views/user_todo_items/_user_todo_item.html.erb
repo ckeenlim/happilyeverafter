@@ -1,7 +1,7 @@
 <% if user_todo_item.completed_at == nil %>
 	<li class="panel panel-heading , remaining-todo-item", id=<%= dom_id(user_todo_item)%> >
 					<div class="todoContent">
-						<%= link_to '<i class="fa fa-check-square-o checkIcon", style="margin-right:5px;", data-toggle="tooltip" title="Mark as Complete"> </i> '.html_safe, complete_user_todo_item_path(user_todo_item.id), class: "check-but", method: :patch, remote: true  %>
+						<%= link_to '<i class="fa fa-check-square-o checkIcon", style="margin-right:5px;", data-toggle="tooltip" title="Mark as Complete"> </i> '.html_safe, complete_user_todo_item_path(user_todo_item.id), class: "check-but", method: :put, remote: true  %>
 							
 						<%= user_todo_item.item %> 
 
@@ -25,7 +25,7 @@
 
 								<ul class="list-inline panel-actions", style="text-align: right;margin-top: -25px;margin-bottom: 0;">
 									<li>
-										<%= link_to '<i class="fa fa-undo resetIcon", style="margin-right:5px;", data-toggle="tooltip" title="Restore"> </i> '.html_safe, reset_user_todo_item_path(user_todo_item.id), method: :patch, remote: true  %>
+										<%= link_to '<i class="fa fa-undo resetIcon", style="margin-right:5px;", data-toggle="tooltip" title="Restore"> </i> '.html_safe, reset_user_todo_item_path(user_todo_item.id), method: :put, remote: true  %>
 									</li>
 
 								</ul>

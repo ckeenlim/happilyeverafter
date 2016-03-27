@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Happilyeverafter - Weddings, Wedding Planner, Ideas, Philippines</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js' %>
+  
+  <%= csrf_meta_tags %>
+ 
+
+  <!-- test to see this -->
+  <meta charset="utf-8">
+  <title>Happily Ever After PH - Weddings, Wedding Planner, Ideas, Philippines</title>
+  <meta name="description" content="Happily Ever After PH">
+  <!-- Latest compiled and minified CSS -->
+   <!-- Latest compiled and minified CSS -->
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <!--link rel="stylesheet" type="text/css" href="css/custom.css"-->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale = 1.0" />
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <!--script src="code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="code.jquery.com/ui/1.11.4/jquery-ui.js"></script-->
+
+</head>
+<%= render partial: "shared/flash_messages", flash: flash %> 
+<body data-spy="scroll" data-target="#my-navbar">
+<%= render partial: "shared/top_nav" %>
+
+
+  
+
+  
+  
+  <%= yield %>
+
+</body> 
+
+</html>
+
+
+<script>
+    $('.error_msgs').fadeOut(1800)
+  </script>

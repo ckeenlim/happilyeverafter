@@ -17,4 +17,5 @@
 //= require_tree .
 //= require turbolinks
 //= require bootstrap-slider.min
+//= require RalewayMain
 

@@ -1,0 +1,74 @@
+
+				<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+				    <div class="modal-dialog modal-sm">
+				        <div class="modal-content">
+			<!-- Begin Content -->
+			<div class="content-40mg">
+				<div class="container">
+
+					<div class="row">
+
+						
+
+						<!-- Begin Register -->
+						<div class="col-sm-6 mt30-xs">
+							<div class="panel no-margin panel-default">
+							    <div class="panel-heading">Create an account</div>
+							    <div class="panel-body">
+							        <!-- start form -->
+							        <%= simple_form_for(:user, :url => registration_path(:user)) do |f| %>
+							            <div class="form-group">
+							                <div class="input-group">
+							                    <div class="input-group-addon"><span class="ion-android-mail" style="font-size:9px;"></span></div>
+							                    <!--input class="form-control" type="email" placeholder="Enter email"-->
+							                    <%= f.input :email , autofocus: true, class: "form-control", placeholder: "Enter email" , label:false, required: true %>
+							                </div>
+							            </div>
+							            <div class="form-group">
+							            	<div class="input-group">
+							                    <div class="input-group-addon"><span class="ion-ios7-locked"></span></div>
+							                	<!--input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password"-->
+							                	<%= f.input :password,class: "form-control",  placeholder:"Password",label:false,required: true  %>          
+							                </div>
+							            </div>
+							            <div class="form-group">
+							            	<div class="input-group">
+							                    <div class="input-group-addon"><span class="ion-ios7-locked"></span></div>
+							                	<!--input type="password" class="form-control" id="exampleInputPassword4" placeholder="Confirm Password"-->
+							                	<%= f.input :password_confirmation, class: "form-control", placeholder: "Confirm Password",label:false,required: true %>
+							                </div>
+							            </div>
+							            <div class="checkbox">
+							                <label>
+							                  <input type="checkbox"> I read the terms of service.
+							                </label>
+							            </div>
+							            <hr class="mb20 mt20">
+							            <div class="form-group">
+							                <input type="email" class="form-control" id="firstName" placeholder="First Name">
+							            </div>
+							            <div class="form-group">
+							                <input type="email" class="form-control" id="lastName" placeholder="Last Name">
+							            </div>
+							            <hr class="mt20 mb20">
+							            <!--button type="submit" class="btn btn-rw btn-primary">Register</button--> 
+							            <%= f.submit "Register", :class => "btn btn-rw btn-primary"  %>
+							            &nbsp;&nbsp;&nbsp;
+							            <small><a href="#">Terms of service</a></small>
+							        
+							        <% end %>
+							        <!-- /form -->
+							    </div><!-- /panel body -->
+							</div><!-- /panel -->
+						</div><!-- /column-->
+						<!-- End Register -->
+
+					</div><!-- /row -->
+
+				</div><!-- /container -->
+			</div><!-- /content -->
+			<!-- End Content -->
+
+			</div>
+			</div>
+			</div>
