@@ -1,0 +1,89 @@
+
+<!--html lang="en"-->
+
+
+
+
+  	<!-- Search-->
+  	<div class="container" id="searchContainer">
+  		<section>
+  			<div class="page-header" id="searchDiv">
+  				<h2>Let's turn your wedding vision into a reality.<br><small> Search for anything you need.</small></h2>
+  			</div>
+
+  			<div class="row" style="text-align: center;">
+
+
+
+  				<!--form action="" class="form-inline" style="border-bottom: none;"-->
+          
+          <%= search_form_for @q, :class => "form-inline", url: search_vendors_path, method: :post do |f| %>
+            <div class = "m-t-1">
+              <%= f.text_field :name_cont, class: "form-control", placeholder: "Photographers, etc." %>
+              <%= f.submit "Find", :class =>"btn btn-default" %>
+            </div>
+          <% end %>
+
+
+
+
+
+            <!--div class="form-group ">
+              
+              <!--input type="text" class="form-control" id="searchText" placeholder="Reception, Photographers, etc."-->
+            <!--/div>
+            
+            <!--button type="submit" class="btn btn-default">Find</button-->
+          <!--/form-->
+  			</div><!-- End row -->
+  		</section>
+  	</div><!--End Container-->
+
+<!-- Footer -->
+
+    <footer>
+      <hr>
+        <div class="container text-center">
+        <h3>Subscribe for more free stuff</h3>
+        <p>Enter your name and email</p>
+
+        <form action="" class="form-inline">
+          <div class="form-group">
+            <label for="subscription">Subscribe</label>
+            <input type="text" class="form-control" id="subscription" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter your Email">
+          </div>
+          <button type="submit" class="btn btn-default">Subscribe</button>
+          
+        </form>
+
+        <hr>
+        <ul class="list-inline">
+          <li><a href="http://www.twitter.com"><i class="fa fa-twitter" style="font-size:24px"></i></a></li>
+          <li><a href="http://www.facebook.com"><i class="fa fa-facebook" style="font-size:24px"></i></a></li>
+          <li><a href="http://www.instagram.com/happilyeverafterph"><i class="fa fa-instagram" style="font-size:24px"></i></a></li>
+        </ul>
+
+        <p>&copy; Copyright @ 2016</p>
+
+      </div><!-- end Container-->
+      
+
+    </footer>
+
+	<!--script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script-->
+
+		<br>
+		<br>
+
+		<h4>
+		<%= link_to "Import data", vendors_path %> 
+
+		</h4>
+
+<!--/html-->

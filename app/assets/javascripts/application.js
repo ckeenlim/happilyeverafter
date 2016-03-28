@@ -18,4 +18,5 @@
 //= require turbolinks
 //= require bootstrap-slider.min
 //= require RalewayMain
+//= require revolution-slider
 
