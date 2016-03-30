@@ -1,0 +1,96 @@
+<!-- Begin Navigation -->
+		     	<div class="navbar-wrapper">
+					<div class="navbar navbar-main" id="fixed-navbar">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12 column-header">
+									<div class="navbar-header">
+										<!-- Brand -->
+										<%= link_to '<div class="css-logo"></div> <img src="images/heap_logo2.jpg" class="raleway-logo" alt="HEAP">'.html_safe, root_path, :class => "navbar-brand"  %>
+
+
+										<!-- Mobile Navigation -->
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+								            <span class="sr-only">Toggle navigation</span>
+								            <span class="icon-bar"></span>
+								            <span class="icon-bar"></span>
+								            <span class="icon-bar"></span>
+										</button>
+									</div><!-- /navbar header -->   
+
+									<!-- Main Navigation - Explained in Documentation -->
+									<nav class="navbar-collapse collapse navHeaderCollapse" role="navigation">
+										<ul class="nav navbar-nav navbar-right">
+											<li class="dropdown dropdown-main">
+									        	
+									        	<%= link_to "Home", root_path %>
+									        
+									    </li>
+
+									    <li class="dropdown dropdown-main">
+									        	
+									        	<%= link_to "Contact Us", page_contact_path %>
+									        
+									    </li>
+											
+											<li class="dropdown dropdown-main">
+									        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Vendors<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
+										         
+										            <li> <%= link_to "See all categories", page_listings_path %> </li>
+									        	</ul>
+									    </li>
+									    <li class="dropdown dropdown-main">
+									        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Real Weddings<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	
+									    </li>
+
+
+											<li class="dropdown dropdown-main">
+									        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
+									            	<li><%= link_to "All Topics", posts_path %> </li> 
+									        	</ul>
+									    </li>
+
+											<li class="dropdown dropdown-main">
+									        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
+									            	<li><a href="blog-posts-sidebar-right.html">Sidebar Right</a></li>
+									            	<li><a href="blog-posts-sidebar-left.html">Sidebar Left</a></li>
+									            	<li><a href="blog-posts-fullwidth.html">Full Width</a></li>
+									            	<li><a href="blog-posts-grid.html">Grid</a></li>
+									            	<li><a href="blog-single-post.html">Single Post</a></li>
+									        	</ul>
+									    </li>
+									    <li class="dropdown dropdown-main">
+									        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">My HEAP<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
+												    		<li><%= link_to "My Checklist", user_todo_items_path%></li>
+												    		
+												    		
+									        	</ul>
+									        </li>
+											<li class="dropdown hidden-sm hidden-xs">
+						              <a href="#" class="ml10 nav-circle-li dropdown-toggle dropdown-form-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+						                 <ul class="fadeInRight-animated dropdown-menu dropdown-menu-user">
+						                    <li id="dropdownForm">
+						                        <div class="dropdown-form">
+						                          <%= search_form_for @q, :class => "form-default form-inline p15", url: search_vendors_path, method: :post do |f| %>
+						                               <div class="input-group">
+            																	<%= f.text_field :name_or_address_cont, class: "form-control search-input", placeholder: "Search..." %>
+              																<span class="input-group-btn"> <%= f.submit "Go!", :class =>"btn btn-rw btn-primary search-btn" %> </span>
+          														<% end %>
+																			<!-- /searh form -->  
+						                        </div><!-- /dropdown form -->  
+						                    </li><!-- /dropdownForm list item -->  
+						                  </ul><!-- /search dropdown -->
+						          </li><!-- /search navbar list item --> 
+										</ul><!-- /navbar right -->  
+									</nav><!-- /nav -->
+								</div>
+							</div>
+						</div><!-- /container header -->   
+					</div><!-- /navbar -->
+				</div><!-- /navbar wrapper -->
+				<!-- End Navigation -->

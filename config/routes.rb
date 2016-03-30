@@ -26,8 +26,8 @@ Rails.application.routes.draw do
   resources :user_todo_items do
     collection { post :generate, to:'user_todo_items#generate'}
     member do
-      patch :complete
-      patch :reset
+      put :complete
+      put :reset
     end
   end
 

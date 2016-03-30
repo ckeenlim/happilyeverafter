@@ -1,5 +1,6 @@
 class UserTodoItemsController < ApplicationController
 	before_action :set_user_todo_item , except: [:index, :create]
+	before_action :authenticate_user!
 
 	def index
 		@user_todo_items = UserTodoItem.where(:user_id => current_user.id, :completed_at => nil).order(:todo_item_id, :created_at)

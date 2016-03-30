@@ -1,0 +1,96 @@
+<!-- Begin Header -->
+			<header>
+
+				<!-- Begin Top Bar -->
+				<div class="top-bar">
+					<div class="container">
+						<div class="row">
+							<!-- Address and Phone -->
+							<div class="col-sm-7 hidden-xs">
+								<span class="ion-android-system-home home-icon"></span>Ortigas Center, Pasig, Philippines<span class="ion-ios7-telephone phone-icon"></span>0917-123-45678
+							</div>
+							<!-- Social Buttons -->
+							<div class="col-sm-5 text-right">
+				      	<ul class="topbar-list list-inline">
+					        <li>						
+						        <a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+											<i class="fa fa-twitter"></i>
+										</a>
+										<a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+											<i class="fa fa-instagram"></i>
+										</a>
+										<a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+
+									<% if user_signed_in? %>
+
+										<li>
+          					<%= link_to "Log Out", destroy_user_session_path , :method => :delete %>
+        						<% else %>
+        						<li>
+										<li><a data-toggle="modal" data-target="#login">Login</a></li>		 
+										<!--li><a href="pages-forms-register-login.html">Register</a></li-->
+										<li><a data-toggle="modal" data-target="#register">Register</a></li>	
+									<% end %>
+								</ul>
+							</div>
+						</div><!--/row --> 
+					</div><!--/container header -->   
+				</div><!--/top bar -->   
+				<!-- End Top Bar -->
+
+				<!-- Login -->
+				<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+				    <div class="modal-dialog modal-sm">
+				        <div class="modal-content">
+				            <div class="modal-header">
+				                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+				                <h4 class="modal-title" id="loginLabel">Login</h4>
+				            </div>
+				            <div class="modal-body">
+
+				            
+            
+                  
+            
+            
+          
+
+					            <%= simple_form_for(:user, :url => session_path(:user)) do |f| %>
+						            <div class="form-group">
+						                
+						                <%= f.input :email , autofocus: true, class: "form-control", placeholder: "Enter email" , required: true %>
+
+						            </div>
+						            <div class="form-group">
+						                
+						                <%= f.input :password , class: "form-control", placeholder: "Password" , required: true %>
+						            </div>
+						            <div class="checkbox">
+						                <label>
+						                    <input type="checkbox"> Remember Me
+						                </label>
+						            </div>
+						        
+				            </div>
+				            <div class="modal-footer">
+				                
+				                <%= f.submit "Login", :class => "btn btn-rw btn-primary"  %>
+				                <%= link_to "Forgot your password?", new_password_path(:user) %>
+
+				            </div>
+				            <% end %>
+				            	<!-- /form -->
+				        </div><!-- /modal content -->
+				    </div><!-- /modal dialog -->
+				</div><!-- /modal holder -->
+				<!-- End Login -->
+
+				<%= render partial: "devise/register_login" %>
+
+		     
+
+			</header><!-- /header -->
+			<!-- End Header -->

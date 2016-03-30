@@ -1,4 +1,4 @@
-
+<div class="mt40 mb40">
 
 	<div class="container">
 		
@@ -18,11 +18,10 @@
 						<div class= "panel panel-default">
 							<div class="panel-heading">
 								<strong> Rating: </strong> 
-								<span class="average-review-rating" data-score=<%= @average_review %>
-								>
+								<span class="average-review-rating" data-score=<%= @average_review %>>
 								</span>
 								<br>
-								<%= @vendor.reviews.count %></span><strong> Reviews </strong>
+								<span><%= @vendor.reviews.count %></span><strong> Reviews </strong>
 							</div>
 						</div>
 					</li>
@@ -91,7 +90,7 @@
       			<%= f.input :nickname, :hint => 'Leave this field blank!' %>
 			    </div>
 			    <div>
-			      </br>
+			      <br>
 			      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
 			    </div>
   				<% end %>
@@ -148,6 +147,7 @@
 
 </div>
 </div>
+
 
 
 <script>

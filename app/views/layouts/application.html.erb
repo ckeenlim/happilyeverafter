@@ -1,55 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
+<%= render partial: "layouts/html_head" %>
 
-  <title>Happilyeverafter - Weddings, Wedding Planner, Ideas, Philippines</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js' %>
-  
-  <%= csrf_meta_tags %>
- 
-
-  <!-- test to see this -->
-  <meta charset="utf-8">
-  <title>Happily Ever After PH - Weddings, Wedding Planner, Ideas, Philippines</title>
-  <meta name="description" content="Happily Ever After PH">
-  <!-- Latest compiled and minified CSS -->
-   <!-- Latest compiled and minified CSS -->
-  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <!--link rel="stylesheet" type="text/css" href="css/custom.css"-->
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale = 1.0" />
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
-  <!--script src="code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="code.jquery.com/ui/1.11.4/jquery-ui.js"></script-->
-
-</head>
 <%= render partial: "shared/flash_messages", flash: flash %> 
-<body data-spy="scroll" data-target="#my-navbar">
-<%= render partial: "shared/top_nav" %>
 
-
-  
-
-  
-  
-  <%= yield %>
-
-</body> 
-
-</html>
+<body>
+	<div id="bg-boxed">
+		<div class="boxed">
+			<%= render partial: "layouts/header" %>
+			<%= render partial: "layouts/main_nav" %>
+			<%= render partial: "layouts/breadcrumbs" %>
+	  	<%= yield %>
+	  	<%= render partial: "layouts/footer" %>
+	  </div>
+	</div>
+</body>
 
 
 <script>
     $('.error_msgs').fadeOut(1800)
-  </script>
+</script>
+
+
+	<!-- Slider Revolution Main -->
+	<script type="text/javascript">
+	jQuery(document).ready(function() { 
+	   jQuery("#slider1").revolution({
+	        sliderType:"standard",
+	        startDelay:2500,
+	        spinner:"spinner2",
+	        sliderLayout:"auto",
+	        viewPort:{
+	           enable:false,
+	           outof:'wait',
+	           visible_area:'100%'
+	        }
+	        ,
+	        delay:9000,
+			navigation: {
+				keyboardNavigation:"off",
+				keyboard_direction: "horizontal",
+				mouseScrollNavigation:"off",
+				onHoverStop:"off",
+				arrows: {
+					style:"erinyen",
+					enable:true,
+					hide_onmobile:true,
+					hide_under:600,
+					hide_onleave:true,
+					hide_delay:200,
+					hide_delay_mobile:1200,
+					tmp:'<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div>    <div class="tp-arr-img-over"></div>	<span class="tp-arr-titleholder">{{title}}</span> </div>',
+					left: {
+						h_align:"left",
+						v_align:"center",
+						h_offset:30,
+						v_offset:0
+					},
+					right: {
+						h_align:"right",
+						v_align:"center",
+						h_offset:30,
+						v_offset:0
+					}
+				}
+				,
+				touch:{
+					touchenabled:"on",
+					swipe_treshold : 75,
+					swipe_min_touches : 1,
+					drag_block_vertical:false,
+					swipe_direction:"horizontal"
+				}
+				,
+				bullets: {
+	                enable:true,
+	                hide_onmobile:true,
+	                hide_under:600,
+	                style:"hermes",
+	                hide_onleave:true,
+	                hide_delay:200,
+	                hide_delay_mobile:1200,
+	                direction:"horizontal",
+	                h_align:"center",
+	                v_align:"bottom",
+	                h_offset:0,
+	                v_offset:30,
+	                space:5
+				}
+			},
+			gridwidth:1240,
+			gridheight:497 
+	    }); 
+	}); 
+	</script>
