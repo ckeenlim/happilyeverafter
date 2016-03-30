@@ -28,6 +28,8 @@ module Happilyeverafter
     config.assets.enabled = true
     
     config.assets.paths << "#{Rails.root}/app/assets/javascripts/extensions"
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
+    
 
   end
 end
