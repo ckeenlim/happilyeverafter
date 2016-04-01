@@ -10,7 +10,12 @@
 			<h3> <i class="fa fa-list-ul"></i> My Checklist </h3>
 			
 		</div>
-		<br>
+		<br/>
+		<p class="progress-head">Progress <span class="progress-val pull-right"><%= (@completed_user_todo_items.count * 100.0 / ( @user_todo_items.count + @completed_user_todo_items.count)).ceil.to_s + '%' %></span></p>
+		<div class="progress">
+	    <div class="progress-bar progress-bar-primary progress-bar-striped active"  role="progressbar" style="width: <%= (@completed_user_todo_items.count * 100.0 / ( @user_todo_items.count + @completed_user_todo_items.count)).ceil.to_s + '%' %>">
+	    </div>
+		</div>
 
 		<div class="panel panel-heading", id="todo-panel-option">
 			<div class="row">
@@ -45,23 +50,40 @@
 <div class=" checklist-container col-xs-12 col-lg-8">
 	
 		<div class="panel-group", id="all-items">
-			<h1> Remaining To-Dos </h1>
+			<div class="panel-primary">
+				<div class="panel-heading">
+					<div class="panel-body">
+
+					<h1 class="panel-title"> Remaining To-Dos </h1>
+					</div>
+				</div>
+			</div>
+			<hr class="mt20 mb20">
+			<%= render 'new' %>
 			<ul id="remaining-items-list">
 				<%= render @user_todo_items %> 
 			</ul>
 
-			<%= render 'new' %>
+			
 		</div>
 
 		
 		<!-- completed items -->
 		<div class="panel-group", id="completed-items-panel", style="display:none;">
-			<h1> Completed Items </h1>
+			<div class="panel-success">
+				<div class="panel-heading">
+					<div class="panel-body">
+
+					<h1 class="panel-title"> Completed Items </h1>
+					</div>
+				</div>
+			</div>
+			<hr class="mt20 mb20">
 			<ul id="completed-items">
 				<% @completed_user_todo_items.each do |t| %>
 					
-					<li class="panel panel-heading completed-todo-item", id=<%= dom_id(t)%> >
-						<div class="completedTodoContent">
+					<li class="panel  completed-todo-item", id=<%= dom_id(t)%> >
+						<div class="completedTodoContent panel-body">
 							<div class='completed-todo-item' >
 								<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
 								<%= t.item %> 

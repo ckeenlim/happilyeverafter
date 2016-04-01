@@ -7220,6 +7220,11 @@ img.tp-slider-alternative-image	{
 .completed-todo-item {
   text-decoration: line-through;
 }
+
+/* line 16, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/user_todo_items.scss */
+.check-but {
+  text-decoration: none !important;
+}
 /* line 8, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/vendors.scss */
 ul {
   padding: 0;
@@ -17316,7 +17321,7 @@ input[type=checkbox] {
 .form-control {
 	border-radius:0;
 	border:1px solid #ccc;
-	height:42px;
+	height:42px; 
 	display:inline-block;
 	-webkit-box-shadow:inset 0 2px 1px rgba(0,0,0,.07);
 	box-shadow:inset 0 2px 1px rgba(0,0,0,.07);

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317014237) do
+ActiveRecord::Schema.define(version: 20160330024837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160317014237) do
   add_index "post_categories", ["category", "post_type"], name: "index_post_categories_on_category_and_post_type", using: :btree
 
   create_table "posts", force: :cascade do |t|
-    t.integer  "type"
+    t.integer  "post_type"
     t.integer  "category"
     t.string   "title"
     t.text     "content"
