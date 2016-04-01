@@ -8,3 +8,11 @@
 	var num2 = +$("#user-todo-completed").text() - 1;
 	$("#user-todo-count").text(num1);
 	$("#user-todo-completed").text(num2);
+
+
+	var progressStyle = '<div class="progress-bar progress-bar-primary progress-bar-striped active"  role="progressbar" style="width:';
+	var progressVal = Math.ceil(num2*100.0/(num1 + num2)); 
+	progressStyle += String(progressVal) + "%";
+	progressStyle += '"> </div>';
+	$(".progress-val").text(String(progressVal) + "%").change();
+	$(".progress").html(progressStyle);

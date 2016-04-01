@@ -47,5 +47,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :blogs do
+    resources :comments
+  end
+
 end
  

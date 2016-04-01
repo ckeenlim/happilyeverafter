@@ -1,7 +1,7 @@
 <% if user_todo_item.completed_at == nil %>
-	<li class="panel panel-heading , remaining-todo-item", id=<%= dom_id(user_todo_item)%> >
-					<div class="todoContent">
-						<%= link_to '<i class="fa fa-check-square-o checkIcon", style="margin-right:5px;", data-toggle="tooltip" title="Mark as Complete"> </i> '.html_safe, complete_user_todo_item_path(user_todo_item.id), class: "check-but", method: :put, remote: true  %>
+	<li class="panel remaining-todo-item", id=<%= dom_id(user_todo_item)%> >
+					<div class="todoContent panel-body">
+						<%= link_to '<span size-21> <i class="ion-checkmark bordered-icon-xs checkIcon", style="margin-right:5px; text-decoration:none;", data-toggle="tooltip" title="Mark as Complete"> </i></span> '.html_safe, complete_user_todo_item_path(user_todo_item.id), class: "check-but", method: :put, remote: true  %>
 							
 						<%= user_todo_item.item %> 
 
@@ -17,8 +17,8 @@
 				</li>	
 
 <% else %>
-	<li class="panel panel-heading completed-todo-item", id=<%= dom_id(user_todo_item)%> >
-						<div class="completedTodoContent">
+	<li class="panel completed-todo-item", id=<%= dom_id(user_todo_item)%> >
+						<div class="completedTodoContent panel-body">
 							<div class='completed-todo-item' >
 								<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
 								<%= user_todo_item.item %> 
