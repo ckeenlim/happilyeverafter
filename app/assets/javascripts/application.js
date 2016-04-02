@@ -19,7 +19,8 @@
 //= require bootstrap-slider.min
 //= require RalewayMain
 //= require revolution-slider
-//= require royal_preloader.min
+
+
 
 
 
