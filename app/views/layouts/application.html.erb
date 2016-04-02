@@ -6,15 +6,18 @@
 <%= render partial: "shared/flash_messages", flash: flash %> 
 
 <body>
+	
 	<div id="bg-boxed">
 		<div class="boxed">
 			<%= render partial: "layouts/header" %>
 			<%= render partial: "layouts/main_nav" %>
+
 			<!--%= #render partial: "layouts/breadcrumbs" %-->
 	  	<%= yield %>
 	  	<%= render partial: "layouts/footer" %>
 	  </div>
 	</div>
+	
 </body>
 
 

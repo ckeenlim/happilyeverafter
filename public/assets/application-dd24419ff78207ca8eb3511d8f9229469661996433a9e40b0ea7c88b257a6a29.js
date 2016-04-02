@@ -14795,10 +14795,11 @@ $(document).ready(function(){
       $(".locationCheckbox").prop('checked', $(this).prop("checked"));
       });
 });
-(function() {
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-}).call(this);
+;
 (function() {
 
 
@@ -15785,6 +15786,8 @@ $('#fixed-navbar').affix({
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
 
 
 
