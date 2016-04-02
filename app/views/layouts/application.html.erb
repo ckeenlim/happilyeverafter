@@ -5,8 +5,8 @@
 
 <%= render partial: "shared/flash_messages", flash: flash %> 
 
-<body>
-	
+<body class="royal_preloader">
+	<div id="royal_preloader"></div>
 	<div id="bg-boxed">
 		<div class="boxed">
 			<%= render partial: "layouts/header" %>
@@ -98,3 +98,12 @@
 	    }); 
 	}); 
 	</script>
+
+	    <script>
+		var config = {
+		easing: 'hustle',
+		mobile:  true,
+		delay:  'onload'
+		}
+		window.sr = new scrollReveal( config );
+    </script>
