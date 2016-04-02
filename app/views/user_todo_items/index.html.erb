@@ -1,73 +1,132 @@
+<!-- Begin Page Header -->
+				<div class="header">
+					<div class="container">
+						<div class="row">
+							<!-- Page Title -->
+							<div class="col-sm-6 col-xs-12">
+								<h1>Checklist</h1>
+							</div>
+
+							<!-- Breadcrumbs -->
+							<div class="col-sm-6"> 
+								<ol class="breadcrumb">
+									<li><span class="ion-home breadcrumb-home"></span> <%= link_to "Home", root_path %></li>
+									<li>My HEAP</li>
+									<li>Checklist</li>
+								</ol>
+							</div><!-- /column -->
+						</div><!-- /row -->  
+					</div><!-- /container -->  
+				</div><!-- /page header -->  
+
+			</header><!-- /header -->
+<section class="mt40 mb40">
 <div class="container">
 
 
-<div class="checklist-container col-xs-12 col-lg-3", style="margin-right: 10px;">
+<div class="row">
+	<section class="checklist-container col-lg-3 col-md-3 col-sm-4">
 
-	<div class="panel-group">
-		<div class="panel panel-body">
-
-			<h3> <i class="fa fa-list-ul"></i> My Checklist </h3>
+		<div class="panel-group">
+			<!-- Begin Sidebar -->
 			
-		</div>
-		<br>
+				<nav role="navigation">
+					<ul class="sidebar-nav list-group no-margin" id="sidebar-nav">
+						<li class="list-group-item text-center">
+							<h3 class="pt15"><span> <i class="ion-clipboard"></i>  </span>My Checklist</h3>
+		      		<br/>
+		      		<strong> <small class="progress-head">Progress: <span class="progress-val"><%= (@completed_user_todo_items.count * 100.0 / ( @user_todo_items.count + @completed_user_todo_items.count)).ceil.to_s + '%' %></span></small> 
+		      		</strong>
+							<div class="progress">
+				    		<div class="progress-bar progress-bar-primary progress-bar-striped active"  role="progressbar" style="width: <%= (@completed_user_todo_items.count * 100.0 / ( @user_todo_items.count + @completed_user_todo_items.count)).ceil.to_s + '%' %>">
+				    		</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			
+		
+			<br/>
 
-		<div class="panel panel-heading", id="todo-panel-option">
-			<div class="row">
-				<div class="col-xs-6">
-					To-Dos
-				</div>
-				<div class="col-xs-6">
-					<span id="user-todo-count"> <%= @user_todo_items.count %> </span>
-					/
-					<span id="user-todo-total"> <%= @user_todo_items.count + @completed_user_todo_items.count %> </span>
+			<div class="btn btn-block btn-rw btn-primary mb17 ", id="todo-panel-option">
+				<div class="row">
+					<div class="col-xs-6 text-left">
+						<strong class="text-white"> <span class="glyphicon glyphicon-list-alt"> </span> To-Dos </strong>
+					</div>
+					<div class="col-xs-6">
+						<span id="user-todo-count"> <%= @user_todo_items.count %> </span>
+						/
+						<span id="user-todo-total"> <%= @user_todo_items.count + @completed_user_todo_items.count %> </span>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="panel panel-heading", id="completed-todo-panel-option">
-			<div class="row">
-				<div class="col-xs-6">
-					Completed
-				</div>
-				<div class="col-xs-6">
-					<span id="user-todo-completed"> <%= @completed_user_todo_items.count %> </span>
+
+			
+			<div class="btn btn-block btn-rw btn-success", id="completed-todo-panel-option">
+				<div class="row">
+					
+					<div class="col-xs-6 text-left">
+						<strong class="text-white"> <span class="glyphicon glyphicon-check" > </span> Completed </strong>
+					</div>
+					<div class="col-xs-6">
+						<span id="user-todo-completed"> <%= @completed_user_todo_items.count %> </span>
+					</div>
 				</div>
 			</div>
+
+
 		</div>
 
-
-	</div>
-</div>
-
+	</section>
+	<!-- End Sidebar -->
 
 
-<div class=" checklist-container col-xs-12 col-lg-8">
+
+	<div class=" checklist-container col-lg-9 col-md-9 col-sm-8">
 	
 		<div class="panel-group", id="all-items">
-			<h1> Remaining To-Dos </h1>
+			
+			<table class="table grey-theme">
+				<thead>
+					<tr>
+						<th>Remaining To-Dos</th>     
+					</tr>
+				</thead><!-- /table header -->  
+			</table>
+
+			<hr class="mt20 mb20">
+			<%= render 'new' %>
 			<ul id="remaining-items-list">
 				<%= render @user_todo_items %> 
 			</ul>
 
-			<%= render 'new' %>
+			
 		</div>
 
 		
 		<!-- completed items -->
 		<div class="panel-group", id="completed-items-panel", style="display:none;">
-			<h1> Completed Items </h1>
+			<table class="table grey-theme">
+				<thead>
+					<tr>
+						<th>Completed Items </th>     
+					</tr>
+				</thead><!-- /table header -->  
+			</table>
+			<hr class="mt20 mb20">
 			<ul id="completed-items">
 				<% @completed_user_todo_items.each do |t| %>
 					
-					<li class="panel panel-heading completed-todo-item", id=<%= dom_id(t)%> >
-						<div class="completedTodoContent">
+					<li class="panel  completed-todo-item", id=<%= dom_id(t)%> >
+						<div class="completedTodoContent panel-body">
 							<div class='completed-todo-item' >
 								<i style = "opacity: 0.4;" class ="fa fa-check"> </i>
 								<%= t.item %> 
 
 								<ul class="list-inline panel-actions", style="text-align: right;margin-top: -25px;margin-bottom: 0;">
 									<li>
-										<%= link_to '<i class="fa fa-undo resetIcon", style="margin-right:5px;", data-toggle="tooltip" title="Restore"> </i> '.html_safe, reset_user_todo_item_path(t.id), method: :patch, remote: true  %>
+										<%= link_to '<i class="fa fa-undo resetIcon", style="margin-right:5px;", data-toggle="tooltip" title="Restore"> </i> '.html_safe, reset_user_todo_item_path(t.id), method: :put, remote: true  %>
 									</li>
 								</ul>
 							</div>
@@ -81,15 +140,10 @@
 			</ul>
 		</div>
 
-</div>
 
-</div>
+		</div>
+	</div>
+</section>
 
-<div class="container col-md-6 col-md-offset-3">
 
-		<br>
-		<br>
 
-		global footer??
-
-</div>

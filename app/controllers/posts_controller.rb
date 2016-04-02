@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
-	before_filter :authenticate_user!, except: [:index]
+	before_action :authenticate_user!, except: [:index]
 	
 	def index
-		@posts = Post.all
+		@posts = Post.where(post_type: 1)
 
 	end
 
 	def show
-		@post
+		
 		@comments = @post.comments.paginate(page: params[:page], :per_page => 10)
 	end
 
@@ -21,6 +21,7 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 		@post.user_id = current_user.id
+		@post.post_type = 1
 
 		if @post.save
 			redirect_to @post
@@ -44,6 +45,7 @@ class PostsController < ApplicationController
 	end
 
 	def find_post
-		@post = Post.find(params[:id])
+		#@post = Post.find(params[:id])
+		@post = Post.find_by_id_and_post_type(params[:id], 1)
 	end
 end

@@ -56,7 +56,8 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = {host: "localhost:3000"}
 
-
+  # Precompile fonts
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 
 
 

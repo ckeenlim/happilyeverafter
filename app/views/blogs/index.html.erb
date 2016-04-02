@@ -1,0 +1,93 @@
+
+				<!-- Begin Page Header -->
+				<div class="header">
+					<div class="container">
+						<div class="row">
+							<!-- Page Title -->
+							<div class="col-sm-6 col-xs-12">
+								<h1>Blogs</h1>
+							</div>
+
+							<!-- Breadcrumbs -->
+							<div class="col-sm-6"> 
+								<ol class="breadcrumb">
+									<li><span class="ion-home breadcrumb-home"></span> <%= link_to "Home", root_path %></li>
+									<li><%= link_to "Blogs", blogs_path %></li>
+									
+								</ol>
+							</div><!-- /column -->
+						</div><!-- /row -->  
+					</div><!-- /container -->  
+				</div><!-- /page header -->  
+
+			</header><!-- /header -->
+			<!-- End Header -->
+
+			<!-- New Blog Post Link -->
+			<%= link_to "Create New Blog Post" , new_blog_path%>
+
+			<!-- End New Blog Post -->
+			<!-- Begin Content Section -->
+			<section class="mt40 mb40">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-sm-12 mb20">
+							<p class="lead text-center flipInY-animated flipInY animated"> Happily Ever After Ph <b><mark>Blogs</mark></b></p>
+						</div>
+					</div>
+
+
+				  <!-- Blog Posts -->
+				  <div class="row">
+
+				    	<!-- from rails -->	
+				    	<% @blogs.each do |b|  %>
+
+				    	
+				    	<div class="col-sm-6">
+				    		<div class="blog-post mb40">
+				    			<div class="view image-hover-1 no-margin">
+									<!-- Blog Thumb -->
+										<img class="img-responsive" src="images/backgrounds/stock13.jpg" alt="..." />
+							      <div class="mask">
+									    <div class="image-hover-content">
+									       		<!-- Zoom + Blog Link -->
+												<a href="images/projects/illustration1.jpg" class="info image-zoom-link">
+													<div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+												</a>
+												<a href="portfolio-single-project.html" class="info">
+													<div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+												</a>
+											</div><!-- /image hover content -->
+										</div><!-- /mask-->
+									</div><!-- /image hover -->
+
+				    			<div class="blog-post-holder">
+				    				<ul class="list-inline posted-info">
+		                    <li>By <a href="#"><%= b.user.email %></a></li>
+		                    <li>In <a href="#">Design</a></li>
+		                    <li>Posted <%= b.created_at.strftime("%b %d, %Y") %></li>
+		                </ul>
+
+		                <hr align="left" class="mt15 mb10" style="width:50px;">
+				    				
+				    				<h2> <%= link_to b.title, blog_path(:id => b.id) %>  </h2>
+
+				    				<%= link_to "Read More", blog_path(:id => b.id) , class: "btn btn-rw btn-primary mt10" %> 
+				    			
+				    			</div>
+				    		</div>
+
+				    	</div>
+
+				    	<% end %>
+
+
+				    	<!-- end from rails -->
+
+				    
+						</div>
+			    </div>
+			</section><!-- /content -->
+			<!-- End Content Section -->

@@ -1,153 +1,237 @@
 
-
-	<div class="container">
-		
-			<div class="panel col-xs-4 col-md-3">
-				<ul>
-					<li>
-						<div class="avatarDiv">
-							<% if @vendor.avatars.present? %>
-								<%= image_tag @vendor.avatars[0].url , :class => "avatarClass"   %>
-							<%else%>
-								<%= image_tag "happilyeverafterlogo2.png", :class => "avatarClass" %>
-							<% end%>
-						</div>
-					</li>
-
-					<li>
-						<div class= "panel panel-default">
-							<div class="panel-heading">
-								<strong> Rating: </strong> 
-								<span class="average-review-rating" data-score=<%= @average_review %>
-								>
-								</span>
-								<br>
-								<%= @vendor.reviews.count %></span><strong> Reviews </strong>
+				<!-- Begin Page Header -->
+				<div class="header">
+					<div class="container">
+						<div class="row">
+							<!-- Page Title -->
+							<div class="col-sm-6 col-xs-12">
+								<h1>Single Product</h1>
 							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
 
-			<!-- Information goes here -->
-			<div class="col-xs-6 col-md-8">
-				<h1> <%= @vendor.name %> </h1>
-				<ul>
-					<li>
-						<div class="panel-body">
-								Wordclass Photographer. Very Affordable. Always available.
-								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
-								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
-								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
-								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
-								sfdgsdfgslksjdflgkjsdk;fjg;klsdjf;gjsdk;lfjgs;lkdfjglsf
-								g
-						</div>
-					</li>
-					<li>
-						Websites: <%= link_to "website", "http://#{@vendor.websiteUrl}", :target => "_blank" %>
+							<!-- Breadcrumbs -->
+							<div class="col-sm-6">
+								<ol class="breadcrumb">
+									<li><span class="ion-home breadcrumb-home"></span> <%= link_to "Home", root_path %></li>
+									<li><%= link_to "Vendors", page_listings_path %></li>
+									<li>This Vendor</li>
+								</ol>
+							</div><!-- /column -->
+						</div><!-- /row -->  
+					</div><!-- /container -->  
+				</div><!-- /page header -->  
+				
+			</header><!-- /header -->
+			<!-- End Header -->
 
-					</li>
-					<li>
-						Address: <%= @vendor.address %>
+			<!-- Start Vendor -->
+			<section class="mt40">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<!-- Product Title -->
+							<h3 class="mb30 mt10"><strong><%= @vendor.name %> </strong></h3>
+							<div id="owl-carousel-product" class="owl-carousel popup-gallery">
+								<div class="thumbnail">
+					                <div class="caption">
+					                	<div class="thumbnail-caption-holder">
+						                    <a href="images/shop/product-single1.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a>
+					                    </div>
+					                </div>
+					                <img src="images/shop/product-single1.jpg" alt="...">
+					            </div>
+								<div class="thumbnail">
+					                <div class="caption">
+					                	<div class="thumbnail-caption-holder">
+						                    <a href="images/shop/product-single2.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a>
+					                    </div>
+					                </div>
+					                <img src="images/shop/product-single2.jpg" alt="...">
+					            </div>
+								<div class="thumbnail">
+					                <div class="caption">
+					                	<div class="thumbnail-caption-holder">
+						                    <a href="images/shop/product-single3.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a>
+					                    </div>
+					                </div>
+					                <img src="images/shop/product-single3.jpg" alt="...">
+					            </div>
+							</div><!-- /end owl product slider -->
 
-					</li>
+							<form role="form">
+								<div class="col-md-2 mt5">
+									<div class="text-center">
+										
+										<a class="btn btn-social-icon btn-primary"><span class="fa fa-globe"></span></a>
+									</div>
+								</div>
+								
+								<div class="col-md-2 mt5">
+									<div class="text-center">
+										
+										<a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
+									</div>
+								</div>
+								<div class="col-md-2 mt5">
+									<div class="text-center">
+										
+										<a class="btn btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
+									</div>
+								</div>
+								<div class="col-md-2 mt5">
+									<div class="text-center">
+										
+										<a class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
+									</div>
+								</div>
+								<div class="col-md-2 mt5">
+									<div class="text-center">
+										
+										<a class="btn btn-social-icon btn-vimeo"><span class="fa fa-vimeo-square"></span></a>
+									</div>
+								</div>
+								<div class="col-md-2 mt5">
+									<div class="text-center">
+										
+										<a class="btn btn-social-icon btn-primary"><span class="fa fa-envelope"></span></a>
+									</div>
+								</div>
+								<div class="col-md-12 text-center mt15">
+									<!--h5 class="product-price"><s>$1120</s></h5><h3 class="pull-left no-margin mt5">$550</h3-->
 
-					<li>
-						Contact Information: <%= @vendor.officeNo %>
-						<%= @vendor.homeNo.nil? ? "" : @vendor.homeNo.to_s %>
-						<%= @vendor.cellNo.nil? ? "" : @vendor.cellNo.to_s %>
-						<%= @vendor.cellNoAlt1.nil? ? "" : @vendor.cellNoAlt1.to_s %>
-						<%= @vendor.cellNoAlt2.nil? ? "" : @vendor.cellNoAlt2.to_s %>
-						<%= @vendor.cellNoAlt3.nil? ? "" : @vendor.cellNoAlt3.to_s %>
-					</li>
+									<h3 class="pull-left no-margin mt5"> Rating: </h3>
+									<span class="average-review-rating" data-score=<%= @average_review %>> </span>
 
-					<li>
-						email: <%= @vendor.emailAddress %>
-					</li>
-				</ul>
-			</div>
-		</div>
+									<input type="submit" value=" <%= @average_review %> " class="btn btn-rw pull-right btn-md btn-primary">
+								</div>
+							</form><!-- /form -->
+						</div><!-- /end order details -->
+						<div class="col-sm-8 mt30-xs">
+							<!-- Begin Tabs w Icons -->
+							<ul class="nav nav-pills nav-pills-shop mt30-xs" role="tablist">
+							    <li class="active mr15"><a href="#details" role="tab" data-toggle="tab"><span class="fa fa-home"></span>  Details</a></li>
+							    <li class="mr15"><a href="#specs" role="tab" data-toggle="tab"><span class="fa fa-clipboard"></span>  Packages/Rates</a></li>
+							    <li><a href="#reviews" role="tab" data-toggle="tab"><span class="fa fa-star"></span>  Reviews (<%=@vendor.reviews.count%>)</a></li>
+							</ul><!-- /nav pills -->
+							<div class="tab-content tab-product">
+							    <div class="tab-pane in active" id="details">
+							    	<h5><strong>A collection created by Versace.</strong></h5>
+							    	<p class="mb15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus. Vestibulum id vestibulum sapien, non convallis purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
+							    	<p class="mb20">Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante. Vivamus ornare magna molestie odio pellentesque fermentum.</p>
+							    	<h5><strong>Vulputate tortor bibendum, ullamcorper arcu.</strong></h5>
+							    	<p class="mb15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus. Vestibulum id vestibulum sapien, non convallis purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
+							    	<p class="no-margin">Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante. Vivamus ornare magna molestie odio pellentesque fermentum. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
+							    </div><!-- /tab pane -->
+							    <div class="tab-pane" id="specs">
+							    	<h5><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong></h5>
+							    	<p class="mb15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus. Vestibulum id vestibulum sapien, non convallis purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
+									<div class="table-responsive">
+										<table class="table table-hover border mb5">
+											<thead>
+												<tr>
+													<th>Specifics</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Pellentesque</td>
+													<td>Morbi sit amet dolor ut sapien dictum porta et a ipsum.</td>
+												</tr>
+												<tr>
+													<td>Proi</td>
+													<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus.</td>
+												</tr>
+												<tr>
+													<td>Proin</td>
+													<td>Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante. Vivamus ornare magna molestie odio pellentesque fermentum. Nullam vestibulum rhoncus leo.</td>
+												</tr>
+												<tr>
+													<td>Ligula</td>
+													<td><i class="fa fa-check text-success"></i></td>
+												</tr>
+												<tr>
+													<td>Etiam A</td>
+													<td>Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</td>
+												</tr>
+												<tr>
+													<td>Suspendisse</td>
+													<td>Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</td>
+												</tr>
+												<tr>
+													<td>Mattis</td>
+													<td><i class="glyphicon glyphicon-remove text-danger"></i></td>
+												</tr>
+											</tbody>
+										</table><!-- /table -->
+									</div><!-- /table responsive -->
+							    </div><!-- /tab pane -->
+							    
 
-		
-
-		
-		<div class="container">
-			<!-- Gallery Photos are here -->
-			
-			<div class="col-xs-12 col-md-8">
-			 
-      </div>
-
-    
-        <div class="col-xs-6 col-md-4">
-        	<h2> Contact This Vendor </h2>
-
-        	<%= simple_form_for Contact.new do |f| %>
-    			<%= f.input :name, :required => true %>
-    			<%= f.input :email, :required => true %>
-    			<%= f.input :message, :as => :text, :required => true %>
-    			<div class= "hidden">
-      			<%= f.input :nickname, :hint => 'Leave this field blank!' %>
-			    </div>
-			    <div>
-			      </br>
-			      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-			    </div>
-  				<% end %>
+							    <div class="tab-pane" id="reviews">
 
 
-
-        </div>
-  </div>
- 
-		
+									<% @reviews.each do |review |%>
 	
-	<div class="container">
 
+									<div>
+										<img class="pull-left mr15" src="images/avatar.jpg" width="60" height="60" alt="">
+										<div class="media-body">
+											<h4 class="media-heading">
+												<%= review.user.email %>
+												<span class="text-muted"><!-- stars -->
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+												</span>
+												<p class="text-muted">September 8, 2014 - 3:23pm</p>
+											</h4>
+											<p><%= review.comment %></p>
+										</div>
+									</div><!-- /review -->
+									<hr class="mt10 mb25">
 
-	<div style="margin-bottom: 5px;">
-	<h1> Reviews </h1>
-	<br>
-	<%= link_to "Write a Review", new_vendor_review_path(@vendor), class: "btn btn-small btn-warning" %>
-
-
-	</div>
-
-		<table class="table">
-		<tbody>
-		<% @reviews.each do |review |%>
-			<tr>
-				
-				
-				<td >
-					<div class="clearfix review-rating" data-score= <%= review.rating %>> 
-							<%= "#{review.user.email}" %>
+									<% end %>
+									
+									<div class="panel panel-default mb5 mt20">
+						                <div class="panel-body">
+						                	<h3>Leave a review</h3>                
+						                    <form>
+												<div class="form-group">
+													<label for="name">Name</label>
+													<input type="text" class="form-control" id="name" placeholder="" name="name" required="">
+												</div>
+												<div class="form-group has-feedback">
+													<label for="subject4">Subject</label>
+													<input type="text" class="form-control" id="subject4" placeholder="" name="subject4" required="">
+												</div>
+												<div class="form-group mb30">
+													<label>Rating</label>
+													<select class="form-control" id="review">
+														<option value="five">5</option>
+														<option value="four">4</option>
+														<option value="three">3</option>
+														<option value="two">2</option>
+														<option value="one">1</option>
+													</select>
+												</div>
+						                        <textarea class="form-control counted" name="message" placeholder="Type in your comment" rows="5" style="margin-bottom:10px;"></textarea>
+						                        <h6 class="pull-right mt10">320 characters remaining</h6>
+						                        <button class="btn btn-rw btn-primary" type="submit">Leave Comment</button>
+						                    </form>
+						                </div>
+						            </div><!-- /panel -->
+							    </div><!-- /tab pane -->
+							</div><!-- /tabs -->  
+							<!-- End Tabs w Icons -->
+						</div>
 					</div>
-					<div>
-					<%= review.comment %> 
-					<%= link_to "Edit", edit_vendor_review_path(review.vendor, review) %>
-					<%= link_to "Delete", vendor_review_path(review.vendor, review), method: :delete, data: {confirm: "Are you sure?"} %>
-					</div>
-				</td>
-
-			</tr>
-
-		<% end %>
-		</tbody>
-		</table>
-		<!--%= render @vendor.reviews %-->
-	</div>
+				</div>
+			</div>
+			<!-- End Product -->
 
 
-
-
-				
-			<%= link_to "EDIT",  edit_vendor_path(@vendor) %>
-
-
-</div>
-</div>
 
 
 <script>

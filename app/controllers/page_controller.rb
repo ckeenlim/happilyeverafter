@@ -1,5 +1,5 @@
 class PageController < ApplicationController
-  before_filter :set_search
+  
   def home
 
   end
@@ -23,10 +23,14 @@ class PageController < ApplicationController
   end
 
   def listings
-    
-    @categories = Category.all
+    @subcategories = Subcategory.all  
     @locations = Location.all
-    @vendors = vendors
+    
+    if (params[:categoryid] != nil)
+      @vendors = Vendor.where(categoryId: params[:categoryid]).paginate(:page => params[:page])
+    else
+      @vendors = vendors
+    end
     
   end
 
