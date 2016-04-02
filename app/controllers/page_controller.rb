@@ -1,5 +1,5 @@
 class PageController < ApplicationController
-  
+  before_action :init_nav
   def home
 
   end
@@ -84,6 +84,12 @@ class PageController < ApplicationController
 
   def contact_vendor
 
+  end
+
+  private
+
+  def init_nav
+    @subcategories = Subcategory.all  
   end
 end
 
