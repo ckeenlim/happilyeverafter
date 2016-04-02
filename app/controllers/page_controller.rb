@@ -1,5 +1,5 @@
 class PageController < ApplicationController
-  
+  before_action :init_nav
   def home
 
   end
@@ -23,10 +23,14 @@ class PageController < ApplicationController
   end
 
   def listings
-    
-    @categories = Category.all
+    @subcategories = Subcategory.all  
     @locations = Location.all
-    @vendors = vendors
+    
+    if (params[:categoryid] != nil)
+      @vendors = Vendor.where(categoryId: params[:categoryid]).paginate(:page => params[:page])
+    else
+      @vendors = vendors
+    end
     
   end
 
@@ -80,6 +84,12 @@ class PageController < ApplicationController
 
   def contact_vendor
 
+  end
+
+  private
+
+  def init_nav
+    @subcategories = Subcategory.all  
   end
 end
 
