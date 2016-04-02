@@ -35,8 +35,12 @@
 											
 											<li class="dropdown dropdown-main">
 									        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Vendors<span class="fa fa-angle-down dropdown-arrow"></span></a>
-									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn scrollable-menu"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
 										         
+										         	<% @subcategories.each do |category| %>
+										         		<li> <%= link_to category.name, {:controller => "page", :action => "listings", :categoryid => category.id } %> </li>
+										         		
+													<% end %>
 										            <li> <%= link_to "See all categories", page_listings_path %> </li>
 									        	</ul>
 									    </li>
