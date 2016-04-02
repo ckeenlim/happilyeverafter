@@ -1,5 +1,5 @@
 class PageController < ApplicationController
-  before_action :init_nav
+  
   def home
 
   end
@@ -23,7 +23,7 @@ class PageController < ApplicationController
   end
 
   def listings
-    @subcategories = Subcategory.all  
+    
     @locations = Location.all
     
     if (params[:categoryid] != nil)
@@ -88,8 +88,6 @@ class PageController < ApplicationController
 
   private
 
-  def init_nav
-    @subcategories = Subcategory.all  
-  end
+
 end
 
