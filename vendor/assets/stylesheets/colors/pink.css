@@ -1,0 +1,345 @@
+#royal_preloader.royal_preloader_number .royal_preloader_percentage:after {
+    border-left-color: #fa9090 !important;
+}
+
+.transition-timer-carousel-progress-bar {
+    background-color: #fa9090;
+}
+
+::selection {
+	background:#fa9090;
+}
+
+::-moz-selection {
+	background:#fa9090;
+}
+
+.nav-circle-li:hover {
+    background-color:#fa9090 !important;
+}
+
+.css-logo { background-color:#fa9090; }
+.cart a { color: #fa9090 !important; }
+a { color:#fa9090; cursor:pointer; }
+a:hover { color:#fa9090; text-decoration:underline; cursor:pointer; }
+
+.text-primary { font-weight:400; color: #fa9090; }
+.text-main { color:#fa9090 !important; }
+mark {
+	background:#fa9090;
+}
+ul.list-arrow-color li:before {
+    color:#fa9090;
+}
+
+ul.list-arrow-2-color li:before {
+    color:#fa9090;
+}
+.tp-bannertimer { background-color:#fa9090 !important; }
+.color-main { color:#fa9090; }
+.background-mainsub { background-color:#fa9090; }
+.table.cart-table > thead > tr > th { background-color:#fa9090; }
+.footer-light .thumbnail:hover { outline:5px solid #fa9090; }
+.nav-pills.nav-stacked:not(.list-style-icons) > li.active > a:focus::after, .nav-pills.nav-stacked:not(.list-style-icons) > li.active > a:hover::after, .nav-pills.nav-stacked:not(.list-style-icons) > li > a:focus::after, .nav-pills.nav-stacked:not(.list-style-icons) > li > a:hover::after {
+	color:#fa9090;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color:#fa9090;
+    border-color:#fa9090;
+}
+
+ul.sidebar-nav > li.active > a { background-color:#fa9090; }
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span { background:#fa9090; }
+#owl-carousel-thumb .thumbnail .caption, #owl-carousel-product .thumbnail .caption { background:rgba(246, 71, 71, 0.6); }
+.shop-product a h2:hover,.shop-product a h3:hover,.shop-product a h4:hover { color:#fa9090; }
+
+.content-render-right { background-color: #fa9090; }
+.btn-rw.btn-bordered:hover, .btn-rw.btn-bordered:focus {
+    background-color:#fa9090;
+    border-color:#fa9090;
+}
+.nav-pills.nav-pills-shop>li.active>a, .nav-pills.nav-pills-shop>li.active>a:focus, .nav-pills.nav-pills-shop>li.active>a:hover, .nav-pills.nav-pills-shop>li>a:hover {
+    background-color:#fa9090;
+    border-color:#fa9090;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+	background-color: #fa9090;
+	border-color: #fa9090;
+}
+
+.pagination>li>a, .pagination>li>span {
+	color: #fa9090;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+	background-color: #fa9090;
+	border-color: #fa9090;
+}
+.btn-rw.btn-primary {
+	background-color:#fa9090;
+	-webkit-box-shadow:0px 2px 0px rgba(246, 71, 71, 0.6);
+	-moz-box-shadow:0px 2px 0px rgba(246, 71, 71, 0.6);
+	box-shadow:0px 2px 0px rgba(246, 71, 71, 0.6);
+}
+
+#owl-carousel-thumb .thumbnail .caption {
+    background:rgba(246, 71, 71, 0.6);
+}
+
+.carousel-nav.nav-pills>li.active>a, .carousel-nav.nav-pills>li.active>a:focus, .carousel-nav.nav-pills>li.active>a:hover {
+	background-color: #fa9090;
+}
+
+.btn-rw.btn-primary:hover, .btn-rw.btn-primary:focus {
+	background-color: #DF3A3A;
+	-webkit-box-shadow:0px 2px 0px #fa9090;
+	-moz-box-shadow:0px 2px 0px #fa9090;
+	box-shadow:0px 2px 0px #fa9090;
+}
+.nav-pills.nav-stacked > li.active > a, .nav-pills.nav-stacked > li.active > a:hover, .nav-pills.nav-stacked > li.active > a:focus, .nav-pills.nav-stacked > li > a:hover, .nav-pills.nav-stacked > li > a:focus {
+    color: #fa9090;
+}
+.image-icon-holder { background-color: transparent; }
+.image-icon-holder:hover { color: #fa9090; background-color: #fff; }
+.image-hover-1 .mask {
+	background-color: rgba(255, 59, 48, 0.4) !important;
+}
+
+.bordered-icon-lg {
+	color:#fa9090;
+}
+
+.bordered-icon-lg:hover, .bordered-icon-lg:focus {
+	background-color:#fa9090;
+}
+
+.bordered-icon-sm {
+	color:#fa9090;
+}
+
+.bordered-icon-sm:hover, .bordered-icon-sm:focus {
+	background-color:#fa9090;
+}
+
+.bordered-icon-xs {
+	color:#fa9090;
+}
+
+.bordered-icon-xs:hover, .bordered-icon-xs:focus {
+	background-color:#fa9090;
+}
+
+.bordered-icon-static-lg {
+	color:#fa9090;
+}
+
+.bordered-icon-static-sm {
+	color:#fa9090;
+}
+
+.bordered-icon-static-xs {
+	color:#fa9090;
+}
+
+.bordered-icon-color {
+	background-color:#fa9090;
+}
+
+.bordered-icon-color:hover, .bordered-icon-color:focus {
+	color: #fff;
+}
+
+.bordered-icon-dark:hover, .bordered-icon-dark:focus {
+	background-color:#fa9090;
+}
+
+.bs-glyphicons li:hover {
+	background-color:#fa9090;
+}
+
+.navbar-brand { 
+	color:#fa9090;
+}
+
+.navbar-toggle:hover {
+	border:1px solid #fa9090;
+	background-color:#fa9090;
+}
+
+.navbar.navbar-main ul.nav li:hover > a { 
+	color:#fa9090;
+}
+
+.mega-dropdown-menu .dropdown-header {
+    color:#fa9090;
+}
+
+.navbar.navbar-main .navbar-nav .open .dropdown-menu>li:hover > a {
+	color:#fa9090;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color:#fa9090;
+}
+
+.navbar.navbar-main .dropdown-menu {
+	border-top:1px solid #fa9090;
+	border-bottom:2px solid #fa9090;
+}
+
+.navbar.navbar-main ul.nav a:hover { 
+	color:#fa9090;
+}
+
+.navbar.navbar-main .nav li.active a {
+	color:#fa9090;
+}
+
+.navbar.navbar-main .navbar-nav .open .dropdown-menu>li>a:hover{
+	color:#fa9090;
+}
+
+.navbar.navbar-main .dropdown-menu {
+	border-top:1px solid #fa9090;
+	border-bottom:2px solid #fa9090;
+}
+
+ul.sidebar-nav>li.active>a {
+	background-color:#fa9090;
+}
+ul.sidebar-nav ul li a:hover,
+ul.sidebar-nav ul li.active>a {
+	color:#fa9090 !important;
+}
+
+ul.sidebar-nav a:hover, ul.sidebar-nav ul li.active>a {
+	background-color:#fa9090;
+}
+
+.carousel-title-bg { 
+	background-color:#fa9090;
+}
+
+.heading h1, .heading h2, .heading h3, .heading h4, .heading h5, .heading h6 {
+	border-bottom:2px solid #fa9090;
+}
+
+.content-box-primary {
+	background:#fa9090;
+}
+
+.panel-title > a:hover {
+	color:#fa9090;
+}
+
+.panel-primary { border-color:#fa9090; }
+.panel-primary>.panel-heading {  background-color:#fa9090; border-color:#fa9090; }
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	border-top:5px solid #fa9090;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+	color: #fa9090;
+}
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover, .nav-tabs.nav-justified>.active>a:focus {
+	border-top:5px solid #fa9090;
+}
+
+.cta-primary {
+	background-color:#fa9090;
+}
+.cta2 {
+	background-color:#fa9090;
+}
+.cta2.arrow-down:after {
+	border-top:15px solid #fa9090;
+}
+.cta2.arrow-up:after {
+	border-bottom:15px solid #fa9090;
+}
+
+.timeline-badge.primary { background-color:#fa9090 !important; }
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+	border-color:#fa9090;
+}
+
+.custom-content.thumbnail:hover {
+	border-bottom:5px solid #fa9090;
+}
+
+.modal-header {
+	background-color:#fa9090;
+}
+
+.badge-primary {
+	background-color:#fa9090;
+}
+
+.label-primary {
+	background-color:#fa9090; 
+}
+
+.progress-bar-primary {
+	background-color:#fa9090;
+}
+
+.team-ico:hover {
+	color:#fa9090;
+}
+
+.topbar-list li a:hover {
+	color:#fa9090;
+}
+
+#portfolio .nav-pills > li:hover {
+   	background:#fa9090;
+   	border:2px solid #fa9090;
+}
+
+#portfolio .nav > li.active {
+   	background:#fa9090;
+   	border:2px solid #fa9090;
+}
+
+
+.portfolio-title a:hover {
+	color:#fa9090;
+}
+
+.blog-post h2 a:active, .blog-post h2 a:hover {
+	color:#fa9090;
+}
+
+.latest-posts h3 a:hover {
+	color:#fa9090;
+}
+
+.blog-heading {
+	border-left:3px solid #fa9090;
+}
+
+.media-list a:hover { color:#fa9090; }
+
+.heading-footer h2, .heading-footer h3, .heading-footer h4 {
+	border-bottom:2px solid #fa9090;
+}
+
+.footer .thumbnail:hover {
+	outline:5px solid #fa9090;
+}
+
+.footer-scrolltop-holder:hover {
+	background-color:#fa9090;	
+}
+
+.footer-light .heading-footer h2, .footer-light .heading-footer h3, .footer-light .heading-footer h4 {
+	border-bottom: 2px solid #fa9090;
+}
+
+@media (max-width:480px) {
+	.nav-pills.nav-pills-shop>li.active>a, .nav-pills.nav-pills-shop>li.active>a:focus, .nav-pills.nav-pills-shop>li.active>a:hover, .nav-pills.nav-pills-shop>li>a:hover {
+	    color:#fa9090;
+	    background-color: transparent;
+	}
+}

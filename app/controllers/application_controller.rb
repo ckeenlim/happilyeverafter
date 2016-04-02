@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
     # Overwriting the sign_out redirect path method
  	before_action :get_forum_categories
   before_action :set_search
+  before_action :init_nav
   def after_sign_out_path_for(resource_or_scope)
     root_path
   end
@@ -16,4 +17,9 @@ end
 		var = 1
 		@forum_categories = PostCategory.where(:category => 1)
 	end
+
+    def init_nav
+    @subcategories = Subcategory.all  
+  end
 end
+
