@@ -14,3 +14,5 @@ Rails.application.config.assets.precompile += %w( jquery.raty.js )
 Rails.application.config.assets.paths << "#{Rails.root}/app/assets/videos"
 Rails.application.config.assets.precompile += %w( royal_preloader.min.js )
 Rails.application.config.assets.precompile += %w( scrollReveal.js )
+Rails.application.config.assets.precompile += %w( user_todo_items.js )
+Rails.application.config.assets.precompile += %w( listings.js )
