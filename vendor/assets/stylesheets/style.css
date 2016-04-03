@@ -507,7 +507,8 @@ ul.list-arrow-2-color li:before {
 	color:#fff;
 }
 
-.btn-social-icon { border-radius:2px; }
+.btn-social-icon { border-radius:4px; }
+.btn-social-icon-circle { border-radius:50%; }
 .btn-social { border-radius:2px; }
 
 .btn-social-icon :first-child { color:#fff; }
