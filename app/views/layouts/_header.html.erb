@@ -12,17 +12,14 @@
 							<!-- Social Buttons -->
 							<div class="col-sm-5 text-right">
 				      	<ul class="topbar-list list-inline">
-					        <li>						
-						        <a class="btn btn-social-icon btn-rw btn-primary btn-xs">
-											<i class="fa fa-twitter"></i>
-										</a>
-										<a class="btn btn-social-icon btn-rw btn-primary btn-xs">
-											<i class="fa fa-instagram"></i>
-										</a>
-										<a class="btn btn-social-icon btn-rw btn-primary btn-xs">
-											<i class="fa fa-facebook"></i>
-										</a>
-									</li>
+					        
+
+											<%= link_to '<i class="fa fa-twitter"></i>'.html_safe, "https://twitter.com/heap_ph", :class => "btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank"   %>
+
+			                <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, "https://www.instagram.com/happilyeverafterph", :class => "btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank"   %>
+			                
+			                <%= link_to '<i class="fa fa-facebook"></i>'.html_safe,  "https://www.facebook.com/happilyeverafterphilppines",:class =>"btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank" %>
+
 
 									<% if user_signed_in? %>
 
