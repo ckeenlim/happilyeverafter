@@ -23,7 +23,7 @@ class PageController < ApplicationController
   end
 
   def listings
-    @subcategories = Subcategory.all  
+    
     @locations = Location.all
     
     if (params[:categoryid] != nil)
@@ -85,5 +85,9 @@ class PageController < ApplicationController
   def contact_vendor
 
   end
+
+  private
+
+
 end
 
