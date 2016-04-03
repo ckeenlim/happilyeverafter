@@ -19,7 +19,8 @@ end
 	end
 
     def init_nav
-    @subcategories = Subcategory.all  
+      @subcategories = Subcategory.all  
+    @categories = Category.all  
     @forumCategories =  PostCategory.where(category: 1)
   end
 end

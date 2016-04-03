@@ -27,7 +27,7 @@ class PageController < ApplicationController
     @locations = Location.all
     
     if (params[:categoryid] != nil)
-      @vendors = Vendor.where(categoryId: params[:categoryid]).paginate(:page => params[:page])
+      @vendors = Vendor.where(category_id: params[:categoryid]).paginate(:page => params[:page])
     else
       @vendors = vendors
     end
@@ -55,7 +55,7 @@ class PageController < ApplicationController
             categoryQuery += "OR"
           end
           
-          categoryQuery += ' "categoryId" = ' + c + ' '
+          categoryQuery += ' "category_id" = ' + c + ' '
         end  
       end
       # End of Category CheckBoxes
