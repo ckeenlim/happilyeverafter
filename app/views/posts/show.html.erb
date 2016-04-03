@@ -1,3 +1,29 @@
+<!-- Begin Page Header -->
+				<div class="header">
+					<div class="container">
+						<div class="row">
+							<!-- Page Title -->
+							<div class="col-sm-6 col-xs-12">
+								
+								<h1><%= truncate(@post.title, length:60) %></h1>
+							</div>
+
+							<!-- Breadcrumbs -->
+							<div class="col-sm-6">
+								<ol class="breadcrumb">
+									<li><span class="ion-home breadcrumb-home"></span> <%= link_to "Home", root_path %></li>
+									<li><%= link_to "Forum", posts_path %></li>
+									<li>Category</li>
+									<li><%= truncate(@post.title, length:15) %> </li>
+								</ol>
+							</div><!-- /column -->
+						</div><!-- /row -->  
+					</div><!-- /container -->  
+				</div><!-- /page header -->  
+				
+			</header><!-- /header -->
+			<!-- End Header -->
+
 <div class="container">
 
 
@@ -13,9 +39,12 @@
 
 		</div>
 
-		<div class=""col-md-9 col-sm-9 col-xs-9"">
-			<h4 class="text-truncated"> <%= @post.title %> </h4>
+		<div class="heading mt15">
+			<h4> <%= @post.title %> </h4>
+			
 		</div>
+
+		
 
 		<div class="clearfix top-border">
 			&nbsp;
