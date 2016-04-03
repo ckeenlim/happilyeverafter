@@ -53,6 +53,28 @@
 											<li class="dropdown dropdown-main">
 									        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
+									            	<li class="dropdown dropdown-submenu">
+											    				<a class="trigger"><strong>Categories</strong></a>
+												    				<ul class="dropdown-menu animated fadeInRight dropdown-animation">
+												    					<% @forumCategories.each do |f| %>
+												    						 <li> <%= link_to f.name, '#'%> </li>
+												    					<% end %>
+															    		<!--li><a tabindex="-1" href="features-alerts.html">Alerts</a></li>
+															    		<li><a tabindex="-1" href="features-tabs-accordions.html">Tabs &amp; Accordions</a></li>
+															    		<li><a tabindex="-1" href="features-lists.html">Lists</a></li>
+															    		<li><a tabindex="-1" href="features-thumbnails.html">Thumbnails</a></li>
+															    		<li><a tabindex="-1" href="features-tables.html">Tables</a></li>
+															    		<li><a tabindex="-1" href="features-dividers.html">Dividers</a></li>
+															    		<li><a tabindex="-1" href="features-headings.html">Headings</a></li>
+															    		<li><a tabindex="-1" href="features-progress-bars.html">Progress Bars</a></li>
+															    		<li><a tabindex="-1" href="features-modals.html">Modals</a></li>
+															    		<li><a tabindex="-1" href="features-tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
+															    		<li><a tabindex="-1" href="features-labels-badges.html">Labels &amp; Badges</a></li>
+															    		<li><a tabindex="-1" href="features-forms.html">Forms</a></li>
+															    		<li><a tabindex="-1" href="features-panels.html">Panels</a></li-->
+												    				</ul>
+												    		</li>
+
 									            	<li><%= link_to "All Topics", posts_path %> </li> 
 									        	</ul>
 									    </li>

@@ -20,6 +20,7 @@ end
 
     def init_nav
     @subcategories = Subcategory.all  
+    @forumCategories =  PostCategory.where(category: 1)
   end
 end
 
