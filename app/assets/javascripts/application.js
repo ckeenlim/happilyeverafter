@@ -19,8 +19,8 @@
 //= require bootstrap-slider.min
 //= require hover-dropdown
 //= require revolution-slider
-//= require RalewayMain
 //= require owl.carousel.min
+//= require RalewayMain
 
 
 
