@@ -1,4 +1,4 @@
-
+<%= javascript_include_tag "jquery.raty" %>
 				<!-- Begin Page Header -->
 				<div class="header">
 					<div class="container">
@@ -35,26 +35,32 @@
 								<div class="thumbnail">
 					                <div class="caption">
 					                	<div class="thumbnail-caption-holder">
-						                    <a href="images/shop/product-single1.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a>
+						                    <!--a href="images/shop/product-single1.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a-->
+						                    <%= link_to '<span class="ion-android-search"></span>'.html_safe, image_path("heap_logo.png"), class: "btn btn-rw btn-clear btn-lg gallery-zoom" %>
 					                    </div>
 					                </div>
-					                <img src="images/shop/product-single1.jpg" alt="...">
+					                <!--img src="images/shop/product-single1.jpg" alt="..."-->
+					                <%= image_tag("heap_logo.png", alt: "...") %>
 					            </div>
 								<div class="thumbnail">
 					                <div class="caption">
 					                	<div class="thumbnail-caption-holder">
-						                    <a href="images/shop/product-single2.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a>
+						                    <!--a href="images/shop/product-single1.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a-->
+						                    <%= link_to '<span class="ion-android-search"></span>'.html_safe, image_path("Wedding1.jpg"), class: "btn btn-rw btn-clear btn-lg gallery-zoom" %>
 					                    </div>
 					                </div>
-					                <img src="images/shop/product-single2.jpg" alt="...">
+					                <!--img src="images/shop/product-single1.jpg" alt="..."-->
+					                <%= image_tag("Wedding1.jpg", alt: "...") %>
 					            </div>
 								<div class="thumbnail">
 					                <div class="caption">
 					                	<div class="thumbnail-caption-holder">
-						                    <a href="images/shop/product-single3.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a>
+						                    <!--a href="images/shop/product-single1.jpg" class="btn btn-rw btn-clear btn-lg gallery-zoom"><span class="ion-android-search"></span></a-->
+						                    <%= link_to '<span class="ion-android-search"></span>'.html_safe, image_path("Wedding2.jpg"), class: "btn btn-rw btn-clear btn-lg gallery-zoom" %>
 					                    </div>
 					                </div>
-					                <img src="images/shop/product-single3.jpg" alt="...">
+					                <!--img src="images/shop/product-single1.jpg" alt="..."-->
+					                <%= image_tag("Wedding2.jpg", alt: "...") %>
 					            </div>
 							</div><!-- /end owl product slider -->
 
@@ -175,7 +181,7 @@
 	
 
 									<div>
-										<img class="pull-left mr15" src="images/avatar.jpg" width="60" height="60" alt="">
+										<!--img class="pull-left mr15" src="images/avatar.jpg" width="60" height="60" alt=""-->
 										<div class="media-body">
 											<h4 class="media-heading">
 												<%= review.user.email %>
@@ -231,6 +237,10 @@
 				</div>
 			</div>
 			<!-- End Product -->
+
+<%= javascript_include_tag "owl.carousel.min" %>
+<%= javascript_include_tag "jquery.magnific-popup.min.js" %>
+<%= javascript_include_tag "RalewayMain" %>
 
 
 

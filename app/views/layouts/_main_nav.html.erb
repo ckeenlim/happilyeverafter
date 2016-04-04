@@ -58,9 +58,9 @@
 											    				<a class="trigger"><strong>Categories</strong></a>
 												    				<ul class="dropdown-menu animated fadeInRight dropdown-animation">
 												    					<% @forumCategories.each do |f| %>
-												    						 <li> <%= link_to f.name, '#'%> </li>
+												    						 <li> <%= link_to f.name, '#', tabindex: "-1"%> </li>
 												    					<% end %>
-															    		<!--li><a tabindex="-1" href="features-alerts.html">Alerts</a></li>
+															    		<li><a tabindex="-1" href="features-alerts.html">Alerts</a></li>
 															    		<li><a tabindex="-1" href="features-tabs-accordions.html">Tabs &amp; Accordions</a></li>
 															    		<li><a tabindex="-1" href="features-lists.html">Lists</a></li>
 															    		<li><a tabindex="-1" href="features-thumbnails.html">Thumbnails</a></li>
@@ -72,7 +72,7 @@
 															    		<li><a tabindex="-1" href="features-tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
 															    		<li><a tabindex="-1" href="features-labels-badges.html">Labels &amp; Badges</a></li>
 															    		<li><a tabindex="-1" href="features-forms.html">Forms</a></li>
-															    		<li><a tabindex="-1" href="features-panels.html">Panels</a></li-->
+															    		<li><a tabindex="-1" href="features-panels.html">Panels</a></li>
 												    				</ul>
 												    		</li>
 
