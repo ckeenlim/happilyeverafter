@@ -138,10 +138,6 @@ $(document).ready(function() {
     });
 });
 
-//responsive video
-$(document).ready(function() {
-    $(document.body).fitVids();
-});
 
 // scroll to top action
 $('.scroll-top').on('click', function(event) {
