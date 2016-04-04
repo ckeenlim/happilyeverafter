@@ -14,11 +14,13 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require bootstrap-sprockets
+//= require_tree .
 //= require turbolinks
 //= require bootstrap-slider.min
 //= require hover-dropdown
 //= require revolution-slider
 //= require RalewayMain
+//= require owl.carousel.min
 
 
 
