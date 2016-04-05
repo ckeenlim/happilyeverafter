@@ -1,0 +1,88 @@
+
+<!-- Begin Page Header -->
+				<div class="header">
+					<div class="container">
+						<div class="row">
+							<!-- Page Title -->
+							<div class="col-sm-6 col-xs-12">
+								<h1>Budget Tracker</h1>
+							</div>
+
+							<!-- Breadcrumbs -->
+							<div class="col-sm-6"> 
+								<ol class="breadcrumb">
+									<li><span class="ion-home breadcrumb-home"></span> <%= link_to "Home", root_path %></li>
+									<li>My HEAP</li>
+									<li>Budget Tracker</li>
+								</ol>
+							</div><!-- /column -->
+						</div><!-- /row -->  
+					</div><!-- /container -->  
+				</div><!-- /page header -->  
+
+			</header><!-- /header -->
+
+
+<!-- Start Cart Table -->
+	<div class="container">
+			<div class="content-40mg">
+				<div class="row">
+					<div class="col-sm-12 mt40">
+						<h3 class="text-center mb20-xs no-margin">Budget Details</h3>
+						<hr style="width:400px;" class="double-hr hidden-xs mt20 mb30">
+						<div class="table-responsive no-margin" >
+							
+							<table class="table cart-table table-striped" >
+							    <thead >
+							    	
+							        <tr>
+							            <th  class="budget-subheading">Category</th>
+							            <th  class="budget-subheading">Cost</th>
+							            <th  class="budget-subheading">Amount Paid</th>
+							            
+							            <th class="total-title budget-subheading">Remaining Balance</th>
+							        </tr>
+							      
+							    </thead><!-- /table header -->  
+
+							    <tbody >
+							    		<% @budget_detail_entries.each do |b| %>
+							        <tr>
+							            <td>
+							            	<a href="shop-single-product.html" class="product-name"><%= b.entry_name %></a>
+							            	<small class="product-description">48 Layered, Labled .PSD files</small>
+							            </td>
+							            <td class="cart-price"> &#8369; <%=  number_with_delimiter(b.cost_amt , :delimiter => ',')%></td>
+							            <td>
+													<input type="text" class="form-control cart-quantity" value="1">
+													</td>
+										<!--td><a href="#"><span class="fa fa-close bordered-icon-xs"></span></a></td-->
+							            <td class="cart-total">&#8369;92.00</td>
+							        </tr>
+							        <% end %>
+							        
+
+							        <tr>
+												<td class="subtotal product-description" >Subtotal</td>
+												<td class="cart-price">$92.00</td>
+												<td class="cart-price">$1367.00</td>
+												<td class="cart-total">$1382.00</td>
+											</tr>
+
+											<tr>
+												<td class="subtotal product-description" >Total</td>
+												<td class="cart-price">$92.00</td>
+												<td class="cart-price" >$1382.00</td>
+												<td class="cart-total">$1382.00</td>
+
+											</tr>
+							    </tbody><!-- /table body -->  
+							</table><!-- /basic table -->
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!-- End Cart Table -->
+
+	</div>

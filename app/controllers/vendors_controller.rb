@@ -18,7 +18,8 @@ class VendorsController < ApplicationController
 
   def search
     @search = Vendor.search(params[:q])
-    @vendors = @search.result
+    @vendors = @search.result.paginate(:page => params[:page])
+    @locations = Location.all
   end
 
   def change

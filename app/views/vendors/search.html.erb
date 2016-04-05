@@ -1,36 +1,118 @@
-<div class="container">
-
-	<h1> Search Results </h1>
-
-
-  <%= render partial: "shared/search_form" %> 
-
-
-	<table class = "table table-striped">
-	  <thead>
-	    <tr>
-	    	<th>Category </th>
-	      <th>Name</th>
-	      <th>Address</th>
-
-	    </tr>
-	  </thead>
-	  <tbody>
-	  	<% if @vendors.nil? %>
-	  		<h1> no vendors yet </h1>
-	  	<% else %>
-		    <% @vendors.each do |vendor| %>
-		      <tr>
-		      	<td><%= vendor.categoryId %></td>
-		       
-		        <td><%= link_to(vendor.name, vendor) %></td>
-		        <td><%= vendor.address %></td>
-		      </tr>
-		    <% end %>
-		  <% end %>
-	  </tbody>
-	</table>
-
-
-	
-<div>
+<%= javascript_include_tag "listings" %>
+<div class="mt40 mb40">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        	<%= form_tag("/page/search", method: "post") do %>
+            
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#collapseCategory">
+                            <h4 class="panel-title accordion-toggle">Category</h4>
+                        </div>
+                        <div id="collapseCategory" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                            	
+								<div>
+									<input type="checkbox" id="allCategories" name="allCategoriesCheckbox">
+									<label for="allCategories">
+                                        All Categories
+                                    </label>
+								</div>	
+								
+								<% @subcategories.each do |category| %>
+								<div>
+									<%= check_box_tag("categoryCheckbox[]",category.id, false, class: "categoryCheckbox") %> <%= category.name %>
+								</div>	
+								<% end %>
+								
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#collapseLocation">
+                            <h4 class="panel-title accordion-toggle">Location</h4>
+                        </div>
+                        <div id="collapseLocation" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                            	
+								<div>
+									<input type="checkbox" id="allLocations">
+									<label for="allLocations">
+                                        All Locations
+                                    </label>
+								</div>
+								
+								<% @locations.each do |location| %>
+								<div>
+									<%= check_box_tag("locationCheckbox[]",location.name, false, class: "locationCheckbox") %> <%= location.name %>
+								</div>	
+								<% end %>
+								
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#collapseSearch">
+                            <h4 class="panel-title accordion-toggle">Search</h4>
+                        </div>
+                        <div id="collapseSearch" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <%= search_field(:vendor, :details, placeholder:"Enter details...") %>
+                                <%= submit_tag "Filter", class: "btn btn-info" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div class="col-md-9">
+        	
+    			<div class="well well-sm">
+        			<strong>Category Title</strong>
+        			<div class="btn-group">
+            			<a href="#" id="list" class="btn btn-default btn-sm">
+            				<span class="glyphicon glyphicon-th-list"></span>
+								List
+						</a>
+						<a href="#" id="grid" class="btn btn-default btn-sm">
+							<span class="glyphicon glyphicon-th"></span>
+								Grid
+						</a>
+        			</div>
+    			</div>
+				
+    			<div id="vendors" class="row list-group">
+    				<% @vendors.each do |vendor| %>
+					<div class="item col-xs-4 col-lg-4">
+						<div>
+			                <img class="group list-group-image" src="http://placehold.it/250x200/000/fff" alt="" />
+			                <div class="caption">
+			                    <h4 class="group inner list-group-item-heading textellipsis">
+			                        <%= link_to vendor.name, vendor_path(:id => vendor.id) %></h4>
+			                    <p class="group inner list-group-item-text textellipsis">
+			                        <%= vendor.address %>&nbsp;</p>
+								<div class="textellipsis"><%= vendor.emailAddress %>&nbsp;</div>
+								<div class="textellipsis"><%= vendor.websiteUrl %>&nbsp;</div>
+								<br>
+			                    <div class="row">
+			                    	<div class="col-xs-12 col-md-4 col-lg-4">
+			                            &nbsp;
+			                        </div>
+			                    	<div class="col-xs-12 col-md-4 col-lg-4">
+			                            &nbsp;
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+					</div>
+					<% end %>		
+				</div>
+			
+			<div align="center">
+				<%= will_paginate @vendors, renderer:BootstrapPagination::Rails, previous_label:"<<", next_label:">>", inner_window:2, outer_window:0%>
+			</div>
+        </div>
+    </div>
+</div>
+</div>

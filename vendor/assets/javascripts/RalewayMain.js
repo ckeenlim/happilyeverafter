@@ -8,6 +8,9 @@ $('#fixed-navbar').affix({
 });
 
 
+});
+
+
 // pagination fix
 //$(function() {
     $(".dropdown-menu > li > a.trigger").on("click", function(e) {
@@ -17,7 +20,7 @@ $('#fixed-navbar').affix({
     });
 //});
 
-})
+//})
 
 
 

@@ -14,7 +14,7 @@ class UserTodoItemsController < ApplicationController
 	end
 
 	def show
-		@user_todo_items = User_Todo_Items.find(:user_id)
+		
 	end
 
 	def generate

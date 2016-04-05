@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160403065642) do
+ActiveRecord::Schema.define(version: 20160405010922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "budget_details", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.string   "entry_name"
+    t.integer  "vendor_id"
+    t.string   "payee_name"
+    t.decimal  "cost_amt",    precision: 10, scale: 2
+    t.decimal  "paid_amt",    precision: 10, scale: 2
+    t.decimal  "balance_amt", precision: 10, scale: 2
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  add_index "budget_details", ["user_id"], name: "index_budget_details_on_user_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -153,6 +168,8 @@ ActiveRecord::Schema.define(version: 20160403065642) do
 
   add_index "vendors", ["category_id"], name: "index_vendors_on_category_id", using: :btree
 
+  add_foreign_key "budget_details", "categories"
+  add_foreign_key "budget_details", "users"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "posts", "users"

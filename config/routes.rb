@@ -31,6 +31,12 @@ Rails.application.routes.draw do
     end
   end
 
+
+  resources :budget_details do
+    collection { post :generate, to:'budget_details#generate'}
+  
+  end
+
   get 'page/contact'
   get 'page/faqs'
   get 'page/vendors'

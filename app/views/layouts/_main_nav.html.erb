@@ -60,7 +60,7 @@
 												    					<% @forumCategories.each do |f| %>
 												    						 <li> <%= link_to f.name, '#', tabindex: "-1"%> </li>
 												    					<% end %>
-															    		<li><a tabindex="-1" href="features-alerts.html">Alerts</a></li>
+															    		<!--li><a tabindex="-1" href="features-alerts.html">Alerts</a></li>
 															    		<li><a tabindex="-1" href="features-tabs-accordions.html">Tabs &amp; Accordions</a></li>
 															    		<li><a tabindex="-1" href="features-lists.html">Lists</a></li>
 															    		<li><a tabindex="-1" href="features-thumbnails.html">Thumbnails</a></li>
@@ -72,7 +72,7 @@
 															    		<li><a tabindex="-1" href="features-tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
 															    		<li><a tabindex="-1" href="features-labels-badges.html">Labels &amp; Badges</a></li>
 															    		<li><a tabindex="-1" href="features-forms.html">Forms</a></li>
-															    		<li><a tabindex="-1" href="features-panels.html">Panels</a></li>
+															    		<li><a tabindex="-1" href="features-panels.html">Panels</a></li-->
 												    				</ul>
 												    		</li>
 
@@ -91,7 +91,7 @@
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn"><!-- Control Animations by changing "fadeIn" to another property from animate.css, check animations page in features / ALSO dropdown-animation class controls the duration, ajust if need -->
 
 												    		<li><%= link_to "Checklist", user_todo_items_path%></li>
-												    		<li><a href="#">Budget Tracker</a></li>
+												    		<li><%= link_to "Budget Tracker", budget_details_path %> </li>
 												    		<li><a href="#">Guest List</a></li>
 												    		<li><a href="#">Wedding Team</a></li>
 												    		<li><a href="#">Pegs</a></li>
@@ -103,6 +103,7 @@
 						                 <ul class="fadeInRight-animated dropdown-menu dropdown-menu-user">
 						                    <li id="dropdownForm">
 						                        <div class="dropdown-form">
+						                        	
 						                          <%= search_form_for @q, :class => "form-default form-inline p15", url: search_vendors_path, method: :post do |f| %>
 						                               <div class="input-group">
             																	<%= f.text_field :name_or_address_cont, class: "form-control search-input", placeholder: "Search..." %>
