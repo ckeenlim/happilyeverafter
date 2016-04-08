@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
-  devise_for :users 
+  devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
 
  
   root 'page#home'
@@ -50,18 +50,19 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
 
   resources :posts do
-    resources :comments
+    member do
+      resources :comments
+    end
   end
 
   resources :blogs do
-    resources :comments
+    member do
+      resources :comments
+      put "like", to: "blogs#upvote"
+    end
   end
 
-  
-    resources :categories 
-    
-  
-
+  resources :categories 
 
 end
  

@@ -55,10 +55,44 @@
 		                <hr align="left" class="mt15 mb10" style="width:50px;">
 		                <h3><strong> <%= @blog.title %> </strong></h3>
 
+		                <div class="mb40">
 		                <%= @blog.content.html_safe %>
-		              </div>  
+		                </div>
+		                
 
-		              <div class="blog-comment mt30">
+		                <div class="heading ">
+		                	<h3> Tell us what you think </h3>
+
+		                </div>
+
+
+		                <h4>
+			                <span class="label label-default "> 
+			                	<i class="ion-person-stalker"> </i>
+			                	<span class="size-15"> <%= pluralize(@blog.get_upvotes.size, "like") + " this post"%> </span>
+
+			                </span>
+		                </h4>
+
+		                <div class=" mb10">
+
+			                <%= link_to like_blog_path(@blog), method: :put do  %>
+			                	<button class="btn btn-circle btn-primary"><i class="fa fa-thumbs-up"></i> </button>
+			                <% end %>
+			                <button class="btn btn-circle btn-twitter"><i class="fa fa-twitter"></i> </button>
+			                <button class="btn btn-circle btn-facebook"><i class="fa fa-facebook"></i> </button>
+		              
+		               	</div>
+		                
+
+
+
+		            </div>
+
+		                
+		        </div>  <!-- end of blogpost -->
+
+		        <div class="blog-comment mt30">
 									<div class="heading mb30"><h4>Comments</h4></div>
 									<ul class="comments">
 										<li class="clearfix">
@@ -102,9 +136,9 @@
 					                        <button class="btn btn-rw btn-info" type="submit">Leave Comment</button>
 					                    </form>
 					                </div>
-					            </div>        
-		                    </div>
-				        </div>
+					       </div>        
+		          </div>
+				       
 				        <!-- Sidebar -->
 				        <div class="col-sm-4">
 				        	<div class="content-box content-box-bordered mt30-xs mb30">
@@ -125,43 +159,8 @@
 				        	<div class="blog-heading"><h3>About</h3></div>
 							<p class="mb30">Vivamus quis est a metus tincidunt viverra. Morbi condimentum tempor libero at cursus. Etiam sollicitudin venenatis arcu id vulputate. Phasellus in pharetra lorem, non suscipit mauris. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
 
-				        	<!-- Nav tabs -->
-							<ul class="nav nav-tabs" role="tablist">
-							    <li class="active"><a href="#posts" role="tab" data-toggle="tab">Posts</a></li>
-							    <li><a href="#info" role="tab" data-toggle="tab">Info</a></li>
-							</ul>
-							<div class="tab-content tab-default mb30">
-							    <div class="tab-pane in active" id="posts">
-		                            <ul class="media-list">
-		                                <li class="media">
-		                                    <a class="pull-left" href="#"><img class="media-object" src="http://lorempixel.com/output/city-q-c-80-80-5.jpg" width="80" height="80" alt="image"></a>
-		                                    <div class="media-body">
-		                                        <p class="media-heading"><a href="#">Lorem ipsum dolor sit amet aut consectetur adipisicing elitl libero</a></p>
-		                                        <small>5 Jan, 2015<br><em><a href="#">Web,</a> <a href="#">Webdesign</a></em></small>
-		                                    </div>
-		                                </li>
-		                                <li class="media">
-		                                    <a class="pull-left" href="#"><img class="media-object" src="http://lorempixel.com/output/city-q-c-80-80-7.jpg" width="80" height="80" alt="image"></a>
-		                                    <div class="media-body">
-		                                        <p class="media-heading"><a href="#">Lorem ipsum dolor sit amet in consectetur adipisicing</a></p>
-		                                        <small>17 Jan, 2015<br><em><a href="#">Artificial Intelligence</a></em></small>  
-		                                    </div>
-		                                </li>
-		                                <li class="media">
-		                                    <a class="pull-left" href="#"><img class="media-object" src="http://lorempixel.com/output/city-q-c-80-80-8.jpg" width="80" height="80" alt="image"></a>
-		                                    <div class="media-body">
-		                                        <p class="media-heading"><a href="#">Sit amet consectetur adipisicing elit incidunt minus</a></p>
-		                                        <small>23 Jan, 2015<br><em><a href="#">Art,</a> <a href="#">Lifestyles</a></em></small>   
-		                                    </div>
-		                                </li>
-		                            </ul>
-							    </div>
-							    <div class="tab-pane" id="info">Donec tristique dignissim nisi, quis fermentum quam. Sed turpis ipsum, tempor vel malesuada ac, pharetra eu nunc. Aliquam condimentum mauris eget justo aliquam, in rhoncus libero egestas.
-							    <a href="pages-about-1.html" class="btn btn-rw btn-primary btn-sm mt10">About</a></div>
-							</div>
-							<!-- End Nav tabs -->
-
-				        	<div class="blog-heading"
+				        	
+				       <div class="blog-heading"
 				        	><h3>Recent Posts</h3></div>
 							<ul class="list-unstyled latest-posts">
 		                        <li>

@@ -38,6 +38,9 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'jquery-turbolinks'
 # this is to fix the tz in windows machines#
 gem 'tzinfo-data' 
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'omniauth-facebook'
+
 ##########################
 
 # Use ActiveModel has_secure_password

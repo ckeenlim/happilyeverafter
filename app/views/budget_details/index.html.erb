@@ -28,8 +28,13 @@
 			<div class="content-40mg">
 				<div class="row">
 					<div class="col-sm-12 mt40">
-						<h3 class="text-center mb20-xs no-margin">Budget Details</h3>
+						<h3 class="text-center mb20-xs no-margin">Our Wedding Budget</h3>
+
 						<hr style="width:400px;" class="double-hr hidden-xs mt20 mb30">
+
+						<h4> Total Budget: &#8369; 1,000,000.00 </h4> 
+						<h4> Booked: &#8369; 700,000.50 </h4>
+						<h4> Spent So Far: &#8369; 50,000.50 </h4>
 						<div class="table-responsive no-margin" >
 							
 							<table class="table cart-table table-striped" >
@@ -49,7 +54,8 @@
 							    		<% @budget_detail_entries.each do |b| %>
 							        <tr>
 							            <td>
-							            	<a href="shop-single-product.html" class="product-name"><%= b.entry_name %></a>
+							            	
+							            	<%= link_to b.entry_name, category_path(:id => b.category_id) %>
 							            	<small class="product-description">48 Layered, Labled .PSD files</small>
 							            </td>
 							            <td class="cart-price"> &#8369; <%=  number_with_delimiter(b.cost_amt , :delimiter => ',')%></td>

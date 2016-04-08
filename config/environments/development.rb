@@ -59,6 +59,10 @@ Rails.application.configure do
   # Precompile fonts
   config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 
+  unless Rails.env.production?
+  ENV['FACEBOOK_APP_ID'] = '280356345629895'
+  ENV['FACEBOOK_APP_SECRET'] = '1d986c04147e5cd9f99c24cb29fa8340'
+  end
 
 
 end

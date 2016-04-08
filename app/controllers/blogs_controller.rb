@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
-	before_action :find_blog, only: [:show, :edit, :update, :destroy]
-	before_action :authenticate_user!, except: [:index]
+	before_action :find_blog, only: [:show, :edit, :update, :destroy, :upvote]
+	before_action :authenticate_user!, except: [:index, :show]
 	
 	def index
 		@blogs =  Blog.where(post_type: 2)
@@ -35,6 +35,13 @@ class BlogsController < ApplicationController
 	def update
 	end
 	def destroy
+	end
+
+	def upvote
+		@blog.upvote_by current_user
+
+		redirect_to :back
+
 	end
 
 
