@@ -6,34 +6,39 @@
 					<div class="container">
 						<div class="row">
 							<!-- Address and Phone -->
-							<div class="col-sm-7 hidden-xs">
+							<div class="col-sm-8 hidden-xs">
 								<span class="ion-android-system-home home-icon"></span>Ortigas Center, Pasig, Philippines<span class="ion-ios7-telephone phone-icon"></span>0917-123-45678
 							</div>
 							<!-- Social Buttons -->
-							<div class="col-sm-5 text-right">
-				      	<ul class="topbar-list list-inline">
-					        
-
-											<%= link_to '<i class="fa fa-twitter"></i>'.html_safe, "https://twitter.com/heap_ph", :class => "btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank"   %>
-
-			                <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, "https://www.instagram.com/happilyeverafterph", :class => "btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank"   %>
+							<div>
+				        <ul class="topbar-list list-inline">
+					      	<li>						
+							      
+										<%= link_to '<i class="fa fa-twitter"></i>'.html_safe, "https://twitter.com/heap_ph", :class => "btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank"   %>
+										
+										<%= link_to '<i class="fa fa-instagram"></i>'.html_safe, "https://www.instagram.com/happilyeverafterph", :class => "btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank"   %>
 			                
-			                <%= link_to '<i class="fa fa-facebook"></i>'.html_safe,  "https://www.facebook.com/happilyeverafterphilppines",:class =>"btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank" %>
-
-
+			              <%= link_to '<i class="fa fa-facebook"></i>'.html_safe,  "https://www.facebook.com/happilyeverafterphilppines",:class =>"btn btn-social-icon btn-rw btn-primary btn-xs", :target => "_blank" %>
+									
+									</li>
 									<% if user_signed_in? %>
-
 										<li>
-          					<%= link_to "Log Out", destroy_user_session_path , :method => :delete %>
-        						<% else %>
-        						<li>
+										<%= link_to "Log Out", destroy_user_session_path , :method => :delete %>
+										</li>
+									<% else %>
 										<li><a data-toggle="modal" data-target="#login">Login</a></li>	
 										<li><%= link_to "Login with Facebook", user_omniauth_authorize_path(:facebook) %> </li>
 										<!--li><a href="pages-forms-register-login.html">Register</a></li-->
 										<li><a data-toggle="modal" data-target="#register">Register</a></li>	
 									<% end %>
+										
 								</ul>
+
 							</div>
+
+							
+
+
 						</div><!--/row --> 
 					</div><!--/container header -->   
 				</div><!--/top bar -->   

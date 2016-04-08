@@ -1,44 +1,35 @@
-
 			<!-- Begin Footer -->
-			<footer class="footer-light">
+			<footer class="footer ">
 			    <div class="container">
 			        <div class="row">
-			            <!-- About -->
-			            <div class="col-sm-3">
+
+			            <div class="col-sm-4 mb30-xs">
 			                <div class="heading-footer"><h4>About</h4></div>
-			                <p>Happily Ever After Philippines. 
+			                <p> <strong> Happily Ever After Philippine (HEAP)  </strong>
 			                <br>
 			                Created for the Filipino Couples.
 			                <br>
-			                Powered by Wordlclass Pinoy Talents.
+			                Powered by Worldclass Pinoy Talents.
 			                <br>
 			                Weddings Simplified.  
 			                </p>
 			                
 			            </div>
-			            
 			            <!-- Social -->
-			            <div class="col-sm-3 mg25-xs">
-			                <div class="heading-footer"><h4>Social Networks</h4></div>
-			                			            
-			                <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, "https://twitter.com/heap_ph", :class => "btn btn-social-icon btn-twitter btn-lg", :target => "_blank"   %>
-
-			                <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, "https://www.instagram.com/happilyeverafterph", :class => "btn btn-social-icon btn-instagram btn-lg", :target => "_blank"   %>
+			            <div class="col-sm-4 mg25-xs text-center">
+			                <div class="heading-footer"><h4>Follow Us</h4></div>
 			                
-			                <%= link_to '<i class="fa fa-facebook"></i>'.html_safe,  "https://www.facebook.com/happilyeverafterphilppines",:class =>"btn btn-social-icon btn-facebook btn-lg", :target => "_blank" %>
+			                <%= link_to '<span class="fa fa-facebook bordered-icon bordered-icon-sm mb5"></span>'.html_safe,  "https://www.facebook.com/happilyeverafterphilppines", :target => "_blank" %>
 
+			                <%= link_to '<span class="fa fa-twitter bordered-icon bordered-icon-sm mb5 mt10"></span>'.html_safe, "https://twitter.com/heap_ph", :target => "_blank"   %>
+
+			                <%= link_to '<span class="fa fa-instagram bordered-icon bordered-icon-sm mb5"></span>'.html_safe, "https://www.instagram.com/happilyeverafterph", :target => "_blank"   %>
 			                
-			            </div>
-			            <!-- Contact -->
-			            <div class="col-sm-3 mg25-xs">
-			                <div class="heading-footer"><h4>Contact us</h4></div>
-			                <p><span class="ion-home footer-info-icons"></span><small class="address">Ortigas Center, Pasig, Philippines</small></p>
-			                <p><span class="ion-email footer-info-icons"></span><small class="address"><a href="mailto:info@raleway.com">info@happilyeverafter.ph</a></small></p>
-			                <p><span class="ion-ios7-telephone footer-info-icons"></span><small class="address">+6391712345678</small></p>
+			                
 			            </div>
 			            <!-- Recent Work -->
-			            <div class="col-sm-3 hidden-xs">
-			                <div class="heading-footer"><h4>Recent Work</h4></div>
+			            <div class="col-sm-4 hidden-xs text-right">
+			                <div class="heading-footer"><h4>Recent Listings</h4></div>
 			                <div class="col-xs-4 recent-work-padding">
 			                    <!--a href="images/projects/web2.jpg" class="thumbnail image-zoom-link">
 			                      <img src="images/projects/thumbs/web2.jpg" alt="..." class="thumbnail img-responsive">
@@ -55,17 +46,16 @@
 			                    </a-->
 			                </div>
 			            </div>
+			            
 			        </div><!-- /row -->
 			        <!-- Copyright -->
 			        <div class="row">
 			            <hr>
-			            <div class="col-sm-11 col-xs-10">
-			                <p class="copyright">© 2016 Happily Ever After Philippines. All rights reserved. </b></p>
-			            </div>
-			            <div class="col-sm-1 col-xs-2 text-right">
-			                <a href="#" class="scroll-top"><div class="footer-scrolltop-holder"><span class="ion-ios7-arrow-up footer-scrolltop"></span></div></a>
+			            <div class="col-sm-12 text-center">
+			                <p class="copyright mb15">© <%= Time.now.year %> Happily Ever After Philippines. All rights reserved.</p>
+			                <a href="#" class="scroll-top"><div class="footer-scrolltop-holder" style="float:none;display: inline-block;"><span class="ion-ios7-arrow-up footer-scrolltop"></span></div></a>
 			            </div>
 			        </div><!-- /row -->
 			    </div><!-- /container -->
 			</footer><!-- /footer -->
-			<!-- End Footer --> 
+			<!-- End Footer -->
