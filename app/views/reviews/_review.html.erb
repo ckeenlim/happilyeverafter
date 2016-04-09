@@ -1,17 +1,36 @@
-<div class="review-rating" data-score="<%= review.rating %>">
-</div>
-<p>
-<%= review.rating %>
-<%= review.comment %>
+<!--div class="review-rating" data-score="<%= review.rating %>">
+</div-->
 
 
-<% if user_signed_in? %>
-	<% if review.user_id == current_user.id %>
+
+
+<div>
+										<!--img class="pull-left mr15" src="images/avatar.jpg" width="60" height="60" alt=""-->
+										<%= image_tag("http://graph.facebook.com/197219423995423/picture?type=normal", :width => "60", :height => "60", :alt => "", :class => "pull-left mr15" ) %>
+										
+										<div class="media-body">
+											<h4 class="media-heading">
+												<%= review.user.email %>
+												<span class="text-muted"><!-- stars -->
+													<small class="review-rating" data-score="<%= review.rating %>"> </small>
+													
+												</span>
+												<p class="text-muted"> <%= review.updated_at.strftime("%b %d, %Y") %></p>
+											</h4>
+											<p><%= review.comment %></p>
+										</div>
+									</div><!-- /review -->
+									
+
+
+
+<% if user_signed_in? && review.user_id == current_user.id  %>
+	
 	<%= link_to "Edit", edit_vendor_review_path(review.vendor, review) %>
 	<%= link_to "Delete", vendor_review_path(review.vendor, review), method: :delete, 
 		data: {confirm: "Are you sure?"} %>
 
-	<%end%>
+
 <% end %>
 
-</p>
+<hr class="mt10 mb25">

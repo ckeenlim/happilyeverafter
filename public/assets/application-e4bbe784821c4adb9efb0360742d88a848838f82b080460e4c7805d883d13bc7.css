@@ -303,6 +303,15 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
   max-height: 200px;
   overflow-x: hidden;
 }
+
+/* line 131, /Users/tan/Desktop/RoR/happilyeverafter/app/assets/stylesheets/page.scss */
+#notice {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+}
 /*-----------------------------------------------------------------------------
 
 - Revolution Slider 5.0 Navigatin Skin Style  -
@@ -18607,7 +18616,7 @@ h6.progress-head {
 
 .top-bar-dark .topbar-list li{
 	border-left:1px solid #323232;
-	padding:0 14px;
+	padding:0 13px;
 }
 
 .top-bar-dark .topbar-list:last-child {
@@ -18628,7 +18637,7 @@ h6.progress-head {
 
 .topbar-list li {
 	border-left:1px solid #eee;
-	padding:0 14px;
+	padding:0 13px;
 }
 
 .topbar-list li a {

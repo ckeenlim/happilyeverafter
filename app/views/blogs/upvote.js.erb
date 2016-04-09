@@ -1,0 +1,1 @@
+$(".likes-count").text("<%= pluralize(@blog.get_upvotes.size, "like") %>").change();

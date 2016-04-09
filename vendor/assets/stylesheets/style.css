@@ -2396,7 +2396,7 @@ h6.progress-head {
 
 .top-bar-dark .topbar-list li{
 	border-left:1px solid #323232;
-	padding:0 14px;
+	padding:0 13px;
 }
 
 .top-bar-dark .topbar-list:last-child {
@@ -2417,7 +2417,7 @@ h6.progress-head {
 
 .topbar-list li {
 	border-left:1px solid #eee;
-	padding:0 14px;
+	padding:0 13px;
 }
 
 .topbar-list li a {

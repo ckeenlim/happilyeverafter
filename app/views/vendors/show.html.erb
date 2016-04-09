@@ -21,11 +21,11 @@
 					</div><!-- /container -->  
 				</div><!-- /page header -->  
 				
-			</header><!-- /header -->
+			
 			<!-- End Header -->
 
 			<!-- Start Vendor -->
-			<section class="mt40">
+			<section class="mt40 mb40">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4">
@@ -122,15 +122,57 @@
 							</ul><!-- /nav pills -->
 							<div class="tab-content tab-product">
 							    <div class="tab-pane in active" id="details">
-							    	<h5><strong>A collection created by Versace.</strong></h5>
+							    	<h5><strong>Vendor description.</strong></h5>
 							    	<p class="mb15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus. Vestibulum id vestibulum sapien, non convallis purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
 							    	<p class="mb20">Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante. Vivamus ornare magna molestie odio pellentesque fermentum.</p>
 							    	<h5><strong>Vulputate tortor bibendum, ullamcorper arcu.</strong></h5>
 							    	<p class="mb15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus. Vestibulum id vestibulum sapien, non convallis purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
-							    	<p class="no-margin">Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante. Vivamus ornare magna molestie odio pellentesque fermentum. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
+
+							    	<!-- contact details -->
+									    <div class="table-responsive">
+												<table class="table table-hover border mb5">
+													<thead>
+														<tr>
+															<th>Details&nbsp;About&nbsp;This&nbsp;Vendor</th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Accepts Pencil Bookings </td>
+															<td>Morbi sit amet dolor ut sapien dictum porta et a ipsum.</td>
+														</tr>
+														<tr>
+															<td>Proi</td>
+															<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus.</td>
+														</tr>
+														<tr>
+															<td>Proin</td>
+															<td>Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante. Vivamus ornare magna molestie odio pellentesque fermentum. Nullam vestibulum rhoncus leo.</td>
+														</tr>
+														<tr>
+															<td>Ligula</td>
+															<td><i class="fa fa-check text-success"></i></td>
+														</tr>
+														<tr>
+															<td>Etiam A</td>
+															<td>Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</td>
+														</tr>
+														<tr>
+															<td>Suspendisse</td>
+															<td>Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</td>
+														</tr>
+														<tr>
+															<td>Mattis</td>
+															<td><i class="glyphicon glyphicon-remove text-danger"></i></td>
+														</tr>
+													</tbody>
+												</table><!-- /table -->
+											</div><!-- /table responsive -->
 							    </div><!-- /tab pane -->
+
 							    <div class="tab-pane" id="specs">
-							    	<h5><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong></h5>
+							    	<h5><strong>Details about packages, rates and promos</strong></h5>
 							    	<p class="mb15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et ante metus. Vestibulum id vestibulum sapien, non convallis purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vestibulum rhoncus leo. Suspendisse vulputate elementum dui. Duis tristique auctor dolor in lobortis. Donec pretium laoreet purus non tempus. Morbi sit amet dolor ut sapien dictum porta et a ipsum. Proin malesuada dapibus ligula, at mattis ligula venenatis et. Etiam a quam ante.</p>
 									<div class="table-responsive">
 										<table class="table table-hover border mb5">
@@ -176,61 +218,10 @@
 							    
 
 							    <div class="tab-pane" id="reviews">
-
-
-									<% @reviews.each do |review |%>
-	
-
-									<div>
-										<!--img class="pull-left mr15" src="images/avatar.jpg" width="60" height="60" alt=""-->
-										<div class="media-body">
-											<h4 class="media-heading">
-												<%= review.user.email %>
-												<span class="text-muted"><!-- stars -->
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</span>
-												<p class="text-muted">September 8, 2014 - 3:23pm</p>
-											</h4>
-											<p><%= review.comment %></p>
-										</div>
-									</div><!-- /review -->
-									<hr class="mt10 mb25">
-
-									<% end %>
-									
-									<div class="panel panel-default mb5 mt20">
-						                <div class="panel-body">
-						                	<h3>Leave a review</h3>                
-						                    <form>
-												<div class="form-group">
-													<label for="name">Name</label>
-													<input type="text" class="form-control" id="name" placeholder="" name="name" required="">
-												</div>
-												<div class="form-group has-feedback">
-													<label for="subject4">Subject</label>
-													<input type="text" class="form-control" id="subject4" placeholder="" name="subject4" required="">
-												</div>
-												<div class="form-group mb30">
-													<label>Rating</label>
-													<select class="form-control" id="review">
-														<option value="five">5</option>
-														<option value="four">4</option>
-														<option value="three">3</option>
-														<option value="two">2</option>
-														<option value="one">1</option>
-													</select>
-												</div>
-						                        <textarea class="form-control counted" name="message" placeholder="Type in your comment" rows="5" style="margin-bottom:10px;"></textarea>
-						                        <h6 class="pull-right mt10">320 characters remaining</h6>
-						                        <button class="btn btn-rw btn-primary" type="submit">Leave Comment</button>
-						                    </form>
-						                </div>
-						            </div><!-- /panel -->
+							    	<%= render @reviews %>
+										<%= render partial: "reviews/form"  %>
 							    </div><!-- /tab pane -->
+							    
 							</div><!-- /tabs -->  
 							<!-- End Tabs w Icons -->
 						</div>
@@ -238,6 +229,7 @@
 				</div>
 			</div>
 			<!-- End Product -->
+			</section>
 
 <%= javascript_include_tag "owl.carousel.min" %>
 <%= javascript_include_tag "jquery.magnific-popup.min.js" %>
@@ -249,16 +241,12 @@
 <script>
 	$('.review-rating').raty({
 		readOnly: true,
+
 		score: function() {
 			return $(this).attr('data-score');
 		},
 		path: '/assets/'
-
-
-
 	}
-
-
 		);
 
 </script>
@@ -271,8 +259,5 @@
 		score: function() {
 			return $(this).attr('data-score')
 		}
-
-
-
 	});
 </script>

@@ -69,14 +69,14 @@
 		                <h4>
 			                <span class="label label-default "> 
 			                	<i class="ion-person-stalker"> </i>
-			                	<span class="size-15"> <%= pluralize(@blog.get_upvotes.size, "like") + " this post"%> </span>
+			                	<span class="size-15 likes-count"> <%= pluralize(@blog.get_upvotes.size, "like") %> </span>
 
 			                </span>
 		                </h4>
 
 		                <div class=" mb10">
 
-			                <%= link_to like_blog_path(@blog), method: :put do  %>
+			                <%= link_to like_blog_path(@blog), method: :put,  remote: true  do  %>
 			                	<button class="btn btn-circle btn-primary"><i class="fa fa-thumbs-up"></i> </button>
 			                <% end %>
 			                <button class="btn btn-circle btn-twitter"><i class="fa fa-twitter"></i> </button>
@@ -96,7 +96,8 @@
 									<div class="heading mb30"><h4>Comments</h4></div>
 									<ul class="comments">
 										<li class="clearfix">
-										  <img src="http://bootdey.com/img/Content/user_1.jpg" class="avatar" alt="">
+										  <!--img src="http://bootdey.com/img/Content/user_1.jpg" class="avatar" alt=""-->
+										  <%= image_tag(current_user.thumb_url + "?type=normal", :class => "avatar", :alt => "") if current_user.thumb_url.present? %>
 										  <div class="post-comments">
 										      <p class="meta">Dec 18, 2014 <a href="#">John Doe</a> says : <i class="pull-right"><a href="#"><small>Reply</small></a></i></p>
 										      <p>

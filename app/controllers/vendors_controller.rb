@@ -12,7 +12,7 @@ class VendorsController < ApplicationController
     if @vendor.reviews(:ratings).blank?
       @average_review = 0
     else
-      @average_review = @vendor.reviews.average(:rating).round(2)
+      @average_review = (@vendor.reviews.average(:rating) * 2).round/2.0
     end
   end
 

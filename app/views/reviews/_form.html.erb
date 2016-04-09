@@ -1,20 +1,47 @@
-<%= simple_form_for ([@vendor, @vendor.reviews.build]) do |f| %>
-	<div id="rating-form">
-		<label> Rating </label>
-	</div>
-	<%= f.input :comment%>
-	<%= f.button :submit %>
-<%end%>
+
+<!-- Review Form -->
+<div class="panel panel-default mb5 mt20">
+	<div class="panel-body">
+		<h3>Leave a review</h3>                
+		<!--form-->
+		<%= simple_form_for ([@vendor, @vendor.reviews.build]) do |f| %>
+			<div id="rating-score" class="form-group mb10 mt20 medium" >
+				<label>  Rating </label>
+			</div>
+	    
+	    <%= f.input :comment,  :input_html => {:id => "comment-area", :class => "form-control counted", :rows => 5, :placeholder => "Type in your comment", :style => "margin-bottom:10px;"}%>
+
+	    <h6 id="comment_text_feedback" class="pull-right mt10">320 characters remaining</h6>
+	    
+	    <button class="btn btn-rw btn-primary" type="submit">Leave Comment </button>
+	  <% end %>
+    <!--/form-->
+  </div>
+</div><!-- /panel -->
+
+
 
 <script>
-	$('#rating-form').raty({
+	
+	$('#rating-score').raty({
+
+		size: 15,
 		path: '/assets/',
-		score: 3,
+		score: 5,
 		scoreName: 'review[rating]'
-
 	}
-
-
 		);
 
+
+$(function() {
+    var text_max = 320;
+    $('#comment_text_feedback').html(text_max + ' characters remaining');
+
+    $('#comment-area').keyup(function() {
+        var text_length = $('#comment-area').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#comment_text_feedback').html(text_remaining + ' characters remaining');
+    });
+});
 </script>
