@@ -6,8 +6,12 @@
 								<div class="col-sm-12 column-header">
 									<div class="navbar-header">
 										<!-- Brand -->
+										<!--a href="index.html" class="navbar-brand"-->
+										<div class="navbar-brand"	>
+											<%= image_tag("heap_logo.png", alt: "heap", class: "raleway-logo") %>
+										</div>
+										<!--/a-->
 										
-										<%= image_tag("heap_logo.png", alt: "heap", class: "raleway-logo") %>
 
 										<!-- Mobile Navigation -->
 										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -60,19 +64,6 @@
 												    					<% @forumCategories.each do |f| %>
 												    						 <li> <%= link_to f.name, '#', tabindex: "-1"%> </li>
 												    					<% end %>
-															    		<!--li><a tabindex="-1" href="features-alerts.html">Alerts</a></li>
-															    		<li><a tabindex="-1" href="features-tabs-accordions.html">Tabs &amp; Accordions</a></li>
-															    		<li><a tabindex="-1" href="features-lists.html">Lists</a></li>
-															    		<li><a tabindex="-1" href="features-thumbnails.html">Thumbnails</a></li>
-															    		<li><a tabindex="-1" href="features-tables.html">Tables</a></li>
-															    		<li><a tabindex="-1" href="features-dividers.html">Dividers</a></li>
-															    		<li><a tabindex="-1" href="features-headings.html">Headings</a></li>
-															    		<li><a tabindex="-1" href="features-progress-bars.html">Progress Bars</a></li>
-															    		<li><a tabindex="-1" href="features-modals.html">Modals</a></li>
-															    		<li><a tabindex="-1" href="features-tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
-															    		<li><a tabindex="-1" href="features-labels-badges.html">Labels &amp; Badges</a></li>
-															    		<li><a tabindex="-1" href="features-forms.html">Forms</a></li>
-															    		<li><a tabindex="-1" href="features-panels.html">Panels</a></li-->
 												    				</ul>
 												    		</li>
 

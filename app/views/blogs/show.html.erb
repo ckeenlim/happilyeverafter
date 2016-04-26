@@ -97,7 +97,9 @@
 									<ul class="comments">
 										<li class="clearfix">
 										  <!--img src="http://bootdey.com/img/Content/user_1.jpg" class="avatar" alt=""-->
+										  <% if user_signed_in? %>
 										  <%= image_tag(current_user.thumb_url + "?type=normal", :class => "avatar", :alt => "") if current_user.thumb_url.present? %>
+										  <% end %>
 										  <div class="post-comments">
 										      <p class="meta">Dec 18, 2014 <a href="#">John Doe</a> says : <i class="pull-right"><a href="#"><small>Reply</small></a></i></p>
 										      <p>
